@@ -125,7 +125,10 @@
               methods:{
                   setValue(q){
                     this.tos = q;
-                    this.getLanguage();
+                    setTimeout(function(){
+                       this.getLanguage();
+                    },50)  
+ 
                   },
                   setQuery(query){
                      this.query = query;
