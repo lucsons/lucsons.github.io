@@ -1,523 +1,398 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Responsive Admin Dashboard Template"><meta name="keywords" content="admin,dashboard"><meta name="author" content="stacks"><!-- The above 6 meta tags *must* come first in the head;any other head content must come *after* these tags --><!-- Title --><title>Neo - Responsive Admin Dashboard Template</title><!-- Styles --><link href="static/css/0fb62e9b23124ce3894b7c73879b9bb8.css" rel="stylesheet"><link href="static/css/258011e5d6904b6791ea9c17923a3c5d.css" rel="stylesheet"><link href="static/css/bootstrap.min.css" rel="stylesheet"><link href="static/css/all.min.css" rel="stylesheet"><link href="static/css/perfect-scrollbar.css" rel="stylesheet"><link href="static/css/pace.css" rel="stylesheet"><link href="static/css/apexcharts.css" rel="stylesheet"><!-- Theme Styles --><link href="static/css/main.min.css" rel="stylesheet"><link href="static/css/custom.css" rel="stylesheet"><!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --><!-- WARNING:Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-        <script src="static/js/html5shiv.min.js"></script>
-        <script src="static/js/respond.min.js"></script>
-        <![endif]-->
-    </head>
-    <body class="page-sidebar-collapsed">
-        <div class="page-container">
-          <div class="page-sidebar">
-              <a class="logo" href="index.html">Neo</a>
-              <ul class="list-unstyled accordion-menu">
-                <li class="active-page">
-                  <a href="#" class="active"><i data-feather="activity"></i>Dashboard<i class="fas fa-chevron-right dropdown-icon"></i></a>
-                  <ul class="">
-                    <li><a href="index.html" class="active"><i class="far fa-circle"></i>eCommerce</a></li>
-                    <li><a href="crypto.html"><i class="far fa-circle"></i>Crypto</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#"><i data-feather="aperture"></i>Apps<i class="fas fa-chevron-right dropdown-icon"></i></a>
-                  <ul class="">
-                    <li><a href="email.html"><i class="far fa-circle"></i>Email</a></li>
-                    <li><a href="contact.html"><i class="far fa-circle"></i>Contact</a></li>
-                    <li><a href="calendar.html"><i class="far fa-circle"></i>Calendar</a></li>
-                    <li><a href="social.html"><i class="far fa-circle"></i>Social</a></li>
-                    <li><a href="file-manager.html"><i class="far fa-circle"></i>File Manager</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#"><i data-feather="code"></i>UI Kits<i class="fas fa-chevron-right dropdown-icon"></i></a>
-                  <ul class="">
-                    <li><a href="alerts.html"><i class="far fa-circle"></i>Alerts</a></li>
-                    <li><a href="typography.html"><i class="far fa-circle"></i>Typography</a></li>
-                    <li><a href="icons.html"><i class="far fa-circle"></i>Icons</a></li>
-                    <li><a href="badge.html"><i class="far fa-circle"></i>Badge</a></li>
-                    <li><a href="buttons.html"><i class="far fa-circle"></i>Buttons</a></li>
-                    <li><a href="cards.html"><i class="far fa-circle"></i>Cards</a></li>
-                    <li><a href="dropdowns.html"><i class="far fa-circle"></i>Dropdowns</a></li>
-                    <li><a href="list-group.html"><i class="far fa-circle"></i>List Group</a></li>
-                    <li><a href="toasts.html"><i class="far fa-circle"></i>Toasts</a></li>
-                    <li><a href="modal.html"><i class="far fa-circle"></i>Modal</a></li>
-                    <li><a href="pagination.html"><i class="far fa-circle"></i>Pagination</a></li>
-                    <li><a href="popovers.html"><i class="far fa-circle"></i>Popovers</a></li>
-                    <li><a href="progress.html"><i class="far fa-circle"></i>Progress</a></li>
-                    <li><a href="spinners.html"><i class="far fa-circle"></i>Spinners</a></li>
-                    <li><a href="accordion.html"><i class="far fa-circle"></i>Accordion</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#"><i data-feather="box"></i>Plugins<i class="fas fa-chevron-right dropdown-icon"></i></a>
-                  <ul class="">
-                    <li><a href="block-ui.html"><i class="far fa-circle"></i>Block UI</a></li>
-                    <li><a href="session-timeout.html"><i class="far fa-circle"></i>Session Timeout</a></li>
-                    <li><a href="tree-view.html"><i class="far fa-circle"></i>Tree View</a></li>
-                    <li><a href="select2.html"><i class="far fa-circle"></i>Select2</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#"><i data-feather="star"></i>Pages<i class="fas fa-chevron-right dropdown-icon"></i></a>
-                  <ul class="">
-                    <li><a href="invoice.html"><i class="far fa-circle"></i>Invoice</a></li>
-                    <li><a href="404.html"><i class="far fa-circle"></i>404 Page</a></li>
-                    <li><a href="500.html"><i class="far fa-circle"></i>500 Page</a></li>
-                    <li><a href="blank-page.html"><i class="far fa-circle"></i>Blank Page</a></li>
-                    <li><a href="login.html"><i class="far fa-circle"></i>Login</a></li>
-                    <li><a href="register.html"><i class="far fa-circle"></i>Register</a></li>
-                    <li><a href="lockscreen.html"><i class="far fa-circle"></i>Lockscreen</a></li>
-                    <li><a href="price.html"><i class="far fa-circle"></i>Price</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#"><i data-feather="droplet"></i>Form<i class="fas fa-chevron-right dropdown-icon"></i></a>
-                  <ul class="">
-                    <li><a href="form-elements.html"><i class="far fa-circle"></i>Form Elements</a></li>
-                    <li><a href="form-layout.html"><i class="far fa-circle"></i>Form Layout</a></li>
-                    <li><a href="form-validation.html"><i class="far fa-circle"></i>Form Validation</a></li>
-                    <li><a href="form-select2.html"><i class="far fa-circle"></i>Select2</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#"><i data-feather="grid"></i>Tables<i class="fas fa-chevron-right dropdown-icon"></i></a>
-                  <ul class="">
-                    <li><a href="tables.html"><i class="far fa-circle"></i>Basic Tables</a></li>
-                    <li><a href="data-tables.html"><i class="far fa-circle"></i>Data Tables</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="charts.html"><i data-feather="pie-chart"></i>Charts</a>
-                </li>
-                
-              </ul>
-              <a href="#" id="sidebar-collapsed-toggle"><i data-feather="arrow-right"></i></a>
-          </div>
-            <div class="page-content">
-              <div class="page-header">
-                  <nav class="navbar navbar-expand-lg d-flex justify-content-between">
-                    <div class="header-title flex-fill">
-                      <a href="#" id="sidebar-toggle"><i data-feather="arrow-left"></i></a>
-                      <h5>Dashboard</h5>
-                    </div>
-                      <div class="header-search">
-                        <form>
-                          <input class="form-control" type="text" placeholder="Type something.." aria-label="Search">
-                          <a href="#" class="close-search"><i data-feather="x"></i></a>
-                        </form>
-                      </div>
-                      <div class="flex-fill" id="headerNav">
-                        <ul class="navbar-nav">
-                          <li class="nav-item d-md-block d-lg-none">
-                            <a class="nav-link" href="#" id="toggle-search"><i data-feather="search"></i></a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link activity-trigger" href="#" id="activity-sidebar-toggle"><i data-feather="grid"></i></a>
-                          </li>
-                          <li class="nav-item dropdown">
-                            <a class="nav-link notifications-dropdown" href="#" id="notificationsDropDown" role="button" data-bs-toggle="dropdown" aria-expanded="false">3<div class="spinner-grow text-danger" role="status">
-                              <span class="visually-hidden">Loading...</span>
-                            </div></a>
-                            <div class="dropdown-menu dropdown-menu-end notif-drop-menu" aria-labelledby="notificationsDropDown">
-                              <h6 class="dropdown-header">Notifications</h6>
-                              <a href="#">
-                                <div class="header-notif">
-                                  <div class="notif-image">
-                                    <span class="notification-badge bg-info text-white">
-                                      <i class="fas fa-bullhorn"></i>
-                                    </span>
-                                  </div>
-                                  <div class="notif-text">
-                                    <p class="bold-notif-text">faucibus dolor in commodo lectus mattis</p>
-                                    <small>19:00</small>
-                                  </div>
-                                </div>
-                              </a>
-                              <a href="#">
-                                <div class="header-notif">
-                                  <div class="notif-image">
-                                    <span class="notification-badge bg-primary text-white">
-                                      <i class="fas fa-bolt"></i>
-                                    </span>
-                                  </div>
-                                  <div class="notif-text">
-                                    <p class="bold-notif-text">faucibus dolor in commodo lectus mattis</p>
-                                    <small>18:00</small>
-                                  </div>
-                                </div>
-                              </a>
-                              <a href="#">
-                                <div class="header-notif">
-                                  <div class="notif-image">
-                                    <span class="notification-badge bg-success text-white">
-                                      <i class="fas fa-at"></i>
-                                    </span>
-                                  </div>
-                                  <div class="notif-text">
-                                    <p>faucibus dolor in commodo lectus mattis</p>
-                                    <small>yesterday</small>
-                                  </div>
-                                </div>
-                              </a>
-                              <a href="#">
-                                <div class="header-notif">
-                                  <div class="notif-image">
-                                    <span class="notification-badge">
-                                      <img src="static/picture/avatar2.jpeg" alt="">
-                                    </span>
-                                  </div>
-                                  <div class="notif-text">
-                                    <p>faucibus dolor in commodo lectus mattis</p>
-                                    <small>yesterday</small>
-                                  </div>
-                                </div>
-                              </a>
-                              <a href="#">
-                                <div class="header-notif">
-                                  <div class="notif-image">
-                                    <span class="notification-badge">
-                                      <img src="static/picture/avatar5.jpeg" alt="">
-                                    </span>
-                                  </div>
-                                  <div class="notif-text">
-                                    <p>faucibus dolor in commodo lectus mattis</p>
-                                    <small>yesterday</small>
-                                  </div>
-                                </div>
-                              </a>
-                            </div>
-                          </li>
-                          <li class="nav-item dropdown">
-                            <a class="nav-link profile-dropdown" href="#" id="profileDropDown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="static/picture/avatar1.jpeg" alt=""></a>
-                            <div class="dropdown-menu dropdown-menu-end profile-drop-menu" aria-labelledby="profileDropDown">
-                              <a class="dropdown-item" href="#"><i data-feather="user"></i>Profile</a>
-                              <a class="dropdown-item" href="#"><i data-feather="inbox"></i>Messages</a>
-                              <a class="dropdown-item" href="#"><i data-feather="edit"></i>Activities<span class="badge rounded-pill bg-success">12</span></a>
-                              <a class="dropdown-item" href="#"><i data-feather="check-circle"></i>Tasks</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#"><i data-feather="settings"></i>Settings</a>
-                              <a class="dropdown-item" href="#"><i data-feather="unlock"></i>Lock</a>
-                              <a class="dropdown-item" href="#"><i data-feather="log-out"></i>Logout</a>
-                            </div>
-                          </li>
-                        </ul>
-                    </div>
-                  </nav>
-              </div>
-              <div class="main-wrapper">
-                
-                <div class="row">
-                  <div class="col-lg-6">
-                    <div class="card main-chart-card">
-                        <div class="card-body">
-                          <div id="apex3"></div>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="row">
-                      <div class="col-lg-6">
-                        <div class="card stats-card">
-                          <div class="card-body">
-                            <div class="stats-info">
-                              <h5 class="card-title">$30K<span class="stats-change stats-change-danger">-8%</span></h5>
-                              <p class="stats-text">Total revenue</p>
-                            </div>
-                            <div class="stats-icon change-danger">
-                              <i class="material-icons">trending_down</i>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-6">
-                        <div class="card stats-card">
-                          <div class="card-body">
-                            <div class="stats-info">
-                              <h5 class="card-title">$21K<span class="stats-change stats-change-danger">-8%</span></h5>
-                              <p class="stats-text">Total revenue</p>
-                            </div>
-                            <div class="stats-icon change-danger">
-                              <i class="material-icons">trending_down</i>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-lg-6">
-                        <div class="card stats-card">
-                          <div class="card-body">
-                            <div class="stats-info">
-                                <h5 class="card-title">1681<span class="stats-change stats-change-success">+16%</span></h5>
-                                <p class="stats-text">Unique visitors</p>
-                            </div>
-                            <div class="stats-icon change-success">
-                                <i class="material-icons">trending_up</i>
-                            </div>
-                        </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-6">
-                        <div class="card stats-card">
-                          <div class="card-body">
-                            <div class="stats-info">
-                                <h5 class="card-title">4743<span class="stats-change stats-change-success">+12%</span></h5>
-                                <p class="stats-text">Total investments</p>
-                            </div>
-                            <div class="stats-icon change-success">
-                                <i class="material-icons">trending_up</i>
-                            </div>
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-lg-4">
-                      <div class="card card-bg">
-                        <div class="card-body">
-                          <h5 class="card-title">Transactions</h5>
-                          <div class="transactions-list">
-                            <div class="tr-item">
-                              <div class="tr-company-name">
-                                <div class="tr-icon tr-card-icon tr-card-bg-primary text-white">
-                                  <i data-feather="thumbs-up"></i>
-                                </div>
-                                <div class="tr-text">
-                                  <h4 class="text-white">Facebook</h4>
-                                  <p>02 March</p>
-                                </div>
-                              </div>
-                              <div class="tr-rate">
-                                <p><span class="text-success">+$24</span></p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="transactions-list">
-                            <div class="tr-item">
-                              <div class="tr-company-name">
-                                <div class="tr-icon tr-card-icon tr-card-bg-success text-white">
-                                  <i data-feather="credit-card"></i>
-                                </div>
-                                <div class="tr-text">
-                                  <h4 class="text-white">Visa</h4>
-                                  <p>02 March</p>
-                                </div>
-                              </div>
-                              <div class="tr-rate">
-                                <p><span class="text-success">+$300</span></p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="transactions-list">
-                            <div class="tr-item">
-                              <div class="tr-company-name">
-                                <div class="tr-icon tr-card-icon tr-card-bg-danger text-white">
-                                  <i data-feather="tv"></i>
-                                </div>
-                                <div class="tr-text">
-                                  <h4 class="text-white">Netflix</h4>
-                                  <p>02 March</p>
-                                </div>
-                              </div>
-                              <div class="tr-rate">
-                                <p><span class="text-danger">-$17</span></p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="transactions-list">
-                            <div class="tr-item">
-                              <div class="tr-company-name">
-                                <div class="tr-icon tr-card-icon tr-card-bg-warning text-white">
-                                  <i data-feather="shopping-cart"></i>
-                                </div>
-                                <div class="tr-text">
-                                  <h4 class="text-white">Themeforest</h4>
-                                  <p>02 March</p>
-                                </div>
-                              </div>
-                              <div class="tr-rate">
-                                <p><span class="text-danger">-$220</span></p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="transactions-list">
-                            <div class="tr-item">
-                              <div class="tr-company-name">
-                                <div class="tr-icon tr-card-icon tr-card-bg-info text-white">
-                                  <i data-feather="dollar-sign"></i>
-                                </div>
-                                <div class="tr-text">
-                                  <h4 class="text-white">PayPal</h4>
-                                  <p>02 March</p>
-                                </div>
-                              </div>
-                              <div class="tr-rate">
-                                <p><span class="text-success">+20%</span></p>
-                              </div>
-                            </div>
-                          </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="card widget widget-info card-bg">
-                      <div class="card-body">
-                        <div class="widget-info-container">
-                            <div class="widget-info-image" style="background: url('static/images/premium.svg')"></div>
-                            <h5 class="widget-info-title text-white">Advanced Security</h5>
-                            <p class="widget-info-text">Lorem ipsum dolor sit amet. Nunc cursus tempor sapien, et mattis libero dapibus ut. Ut a ante sit amet arcu imperdiet ipsum ante</p>
-                            <a href="#" class="btn btn-primary widget-info-action">Try Premium for free</a>
-                        </div>
-                    </div>
-                  </div>
-                  </div>
-                <div class="col-lg-4">
-                  <div class="card stat-widget card-bg">
-                    <div class="card-body">
-                      <h5 class="card-title">Top Authors</h5>
-                      <div class="transactions-list">
-                        <div class="tr-item">
-                          <div class="tr-company-name">
-                            <div class="tr-img tr-card-img">
-                              <img src="static/picture/avatar1.jpeg" alt="...">
-                            </div>
-                            <div class="tr-text">
-                              <h4 class="text-white">John Doe</h4>
-                              <p>23 items sold</p>
-                            </div>
-                          </div>
-                          <div class="tr-rate">
-                            <p><span>$300</span></p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="transactions-list">
-                        <div class="tr-item">
-                          <div class="tr-company-name">
-                            <div class="tr-img tr-card-img">
-                              <img src="static/picture/avatar2.jpeg" alt="...">
-                            </div>
-                            <div class="tr-text">
-                              <h4 class="text-white">Ann Doe</h4>
-                              <p>19 items sold</p>
-                            </div>
-                          </div>
-                          <div class="tr-rate">
-                            <p><span>$270</span></p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="transactions-list">
-                        <div class="tr-item">
-                          <div class="tr-company-name">
-                            <div class="tr-img tr-card-img">
-                              <img src="static/picture/avatar3.jpeg" alt="...">
-                            </div>
-                            <div class="tr-text">
-                              <h4 class="text-white">Lisa Doe</h4>
-                              <p>14 items sold</p>
-                            </div>
-                          </div>
-                          <div class="tr-rate">
-                            <p><span>$404</span></p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="transactions-list">
-                        <div class="tr-item">
-                          <div class="tr-company-name">
-                            <div class="tr-img tr-card-img">
-                              <img src="static/picture/avatar4.jpeg" alt="...">
-                            </div>
-                            <div class="tr-text">
-                              <h4 class="text-white">John Doe</h4>
-                              <p>10 items sold</p>
-                            </div>
-                          </div>
-                          <div class="tr-rate">
-                            <p><span>$500</span></p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="transactions-list">
-                        <div class="tr-item">
-                          <div class="tr-company-name">
-                            <div class="tr-img tr-card-img">
-                              <img src="static/picture/avatar5.jpeg" alt="...">
-                            </div>
-                            <div class="tr-text">
-                              <h4 class="text-white">Ann Doe</h4>
-                              <p>8 items sold</p>
-                            </div>
-                          </div>
-                          <div class="tr-rate">
-                            <p><span>$299</span></p>
-                          </div>
-                        </div>
-                      </div>
-                      </div>
-                  </div>
-                </div>
-                  
-              </div>
-              <div class="row">
-                <div class="col-lg-4">
-                  <div class="card card-bg">
-                    <div class="card-body">
-                      <h5 class="card-title">Sales</h5>
-                      <div id="sparkline1"></div>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="这个站点是一个免费教程网站 里面包含了大量web领域的技术和知识全由 Lucson 录制并免费提供给大家学习">
+		<meta name="keywords"
+			content="计算机  软件 Java 浏览器 学习 html 进步 csdn docker 编程 模板  编码 代码 培训  交流群 讨论 社区 开源  论坛 美图 博客 路克森 Lucson 个人网站 个人博客  学习  编程  web前端  Java  python  编程培训">
+		<meta name="author" content="lucson">
+		<title>Lucson的小教室  </title>
+		<link href="static/css/0fb62e9b23124ce3894b7c73879b9bb8.css" rel="stylesheet">
+		<link href="static/css/258011e5d6904b6791ea9c17923a3c5d.css" rel="stylesheet">
+		<link href="static/css/bootstrap.min.css" rel="stylesheet">
+		<link href="static/css/all.min.css" rel="stylesheet">
+		<link href="static/css/perfect-scrollbar.css" rel="stylesheet">
+		<link href="static/css/pace.css" rel="stylesheet">
+		<link href="static/css/apexcharts.css" rel="stylesheet">
+		<link href="static/css/main.min.css" rel="stylesheet">
+		<link href="static/css/custom.css" rel="stylesheet">
+		<link rel="shortcut icon" href="static/images/ico.ico" type="image/x-icon" />
+		<!--[if lt IE 9]>
+<script src="static/js/html5shiv.min.js"></script>
+<script src="static/js/respond.min.js"></script>
+<![endif]-->
+	</head>
+	<body class="page-sidebar-collapsed">
+		<div class="page-container">
+			<div class="page-container">
+				<div class="page-sidebar">
+					<a class="logo" href="index.html">Lucson</a>
+					<ul class="list-unstyled accordion-menu">
+						<li>
+							<a href="#"><i data-feather="aperture"></i>讨论交流<i
+									class="fas fa-chevron-right dropdown-icon"></i></a>
+							<ul class="">
+								<li><a href="javascript:void(0);" title="QQ"><i class="far  fa-circle"></i>Q:
+										2857734156</a></li>
+								<li><a href="javascript:void(0);" title="Vx"><i class="far fa-circle"></i>V: lucsons</a>
+								</li>
+								 <h4 class="dropdown-header"> 编程交流群(新群) </h4>
+								<li><a href="javascript:void(0);" title="Q群(编程) : 1073289466 (新群)"><i
+											class="far fa-circle"></i>Q群: 1073289466 </a></li>
+								 <h4 class="dropdown-header"> 指弹交流群(新群) </h4>
+								<li><a href="javascript:void(0);" title="Q群(指弹) : 1134882769 (新群)"><i
+											class="far fa-circle"></i>Q群: 1134882769 </a></li>
+								 <h4 class="dropdown-header"> 健身,街健交流群(新群) </h4>
+								<li><a href="javascript:void(0);" title="Q群(街健,健身) : 1073289466 (新群)"><i
+											class="far fa-circle"></i>Q群: 1073289466</a></li>
+							</ul>
+						</li>
+						<li class="active-page">
+							<a href="#" class="active"><i data-feather="command"></i>Apps<i
+									class="fas fa-chevron-right dropdown-icon"></i></a>
+							<ul class="">
+								<li><a href="email.html"><i class="far fa-circle"></i>Email</a></li>
+								<li><a href="contact.html"><i class="far fa-circle"></i>Contact</a></li>
+								<li><a href="calendar.html"><i class="far fa-circle"></i>Calendar</a></li>
+								<li><a href="social.html" class="active"><i class="far fa-circle"></i>Social</a></li>
+								<li><a href="file-manager.html"><i class="far fa-circle"></i>File Manager</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><i data-feather="code"></i>Components<i
+									class="fas fa-chevron-right dropdown-icon"></i></a>
+							<ul class="">
+								<li><a href="alerts.html"><i class="far fa-circle"></i>Alerts</a></li>
+							</ul>
+						</li>
 
-                  </div>
-                </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="card card-bg">
-                    <div class="card-body">
-                      <h5 class="card-title">Visitors</h5>
-                      <div id="sparkline2"></div>
-                  </div>
-                </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="card card-bg">
-                    <div class="card-body">
-                      <h5 class="card-title">Projects</h5>
-                      <div id="sparkline3"></div>
-                  </div>
-                </div>
-                </div>
-              </div>
-              
-              </div>
-              <div class="page-footer">
-                
-                <a href="crypto.html" class="page-footer-item page-footer-item-right">Crypto<i data-feather="arrow-right" class="footer-right"></i></a>
-              </div>
-            </div>
-        </div>
+					</ul>
+					<a href="#" id="sidebar-collapsed-toggle"><i data-feather="arrow-right"></i></a>
+				</div>
 
-        <div class="activity-sidebar-overlay"></div>
-        <div class="activity-sidebar">
-          <a href="#" id="activity-sidebar-close"><i class="material-icons">close</i></a>
-          <div class="activity-header">
-            <h5>Activity Logs</h5>
-          </div>
-          <div class="activity-body">
-            <ul class="activity-list list-unstyled">
-              <li class="activity-item">
-                  <div class="activity-icon"><i class="material-icons">add</i></div>
-                  <div class="activity-text">Ann Green uploaded new item
-                      <span>This item has to be reviewed, moderators will check it soon.</span>
-                  </div>
-                  <div class="activity-helper">45min ago</div>
-              </li>
-              <li class="activity-item activity-info">
-                  <div class="activity-icon"><i class="material-icons">code</i></div>
-                  <div class="activity-text">John Doe made changes to create-invoice.js
-                      <span>57 lines of code added, 0 removals, 0 errors, 6 warnings</span>
-                  </div>
-                  <div class="activity-helper">3h ago</div>
-              </li>
-              <li class="activity-item activity-danger">
-                  <div class="activity-icon"><i class="material-icons">error_outline</i></div>
-                  <div class="activity-text">Can't retrieve data from server <span>Server is not responding,please contact provider</span></div><div class="activity-helper">6h ago</div></li><li class="activity-item"><div class="activity-icon"><i class="material-icons">done</i></div><div class="activity-text">Files Uploaded <span>2 new files uploaded</span><div class="mail-attachment-files"><div class="card"><img src="static/picture/card2.jpeg" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">image.jpg</h5><p class="card-text text-secondary">305 KB</p></div></div><div class="card"><img src="static/picture/card1.jpeg" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">image2.jpg</h5><p class="card-text text-secondary">400 KB</p></div></div></div></div><div class="activity-helper">8h ago</div></li></ul></div></div><div class="search-results"><div class="container"><div class="row"><div class="col-12"><div class="search-results-header"><h5>Search Results</h5><a href="#" id="closeSearch"><i class="material-icons">close</i></a></div></div></div><div class="row"><div class="col-md-4"><ul class="search-result-list user-search"><li><img src="static/picture/avatar2.jpeg" alt=""><p>John Doe<br>(Works at <span class="search-input-value">hj</span>)</p></li><li><img src="static/picture/avatar3.jpeg" alt=""><p>Anna doe<br>(Lives in <span class="search-input-value">hj</span>)</p></li><li><img src="static/picture/avatar4.jpeg" alt=""><p>People near:<br><span class="search-input-value">hj</span></p></li></ul></div><div class="col-md-4"><ul class="search-result-list social-search"><li><div class="social-search-icon facebook-icon-bg"><i class="fab fa-facebook-f"></i></div><div class="social-search-text"><p><span class="search-input-value">hj</span>on Facebook</p></div></li><li><div class="social-search-icon twitter-icon-bg"><i class="fab fa-twitter"></i></div><div class="social-search-text"><p><span class="search-input-value">hj</span>on Twitter</p></div></li><li><div class="social-search-icon google-icon-bg"><i class="fab fa-google"></i></div><div class="social-search-text"><p><span class="search-input-value">hj</span>on Google</p></div></li></ul></div><div class="col-md-4"><ul class="search-result-list article-search"><li><p>Lorem ipsum dolor sit amet,consectetur <span class="search-input-value">hj</span>adipiscing elit,sunt in culpa quifdaasd quis.</p><span class="search-article-date">06 Jul,2021</span></li><li><p>Duis non semper sapien. Morbi imperdiet velit in <span class="search-input-value">hj</span>bibendum lobortis. Integer arcu urna,elementum in pellentesque nec,finibus at nisi.</p><span class="search-article-date">19 Mar,2017</span></li></ul></div></div></div></div><!-- Javascripts --><script src="static/js/jquery-3.4.1.min.js"></script><script src="static/js/637b3e92eab44245b5ba6109ba908b93.js"></script><script src="static/js/bootstrap.min.js"></script><script src="static/js/9bf6b9af02dd4c9999597a8e72c1a3a3.js"></script><script src="static/js/perfect-scrollbar.min.js"></script><script src="static/js/pace.min.js"></script><script src="static/js/apexcharts.min.js"></script><script src="static/js/jquery.sparkline.min.js"></script><script src="static/js/main.min.js"></script><script src="static/js/dashboard.js"></script></body></html>
+				<!--  侧边栏结束 -->
+
+
+
+				<div class="page-content">
+					<div class="page-header">
+						<nav class="navbar navbar-expand-lg d-flex justify-content-between">
+							<div class="header-title flex-fill">
+								<a href="#" id="sidebar-toggle"><i data-feather="arrow-left"></i></a>
+								<h5 class="text-success bold">Lucson </h5>
+							</div>
+							<div class="header-search">
+								<input class="form-control" type="text" placeholder="输入课程名称按回车搜索" aria-label="Search">
+								<a href="#" class="close-search"><i data-feather="x"></i></a>
+							</div>
+							<div class="flex-fill" id="headerNav">
+								<ul class="navbar-nav">
+									<li class="nav-item d-md-block d-lg-none">
+										<a class="nav-link" href="#" id="toggle-search"><i
+												data-feather="search"></i></a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link activity-trigger" href="#" id="activity-sidebar-toggle"><i
+												data-feather="grid"></i></a>
+									</li>
+									<li class="nav-item dropdown">
+										<a class="nav-link notifications-dropdown" href="#" id="notificationsDropDown"
+											role="button" data-bs-toggle="dropdown" aria-expanded="false">3<div
+												class="spinner-grow text-danger" role="status">
+												<span class="visually-hidden">Loading...</span>
+											</div></a>
+										<div class="dropdown-menu dropdown-menu-end notif-drop-menu"
+											aria-labelledby="notificationsDropDown">
+											<h6 class="dropdown-header">Notifications</h6>
+											<a href="#">
+												<div class="header-notif">
+													<div class="notif-image">
+														<span class="notification-badge bg-info text-white">
+															<i class="fas fa-bullhorn"></i>
+														</span>
+													</div>
+													<div class="notif-text">
+														<p class="bold-notif-text">faucibus dolor in commodo lectus
+															mattis</p>
+														<small>19:00</small>
+													</div>
+												</div>
+											</a>
+											<a href="#">
+												<div class="header-notif">
+													<div class="notif-image">
+														<span class="notification-badge bg-primary text-white">
+															<i class="fas fa-bolt"></i>
+														</span>
+													</div>
+													<div class="notif-text">
+														<p class="bold-notif-text">faucibus dolor in commodo lectus
+															mattis</p>
+														<small>18:00</small>
+													</div>
+												</div>
+											</a>
+											<a href="#">
+												<div class="header-notif">
+													<div class="notif-image">
+														<span class="notification-badge bg-success text-white">
+															<i class="fas fa-at"></i>
+														</span>
+													</div>
+													<div class="notif-text">
+														<p>faucibus dolor in commodo lectus mattis</p>
+														<small>yesterday</small>
+													</div>
+												</div>
+											</a>
+											<a href="#">
+												<div class="header-notif">
+													<div class="notif-image">
+														<span class="notification-badge">
+															<img src="static/picture/avatar2.jpeg" alt="">
+														</span>
+													</div>
+													<div class="notif-text">
+														<p>faucibus dolor in commodo lectus mattis</p>
+														<small>yesterday</small>
+													</div>
+												</div>
+											</a>
+											<a href="#">
+												<div class="header-notif">
+													<div class="notif-image">
+														<span class="notification-badge">
+															<img src="static/picture/avatar5.jpeg" alt="">
+														</span>
+													</div>
+													<div class="notif-text">
+														<p>faucibus dolor in commodo lectus mattis</p>
+														<small>yesterday</small>
+													</div>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li class="nav-item dropdown">
+										<a class="nav-link profile-dropdown" href="#" id="profileDropDown" role="button"
+											data-bs-toggle="dropdown" aria-expanded="false"><img
+												src="static/picture/avatar1.jpeg" alt=""></a>
+										<div class="dropdown-menu dropdown-menu-end profile-drop-menu"
+											aria-labelledby="profileDropDown">
+											<a class="dropdown-item" href="#"><i data-feather="user"></i>Profile</a>
+											<a class="dropdown-item" href="#"><i data-feather="inbox"></i>Messages</a>
+											<a class="dropdown-item" href="#"><i data-feather="edit"></i>Activities<span
+													class="badge rounded-pill bg-success">12</span></a>
+											<a class="dropdown-item" href="#"><i
+													data-feather="check-circle"></i>Tasks</a>
+											<div class="dropdown-divider"></div>
+											<a class="dropdown-item" href="#"><i
+													data-feather="settings"></i>Settings</a>
+											<a class="dropdown-item" href="#"><i data-feather="unlock"></i>Lock</a>
+											<a class="dropdown-item" href="#"><i data-feather="log-out"></i>Logout</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</nav>
+					</div>
+					<div class="main-wrapper">
+
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="card">
+									<div class="card-body">
+
+
+
+										123
+
+
+
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="card stats-card">
+											<div class="card-body">
+												<div class="stats-info">
+													<h5 class="card-title">$30K<span
+															class="stats-change stats-change-danger">-8%</span></h5>
+													<p class="stats-text">Total revenue</p>
+												</div>
+												<div class="stats-icon change-danger">
+													<i class="material-icons">trending_down</i>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="card stats-card">
+											<div class="card-body">
+												<div class="stats-info">
+													<h5 class="card-title">$21K<span
+															class="stats-change stats-change-danger">-8%</span></h5>
+													<p class="stats-text">Total revenue</p>
+												</div>
+												<div class="stats-icon change-danger">
+													<i class="material-icons">trending_down</i>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="card stats-card">
+											<div class="card-body">
+												<div class="stats-info">
+													<h5 class="card-title">1681<span
+															class="stats-change stats-change-success">+16%</span></h5>
+													<p class="stats-text">Unique visitors</p>
+												</div>
+												<div class="stats-icon change-success">
+													<i class="material-icons">trending_up</i>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="card stats-card">
+											<div class="card-body">
+												<div class="stats-info">
+													<h5 class="card-title">4743<span
+															class="stats-change stats-change-success">+12%</span></h5>
+													<p class="stats-text">Total investments</p>
+												</div>
+												<div class="stats-icon change-success">
+													<i class="material-icons">trending_up</i>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row p-4">
+							
+							<!-- Begin -->
+
+							<!-- 900*500 -->
+							<div class="col-sm-6 col-md-4" >
+								<div class="card widget widget-info card-bg">
+									<img src="static/picture/1-1.jpg"  class="card-img-top" alt="Windows 基础实践">
+									<div class="card-body p-4">
+										<p class="d-flex"> <span class="badge  bg-gradient">基础 - 时长： 10:33:14</span></p>
+							
+									   <div class="mb-2"><small class="bg-dark text-light px-2 py-1 ">第一阶段(1) - 难度(6★满)：★★</small></div>
+									   		   <p class="d-flex justify-content-between mt-3"><span class="badge  bg-warning">0基础预计学习周期：4 - 7 (天/3h) </span> </p>
+										<h5 class="widget-info-title text-white">
+										<a class="text-light" href="https://www.bilibili.com/video/BV18E41127wx">
+											  Windows 与 编程基础 
+											  </a>
+										</h5>
+										<p class="widget-info-text">这是针对零基础的同学而录制的入门编程教程 专门针对学习编程方向的同学的 希望在学习完本系列课程之后 能够对计算机有所了解 并能够熟悉windows系统的基本使用 领略编程的基本思维</p>
+										
+										<p> 点击 <a target="_blank" href="static/picture/qrcode.jpg">阿祥说</a> 扫码关注公众号 回复 <span class="text-warning">windows课件</span> 即可获取文档</p>
+										
+											<div class="mb-3">
+												<a  href="" class="col-sm-6" title="点击跳转到B站学习" target="_blank" class="btn btn-link widget-info-action">点击阅读课程文档</a>
+											</div>
+											<div>
+												<a href="https://www.bilibili.com/video/BV18E41127wx" title="点击跳转到B站学习" target="_blank" class="btn btn-info widget-info-action">开始去学习</a>
+											</div>
+									</div>
+								</div>
+							</div>
+							
+							
+							<div class="col-sm-6 col-md-4" >
+								<div class="card widget widget-info card-bg">
+									<img src="static/picture/1-2.jpg" class="card-img-top" alt="WPS OFFICE">
+									<div class="card-body p-4">
+										<p class="d-flex"> <span class="badge  bg-gradient">基础 - 时长： 08:03:14</span></p>
+							
+									   <div class="mb-2"><small class="bg-dark text-light px-2 py-1 ">第一阶段(2) - 难度(6★满)：★</small></div>
+									   		   <p class="d-flex justify-content-between mt-3"><span class="badge  bg-warning">0基础预计学习周期：2 - 4 (天/3h) </span> </p>
+										<h5 class="widget-info-title text-white">
+										<a class="text-light" href="https://www.bilibili.com/video/BV18E41127wx">
+											  WPS OFFICE 快速入门
+											  </a>
+										</h5>
+										<p class="widget-info-text">
+										WPS OFFICE 是非常流行的办公软件 现在从事互联网职业的几乎每个人都会 所以是个必学课程 不过我们没必要精通WPS OFFICE 能够知道如何使用即可 本套课程能带领你们快速入门
+										</p>
+										
+										<p> WPS OFFICE 课程 由于较为简单没有制作获取课件的地址</p>
+										
+											<div class="mb-3">
+												<a  href="" class="col-sm-6" title="点击跳转到B站学习" target="_blank" class="btn btn-link widget-info-action">点击阅读课程文档</a>
+											</div>
+											<div>
+												<a href="https://www.bilibili.com/video/BV1rE411a7NE" title="点击跳转到B站学习" target="_blank" class="btn btn-info widget-info-action">开始去学习</a>
+											</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-sm-6 col-md-4" >
+								<div class="card widget widget-info card-bg">
+									<img src="static/picture/1-3.jpg" class="card-img-top" alt="html4">
+									<div class="card-body p-4">
+										<p class="d-flex"> <span class="badge  bg-gradient">前端 - 时长： 12:04:27</span></p>
+							
+									   <div class="mb-2"><small class="bg-dark text-light px-2 py-1 ">第一阶段(3) - 难度(6★满)：★★</small></div>
+									   		   <p class="d-flex justify-content-between mt-3"><span class="badge  bg-warning">0基础预计学习周期：3 - 6 (天/3h) </span> </p>
+										<h5 class="widget-info-title text-white">
+										<a class="text-light" href="https://www.bilibili.com/video/BV18E41127wx">
+											 HTML4教程最全讲解
+											  </a>
+										</h5>
+										<p class="widget-info-text">
+										HTML4 是超文本标记语言 初入前端的第一门课 用来制作网页  也是最重要的课程之一 虽然难度不大可用处很大 主要掌控网站界面的骨架  唯一的难点在于需要记忆大量标签
+										</p>
+										
+										<p> 点击 <a target="_blank" href="static/picture/qrcode.jpg">阿祥说</a> 扫码关注公众号 回复 <span class="text-warning">html4课件</span> 即可获取文档</p>
+										
+											<div class="mb-3">
+												<a  href="" class="col-sm-6" title="点击跳转到B站学习" target="_blank" class="btn btn-link widget-info-action">点击阅读课程文档</a>
+											</div>
+											<div>
+												<a href="https://www.bilibili.com/video/BV14v411B754" title="点击跳转到B站学习" target="_blank" class="btn btn-info widget-info-action">开始去学习</a>
+											</div>
+									</div>
+								</div>
+							</div>
+							
+
+							<!-- End -->
+						</div>
+
+
+					</div>
+					<div class="page-footer p-4">
+							<a href="https://space.bilibili.com/366914054" target="_blank" title="路克森的B站"
+								 >Lucson &copy; 版权所有 
+								 
+								<br> 站内所有在 BliBli
+								的课程不得搬运到其他平台</a>
+					</div>
+				</div>
+			</div>
+
+
+		
+						<!-- Javascripts -->
+						<script src="static/js/jquery-3.4.1.min.js"></script>
+						<script src="static/js/637b3e92eab44245b5ba6109ba908b93.js"></script>
+						<script src="static/js/bootstrap.min.js"></script>
+						<script src="static/js/9bf6b9af02dd4c9999597a8e72c1a3a3.js"></script>
+						<script src="static/js/perfect-scrollbar.min.js"></script>
+						<!-- <script src="static/js/pace.min.js"></script> -->
+						<script src="static/js/main.min.js"></script>
+	</body>
+</html>
