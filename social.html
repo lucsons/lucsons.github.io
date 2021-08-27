@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 		<meta name="description" content="这个站点是一个免费教程网站 里面包含了大量web领域的技术和知识全由 Lucson 录制并免费提供给大家学习">
 		<meta name="keywords"
 			content="计算机  软件 Java 浏览器 学习 html 进步 csdn docker 编程 模板  编码 代码 培训  交流群 讨论 社区 开源  论坛 美图 博客 路克森 Lucson 个人网站 个人博客  学习  编程  web前端  Java  python  编程培训">
@@ -17,13 +18,21 @@
 		<link href="static/css/pace.css" rel="stylesheet"><!-- Theme Styles -->
 		<link href="static/css/main.min.css" rel="stylesheet">
 		<link href="static/css/custom.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="static/css/animate.min.css"/>
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING:Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
         <script src="static/js/html5shiv.min.js"></script>
         <script src="static/js/respond.min.js"></script>
         <![endif]-->
+		<style>
+			 .profile-cover{
+				 background: url(http://p17.qhimg.com/bdm/0_0_100/t010196b27b8bcc0e60.jpg)  center no-repeat;
+				 background-size: cover;
+			 }
+		</style>
 	</head>
+
 	<body class="page-sidebar-collapsed">
 
 
@@ -206,7 +215,7 @@
 							<div class="profile-cover"></div>
 							<div class="profile-header">
 								<div class="profile-img">
-									<img src="static/images/me.png" alt="">
+									<img src="static/images/me.png" class="me" alt="路克森">
 								</div>
 								<div class="profile-name">
 									<h3>Lucson - 路克森</h3>
@@ -335,153 +344,29 @@
 						</div>
 					</div>
 				</div>
-				<div class="page-footer">
-					<div class="page-footer">
+				<div class="page-footer p-4">
 						<a href="https://space.bilibili.com/366914054" target="_blank" title="路克森的B站"
-							class="page-footer-item page-footer-item-right">Lucson &copy; 版权所有 站内所有在 BliBli
+							 >Lucson &copy; 版权所有 
+							 
+							<br> 站内所有在 BliBli
 							的课程不得搬运到其他平台</a>
-					</div>
 				</div>
 			</div>
 
 		</div>
-
-		<div class="activity-sidebar-overlay"></div>
-		<div class="activity-sidebar">
-			<a href="#" id="activity-sidebar-close"><i class="material-icons">close</i></a>
-			<div class="activity-header">
-				<h5>Activity Logs</h5>
-			</div>
-			<div class="activity-body">
-				<ul class="activity-list list-unstyled">
-					<li class="activity-item">
-						<div class="activity-icon"><i class="material-icons">add</i></div>
-						<div class="activity-text">Ann Green uploaded new item
-							<span>This item has to be reviewed, moderators will check it soon.</span>
-						</div>
-						<div class="activity-helper">45min ago</div>
-					</li>
-					<li class="activity-item activity-info">
-						<div class="activity-icon"><i class="material-icons">code</i></div>
-						<div class="activity-text">John Doe made changes to create-invoice.js
-							<span>57 lines of code added, 0 removals, 0 errors, 6 warnings</span>
-						</div>
-						<div class="activity-helper">3h ago</div>
-					</li>
-					<li class="activity-item activity-danger">
-						<div class="activity-icon"><i class="material-icons">error_outline</i></div>
-						<div class="activity-text">
-							Can't retrieve data from server
-							<span>Server is not responding,please contact provider</span>
-						</div>
-						<div class="activity-helper">
-							6h ago
-						</div>
-					<li class="activity-item">
-						<div class="activity-icon">
-							<i class="material-icons">done</i>
-						</div>
-						<div class="activity-text">
-							Files Uploaded
-							<span>2 new files uploaded</span>
-							<div class="mail-attachment-files">
-								<div class="card">
-									<img src="static/picture/card2.jpeg" class="card-img-top" alt="..." />
-									<div class="card-body">
-										<h5 class="card-title">image.jpg</h5>
-										<p class="card-text text-secondary">305 KB</p>
-									</div>
-								</div>
-								<div class="card">
-									<img src="static/picture/card1.jpeg" class="card-img-top" alt="..." />
-									<div class="card-body">
-										<h5 class="card-title">image2.jpg</h5>
-										<p class="card-text text-secondary">400 KB</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="activity-helper">
-							8h ago
-						</div>
-					</li>
-					<div class="search-results">
-						<div class="container">
-							<div class="row">
-								<div class="col-12">
-									<div class="search-results-header">
-										<h5>Search Results</h5>
-										<a href="#" id="closeSearch"><i class="material-icons">close</i></a>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-4">
-									<ul class="search-result-list user-search">
-										<li><img src="static/picture/avatar2.jpeg" alt="" />
-											<p>John Doe<br />(Works at <span class="search-input-value">hj</span>)</p>
-										</li>
-										<li><img src="static/picture/avatar3.jpeg" alt="" />
-											<p>Anna doe<br />(Lives in <span class="search-input-value">hj</span>)</p>
-										</li>
-										<li><img src="static/picture/avatar4.jpeg" alt="" />
-											<p>People near:<br /><span class="search-input-value">hj</span></p>
-										</li>
-									</ul>
-								</div>
-								<div class="col-md-4">
-									<ul class="search-result-list social-search">
-										<li>
-											<div class="social-search-icon facebook-icon-bg">
-												<i class="fab fa-facebook-f"></i>
-											</div>
-											<div class="social-search-text">
-												<p><span class="search-input-value">hj</span>on Facebook</p>
-											</div>
-										</li>
-										<li>
-											<div class="social-search-icon twitter-icon-bg">
-												<i class="fab fa-twitter"></i>
-											</div>
-											<div class="social-search-text">
-												<p><span class="search-input-value">hj</span>on Twitter</p>
-											</div>
-										</li>
-										<li>
-											<div class="social-search-icon google-icon-bg">
-												<i class="fab fa-google"></i>
-											</div>
-											<div class="social-search-text">
-												<p><span class="search-input-value">hj</span>on Google</p>
-											</div>
-										</li>
-									</ul>
-								</div>
-								<div class="col-md-4">
-									<ul class="search-result-list article-search">
-										<li>
-											<p>Lorem ipsum dolor sit amet,consectetur <span
-													class="search-input-value">hj</span>adipiscing elit,sunt in culpa
-												quifdaasd quis.</p><span class="search-article-date">06 Jul,2021</span>
-										</li>
-										<li>
-											<p>Duis non semper sapien. Morbi imperdiet velit in <span
-													class="search-input-value">hj</span>bibendum lobortis. Integer arcu
-												urna,elementum in pellentesque nec,finibus at nisi.</p><span
-												class="search-article-date">19 Mar,2017</span>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Javascripts -->
-					<script src="static/js/jquery-3.4.1.min.js"></script>
-					<script src="static/js/637b3e92eab44245b5ba6109ba908b93.js"></script>
-					<script src="static/js/bootstrap.min.js"></script>
-					<script src="static/js/9bf6b9af02dd4c9999597a8e72c1a3a3.js"></script>
-					<script src="static/js/perfect-scrollbar.min.js"></script>
-					<!-- <script src="static/js/pace.min.js"></script> -->
-					<script src="static/js/main.min.js"></script>
+		<!-- Javascripts -->
+		<script src="static/js/jquery-3.4.1.min.js"></script>
+		<script src="static/js/637b3e92eab44245b5ba6109ba908b93.js"></script>
+		<script src="static/js/bootstrap.min.js"></script>
+		<script src="static/js/9bf6b9af02dd4c9999597a8e72c1a3a3.js"></script>
+		<script src="static/js/perfect-scrollbar.min.js"></script>
+		<script src="static/js/pace.min.js"></script>
+		<script src="static/js/main.min.js"></script>
+		<script src="https://cdn.bootcdn.net/ajax/libs/wow/1.1.2/wow.js"></script>
+		<script>	
+		
+		  new WOW().init();
+		
+		</script>
 	</body>
 </html>

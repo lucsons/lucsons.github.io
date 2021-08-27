@@ -3,12 +3,12 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 		<meta name="description" content="这个站点是一个免费教程网站 里面包含了大量web领域的技术和知识全由 Lucson 录制并免费提供给大家学习">
 		<meta name="keywords"
 			content="计算机  软件 Java 浏览器 学习 html 进步 csdn docker 编程 模板  编码 代码 培训  交流群 讨论 社区 开源  论坛 美图 博客 路克森 Lucson 个人网站 个人博客  学习  编程  web前端  Java  python  编程培训">
 		<meta name="author" content="lucson">
-		<title>Lucson的小教室  </title>
+		<title>Lucson的小教室 </title>
 		<link href="static/css/0fb62e9b23124ce3894b7c73879b9bb8.css" rel="stylesheet">
 		<link href="static/css/258011e5d6904b6791ea9c17923a3c5d.css" rel="stylesheet">
 		<link href="static/css/bootstrap.min.css" rel="stylesheet">
@@ -18,55 +18,220 @@
 		<link href="static/css/apexcharts.css" rel="stylesheet">
 		<link href="static/css/main.min.css" rel="stylesheet">
 		<link href="static/css/custom.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="static/css/animate.min.css" />
 		<link rel="shortcut icon" href="static/images/ico.ico" type="image/x-icon" />
 		<!--[if lt IE 9]>
 <script src="static/js/html5shiv.min.js"></script>
 <script src="static/js/respond.min.js"></script>
 <![endif]-->
+		<style>
+			.card-title {
+				margin-bottom: 5px;
+			}
+
+			.route::-webkit-scrollbar {
+				width: 5px;
+			}
+
+			.route::-webkit-scrollbar-thumb {
+				background-color: seagreen;
+			}
+
+			.route::-webkit-scrollbar-track {
+				background-color: #ccc;
+			}
+
+			blockquote {
+				border-left: 5px solid seagreen;
+				font-size: 18px;
+			}
+
+
+
+			/*  分界  */
+
+
+			.page-header .navbar {
+				padding: 14px 0;
+			}
+
+			.icon {
+				position: fixed;
+				left: calc(100vw - 50% - (48px / 2));
+				z-index: 9999;
+				top: 30%;
+				opacity: 0;
+				animation: loading 1s infinite ease-in-out;
+			}
+
+			@keyframes loading {
+				to {
+					transform: rotate(1turn);
+				}
+			}
+
+			.alert {
+				position: fixed;
+				left: 50%;
+				opacity: 0;
+				transform: translate(-50%);
+				z-index: 9999;
+				top: 30%;
+			}
+		</style>
 	</head>
 	<body class="page-sidebar-collapsed">
+
+
+		<div class="alert alert-primary w-50" role="alert">
+			暂无此课程
+		</div>
+
+
+
+		<svg t="1630041331902" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+			p-id="5146" width="32" height="32">
+			<path
+				d="M512 1024c-69.1 0-136.2-13.5-199.3-40.2C251.7 958 197 921 150 874c-47-47-84-101.7-109.8-162.7C13.5 648.2 0 581.1 0 512c0-19.9 16.1-36 36-36s36 16.1 36 36c0 59.4 11.6 117 34.6 171.3 22.2 52.4 53.9 99.5 94.3 139.9 40.4 40.4 87.5 72.2 139.9 94.3C395 940.4 452.6 952 512 952c59.4 0 117-11.6 171.3-34.6 52.4-22.2 99.5-53.9 139.9-94.3 40.4-40.4 72.2-87.5 94.3-139.9C940.4 629 952 571.4 952 512c0-59.4-11.6-117-34.6-171.3a440.45 440.45 0 0 0-94.3-139.9 437.71 437.71 0 0 0-139.9-94.3C629 83.6 571.4 72 512 72c-19.9 0-36-16.1-36-36s16.1-36 36-36c69.1 0 136.2 13.5 199.3 40.2C772.3 66 827 103 874 150c47 47 83.9 101.8 109.7 162.7 26.7 63.1 40.2 130.2 40.2 199.3s-13.5 136.2-40.2 199.3C958 772.3 921 827 874 874c-47 47-101.8 83.9-162.7 109.7-63.1 26.8-130.2 40.3-199.3 40.3z"
+				p-id="5147" fill="#51b918" class="cursorsHover"></path>
+		</svg>
+
+
+		<!-- Modal -->
+		<div class="modal fade " id="modal" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">关于本站</h5>
+					</div>
+					<div class="modal-body">
+						<h5>本站点作用</h5>
+						本站是前台的小站点 主要用来展示课程信息 汇总课程 提供引导 获取资料等作用 课程会慢慢更新....
+
+						开发这个小站点主要目的就是为了和大家分享一些日常学习中的知识 进行交流 通过这种方式和大家进行沟通交流学习 本人录制的视频都是会在b站中投稿的~ 并且每一个视频课程都有对应的资料和配套代码
+
+						希望通过这种方式也能够来提高自己 其中也会发现自己的不足和缺乏的地方 会改过自新 迎接美好的未来~
+
+						<h5 class="mt-4">授课方式</h5>
+						整体的课程规划 会根据时间慢慢更新 还请观看我课程童鞋多多担待 其中我可能就是会将一些后面学到的内容但是和当前所学的有所联系的东西提前加到前面 这样的话可能你现在接触第一次不懂没关系
+						在之后学习了对应的课程再回来看 相信你的收获会是不一样的
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">知道了</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		<!-- Modal -->
+		<div class="modal fade " id="directory" tabindex="-1">
+			<div class="modal-dialog  modal-dialog-scrollable">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">关于本站</h5>
+					</div>
+					<div class="modal-body">
+						<h5>Windows 课程目录</h5>
+						<ol id="list">
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">知道了</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
 		<div class="page-container">
 			<div class="page-container">
 				<div class="page-sidebar">
-					<a class="logo" href="index.html">Lucson</a>
+					<a class="logo" href="social.html">Lucson</a>
 					<ul class="list-unstyled accordion-menu">
+
+						<li>
+							<a href="#"><i data-feather="home"></i>资助我<i
+									class="fas fa-chevron-right dropdown-icon"></i></a>
+							<ul class="">
+								<li>
+									<p style="font-size:10px;">如觉不宜,可以请我喝瓶饮料(感谢)</p>
+									<img src="./static/picture/we.png" width="190" height="240" alt="">
+								</li>
+								<li class="dropdown-divider"></li>
+								<li>
+									<p style="font-size:10px;">激励录出更多优质免费教程(感谢)</p>
+									<img src="./static/picture/zfb.jpg" width="190" height="240" alt="">
+								</li>
+							</ul>
+						</li>
 						<li>
 							<a href="#"><i data-feather="aperture"></i>讨论交流<i
 									class="fas fa-chevron-right dropdown-icon"></i></a>
-							<ul class="">
+							<ul>
 								<li><a href="javascript:void(0);" title="QQ"><i class="far  fa-circle"></i>Q:
 										2857734156</a></li>
 								<li><a href="javascript:void(0);" title="Vx"><i class="far fa-circle"></i>V: lucsons</a>
 								</li>
-								 <h4 class="dropdown-header"> 编程交流群(新群) </h4>
-								<li><a href="javascript:void(0);" title="Q群(编程) : 1073289466 (新群)"><i
+								<h4 class="dropdown-header text-warning float-end"> 编程交流群(暂未开放) </h4>
+								<li class="disabled"><a href="javascript:void(0);" title="Q群(编程) : 1073289466 (新群)"><i
 											class="far fa-circle"></i>Q群: 1073289466 </a></li>
-								 <h4 class="dropdown-header"> 指弹交流群(新群) </h4>
+								<h4 class="dropdown-header text-warning float-end"> 指弹交流群(暂未开放) </h4>
 								<li><a href="javascript:void(0);" title="Q群(指弹) : 1134882769 (新群)"><i
 											class="far fa-circle"></i>Q群: 1134882769 </a></li>
-								 <h4 class="dropdown-header"> 健身,街健交流群(新群) </h4>
+								<h4 class="dropdown-header text-warning float-end"> 健身,街健交流群(暂未开放) </h4>
 								<li><a href="javascript:void(0);" title="Q群(街健,健身) : 1073289466 (新群)"><i
 											class="far fa-circle"></i>Q群: 1073289466</a></li>
 							</ul>
 						</li>
-						<li class="active-page">
-							<a href="#" class="active"><i data-feather="command"></i>Apps<i
+						<li>
+							<a href="#"><i data-feather="command"></i>课程列表<i
 									class="fas fa-chevron-right dropdown-icon"></i></a>
 							<ul class="">
-								<li><a href="email.html"><i class="far fa-circle"></i>Email</a></li>
-								<li><a href="contact.html"><i class="far fa-circle"></i>Contact</a></li>
-								<li><a href="calendar.html"><i class="far fa-circle"></i>Calendar</a></li>
-								<li><a href="social.html" class="active"><i class="far fa-circle"></i>Social</a></li>
-								<li><a href="file-manager.html"><i class="far fa-circle"></i>File Manager</a></li>
+								<li><a href="contact.html#al" target="_blank"><i class="far fa-circle"></i> 案例</a></li>
+								<li><a href="contact.html#gj" target="_blank"><i class="far fa-circle"></i> 工具</a></li>
+
+								<li><a href="https://space.bilibili.com/366914054/channel/detail?cid=121222"
+										target="_blank"><i class="far fa-circle"></i> 系列课</a></li>
+
 							</ul>
 						</li>
 						<li>
-							<a href="#"><i data-feather="code"></i>Components<i
+							<a href="#"><i data-feather="code"></i>拓展学习<i
 									class="fas fa-chevron-right dropdown-icon"></i></a>
 							<ul class="">
-								<li><a href="alerts.html"><i class="far fa-circle"></i>Alerts</a></li>
+								<li><a href="https://space.bilibili.com/366914054/channel/detail?cid=166654"
+										target="_blank"><i class="far fa-circle"></i> 面试题</a></li>
+								<li><a href="https://space.bilibili.com/366914054/channel/detail?cid=193178"
+										target="_blank"><i class="far fa-circle"></i> 插件</a></li>
 							</ul>
 						</li>
+
+						<li>
+							<a title="关于本站" href="javascript:void(0)" data-toggle="modal" data-target="#modal"><i
+									data-feather="send"></i>关于本站</a>
+						</li>
+
+
+
+
+						<li>
+							<a href="#"><i data-feather="users"></i>友情链接<i
+									class="fas fa-chevron-right dropdown-icon"></i></a>
+							<ul class="">
+								<li><a href="" target="_blank"><i class="far fa-circle"></i> 暂无</a></li>
+
+							</ul>
+						</li>
+
+
+
+
 
 					</ul>
 					<a href="#" id="sidebar-collapsed-toggle"><i data-feather="arrow-right"></i></a>
@@ -77,322 +242,425 @@
 
 
 				<div class="page-content">
+
 					<div class="page-header">
-						<nav class="navbar navbar-expand-lg d-flex justify-content-between">
-							<div class="header-title flex-fill">
-								<a href="#" id="sidebar-toggle"><i data-feather="arrow-left"></i></a>
-								<h5 class="text-success bold">Lucson </h5>
+						<nav class="navbar navbar-expand-lg d-flex justify-content-evenly">
+							<a href="#" id="sidebar-toggle"><i data-feather="arrow-left"></i></a>
+							<div class="header-title">
+								<h5 class="text-success bold"><a href="social.html">Lucson</a> </h5>
 							</div>
-							<div class="header-search">
-								<input class="form-control" type="text" placeholder="输入课程名称按回车搜索" aria-label="Search">
-								<a href="#" class="close-search"><i data-feather="x"></i></a>
+							<div class="mx-4  d-none d-sm-block my-2 my-lg-0">
+								<input class="form-control mr-sm-2 search-cont" type="search" placeholder="搜索课程"
+									aria-label="Search">
 							</div>
-							<div class="flex-fill" id="headerNav">
+							<div class="" id="headerNav">
+
 								<ul class="navbar-nav">
-									<li class="nav-item d-md-block d-lg-none">
-										<a class="nav-link" href="#" id="toggle-search"><i
-												data-feather="search"></i></a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link activity-trigger" href="#" id="activity-sidebar-toggle"><i
-												data-feather="grid"></i></a>
-									</li>
-									<li class="nav-item dropdown">
-										<a class="nav-link notifications-dropdown" href="#" id="notificationsDropDown"
-											role="button" data-bs-toggle="dropdown" aria-expanded="false">3<div
-												class="spinner-grow text-danger" role="status">
-												<span class="visually-hidden">Loading...</span>
-											</div></a>
-										<div class="dropdown-menu dropdown-menu-end notif-drop-menu"
-											aria-labelledby="notificationsDropDown">
-											<h6 class="dropdown-header">Notifications</h6>
-											<a href="#">
-												<div class="header-notif">
-													<div class="notif-image">
-														<span class="notification-badge bg-info text-white">
-															<i class="fas fa-bullhorn"></i>
-														</span>
-													</div>
-													<div class="notif-text">
-														<p class="bold-notif-text">faucibus dolor in commodo lectus
-															mattis</p>
-														<small>19:00</small>
-													</div>
-												</div>
-											</a>
-											<a href="#">
-												<div class="header-notif">
-													<div class="notif-image">
-														<span class="notification-badge bg-primary text-white">
-															<i class="fas fa-bolt"></i>
-														</span>
-													</div>
-													<div class="notif-text">
-														<p class="bold-notif-text">faucibus dolor in commodo lectus
-															mattis</p>
-														<small>18:00</small>
-													</div>
-												</div>
-											</a>
-											<a href="#">
-												<div class="header-notif">
-													<div class="notif-image">
-														<span class="notification-badge bg-success text-white">
-															<i class="fas fa-at"></i>
-														</span>
-													</div>
-													<div class="notif-text">
-														<p>faucibus dolor in commodo lectus mattis</p>
-														<small>yesterday</small>
-													</div>
-												</div>
-											</a>
-											<a href="#">
-												<div class="header-notif">
-													<div class="notif-image">
-														<span class="notification-badge">
-															<img src="static/picture/avatar2.jpeg" alt="">
-														</span>
-													</div>
-													<div class="notif-text">
-														<p>faucibus dolor in commodo lectus mattis</p>
-														<small>yesterday</small>
-													</div>
-												</div>
-											</a>
-											<a href="#">
-												<div class="header-notif">
-													<div class="notif-image">
-														<span class="notification-badge">
-															<img src="static/picture/avatar5.jpeg" alt="">
-														</span>
-													</div>
-													<div class="notif-text">
-														<p>faucibus dolor in commodo lectus mattis</p>
-														<small>yesterday</small>
-													</div>
-												</div>
-											</a>
-										</div>
-									</li>
 									<li class="nav-item dropdown">
 										<a class="nav-link profile-dropdown" href="#" id="profileDropDown" role="button"
-											data-bs-toggle="dropdown" aria-expanded="false"><img
-												src="static/picture/avatar1.jpeg" alt=""></a>
+											data-bs-toggle="dropdown" aria-expanded="false">
+											<img src="http://q4.qlogo.cn/headimg_dl?dst_uin=2857734156&spec=100"
+												alt=""></a>
 										<div class="dropdown-menu dropdown-menu-end profile-drop-menu"
 											aria-labelledby="profileDropDown">
-											<a class="dropdown-item" href="#"><i data-feather="user"></i>Profile</a>
-											<a class="dropdown-item" href="#"><i data-feather="inbox"></i>Messages</a>
-											<a class="dropdown-item" href="#"><i data-feather="edit"></i>Activities<span
-													class="badge rounded-pill bg-success">12</span></a>
-											<a class="dropdown-item" href="#"><i
-													data-feather="check-circle"></i>Tasks</a>
+											<a target="_blank" class="dropdown-item"
+												href="https://space.bilibili.com/366914054">
+												<i data-feather="send"></i>
+												bilibili</a>
+											<a target="_blank" class="dropdown-item"
+												href="https://github.com/lucsons"><i
+													data-feather="github"></i>Github</a>
+
+											<a target="_blank" class="dropdown-item" href="https://gitee.com/lucson"><i
+													aria-label="icon: codepen-circle"
+													class="anticon anticon-codepen-circle"><svg viewBox="64 64 896 896"
+														focusable="false" class="" data-icon="codepen-circle"
+														width="1em" height="1em" fill="currentColor" aria-hidden="true">
+														<path
+															d="M488.1 414.7V303.4L300.9 428l83.6 55.8zm254.1 137.7v-79.8l-59.8 39.9zM512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm278 533c0 1.1-.1 2.1-.2 3.1 0 .4-.1.7-.2 1a14.16 14.16 0 0 1-.8 3.2c-.2.6-.4 1.2-.6 1.7-.2.4-.4.8-.5 1.2-.3.5-.5 1.1-.8 1.6-.2.4-.4.7-.7 1.1-.3.5-.7 1-1 1.5-.3.4-.5.7-.8 1-.4.4-.8.9-1.2 1.3-.3.3-.6.6-1 .9-.4.4-.9.8-1.4 1.1-.4.3-.7.6-1.1.8-.1.1-.3.2-.4.3L525.2 786c-4 2.7-8.6 4-13.2 4-4.7 0-9.3-1.4-13.3-4L244.6 616.9c-.1-.1-.3-.2-.4-.3l-1.1-.8c-.5-.4-.9-.7-1.3-1.1-.3-.3-.6-.6-1-.9-.4-.4-.8-.8-1.2-1.3a7 7 0 0 1-.8-1c-.4-.5-.7-1-1-1.5-.2-.4-.5-.7-.7-1.1-.3-.5-.6-1.1-.8-1.6-.2-.4-.4-.8-.5-1.2-.2-.6-.4-1.2-.6-1.7-.1-.4-.3-.8-.4-1.2-.2-.7-.3-1.3-.4-2-.1-.3-.1-.7-.2-1-.1-1-.2-2.1-.2-3.1V427.9c0-1 .1-2.1.2-3.1.1-.3.1-.7.2-1a14.16 14.16 0 0 1 .8-3.2c.2-.6.4-1.2.6-1.7.2-.4.4-.8.5-1.2.2-.5.5-1.1.8-1.6.2-.4.4-.7.7-1.1.6-.9 1.2-1.7 1.8-2.5.4-.4.8-.9 1.2-1.3.3-.3.6-.6 1-.9.4-.4.9-.8 1.3-1.1.4-.3.7-.6 1.1-.8.1-.1.3-.2.4-.3L498.7 239c8-5.3 18.5-5.3 26.5 0l254.1 169.1c.1.1.3.2.4.3l1.1.8 1.4 1.1c.3.3.6.6 1 .9.4.4.8.8 1.2 1.3.7.8 1.3 1.6 1.8 2.5.2.4.5.7.7 1.1.3.5.6 1 .8 1.6.2.4.4.8.5 1.2.2.6.4 1.2.6 1.7.1.4.3.8.4 1.2.2.7.3 1.3.4 2 .1.3.1.7.2 1 .1 1 .2 2.1.2 3.1V597zm-254.1 13.3v111.3L723.1 597l-83.6-55.8zM281.8 472.6v79.8l59.8-39.9zM512 456.1l-84.5 56.4 84.5 56.4 84.5-56.4zM723.1 428L535.9 303.4v111.3l103.6 69.1zM384.5 541.2L300.9 597l187.2 124.6V610.3l-103.6-69.1z">
+														</path>
+													</svg></i>Gitee</a>
+											<a target="_blank" class="dropdown-item"
+												href="https://blog.csdn.net/qq_39057639"><i
+													aria-label="icon: copyright-circle"
+													class="anticon anticon-copyright-circle"><svg
+														viewBox="64 64 896 896" focusable="false" class=""
+														data-icon="copyright-circle" width="1em" height="1em"
+														fill="currentColor" aria-hidden="true">
+														<path
+															d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm5.4 670c-110 0-173.4-73.2-173.4-194.9v-52.3C344 364.2 407.4 290 517.3 290c94.3 0 162.7 60.7 162.7 147.4 0 2.6-2.1 4.7-4.7 4.7h-56.7c-4.2 0-7.6-3.2-8-7.4-4-49.5-40-83.4-93-83.4-65.3 0-102.1 48.5-102.1 135.5v52.6c0 85.7 36.9 133.6 102.1 133.6 52.8 0 88.7-31.7 93-77.8.4-4.1 3.8-7.3 8-7.3h56.8c2.6 0 4.7 2.1 4.7 4.7 0 82.6-68.7 141.4-162.7 141.4z">
+														</path>
+													</svg></i>csdn</a>
+											<a target="_blank" class="dropdown-item" rel="noopener noreferrer"
+												href="http://v.t.sina.com.cn/share/share.php?searchPic=false&amp;title=Hello,你好 我是Lucson 这是我的个人博客 内部有需要丰富的web教程 通过我的个人主页就可以找到对应课程并学习啦 ~&amp;url=http://lucsons.github.io"><i
+													aria-label="icon: weibo-circle"
+													class="anticon anticon-weibo-circle"><svg viewBox="64 64 896 896"
+														focusable="false" class="" data-icon="weibo-circle" width="1em"
+														height="1em" fill="currentColor" aria-hidden="true">
+														<path
+															d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm-44.4 672C353.1 736 236 680.4 236 588.9c0-47.8 30.2-103.1 82.3-155.3 69.5-69.6 150.6-101.4 181.1-70.8 13.5 13.5 14.8 36.8 6.1 64.6-4.5 14 13.1 6.3 13.1 6.3 56.2-23.6 105.2-25 123.1.7 9.6 13.7 8.6 32.8-.2 55.1-4.1 10.2 1.3 11.8 9 14.1 31.7 9.8 66.9 33.6 66.9 75.5.2 69.5-99.7 156.9-249.8 156.9zm207.3-290.8a34.9 34.9 0 0 0-7.2-34.1 34.68 34.68 0 0 0-33.1-10.7 18.24 18.24 0 0 1-7.6-35.7c24.1-5.1 50.1 2.3 67.7 21.9 17.7 19.6 22.4 46.3 14.9 69.8a18.13 18.13 0 0 1-22.9 11.7 18.18 18.18 0 0 1-11.8-22.9zm106 34.3s0 .1 0 0a21.1 21.1 0 0 1-26.6 13.7 21.19 21.19 0 0 1-13.6-26.7c11-34.2 4-73.2-21.7-101.8a104.04 104.04 0 0 0-98.9-32.1 21.14 21.14 0 0 1-25.1-16.3 21.07 21.07 0 0 1 16.2-25.1c49.4-10.5 102.8 4.8 139.1 45.1 36.3 40.2 46.1 95.1 30.6 143.2zm-334.5 6.1c-91.4 9-160.7 65.1-154.7 125.2 5.9 60.1 84.8 101.5 176.2 92.5 91.4-9.1 160.7-65.1 154.7-125.3-5.9-60.1-84.8-101.5-176.2-92.4zm80.2 141.7c-18.7 42.3-72.3 64.8-117.8 50.1-43.9-14.2-62.5-57.7-43.3-96.8 18.9-38.4 68-60.1 111.5-48.8 45 11.7 68 54.2 49.6 95.5zm-93-32.2c-14.2-5.9-32.4.2-41.2 13.9-8.8 13.8-4.7 30.2 9.3 36.6 14.3 6.5 33.2.3 42-13.8 8.8-14.3 4.2-30.6-10.1-36.7zm34.9-14.5c-5.4-2.2-12.2.5-15.4 5.8-3.1 5.4-1.4 11.5 4.1 13.8 5.5 2.3 12.6-.3 15.8-5.8 3-5.6 1-11.8-4.5-13.8z">
+														</path>
+													</svg></i>分享到微博</a>
 											<div class="dropdown-divider"></div>
-											<a class="dropdown-item" href="#"><i
-													data-feather="settings"></i>Settings</a>
-											<a class="dropdown-item" href="#"><i data-feather="unlock"></i>Lock</a>
-											<a class="dropdown-item" href="#"><i data-feather="log-out"></i>Logout</a>
+
+											<a target="_blank" class="dropdown-item"
+												href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://lucsons.github.io"><svg
+													viewBox="64 64 896 896" focusable="false" class="" data-icon="qq"
+													width="1em" height="1em" fill="currentColor" aria-hidden="true">
+													<path
+														d="M824.8 613.2c-16-51.4-34.4-94.6-62.7-165.3C766.5 262.2 689.3 112 511.5 112 331.7 112 256.2 265.2 261 447.9c-28.4 70.8-46.7 113.7-62.7 165.3-34 109.5-23 154.8-14.6 155.8 18 2.2 70.1-82.4 70.1-82.4 0 49 25.2 112.9 79.8 159-26.4 8.1-85.7 29.9-71.6 53.8 11.4 19.3 196.2 12.3 249.5 6.3 53.3 6 238.1 13 249.5-6.3 14.1-23.8-45.3-45.7-71.6-53.8 54.6-46.2 79.8-110.1 79.8-159 0 0 52.1 84.6 70.1 82.4 8.5-1.1 19.5-46.4-14.5-155.8z">
+													</path>
+												</svg>分享到QQ空间</a>
+
+
+											<a target="_blank" class="dropdown-item"
+												href="http://connect.qq.com/widget/shareqq/index.html?url=https://blog.csdn.net/qq_39057639/&amp;sharesource=qzone&amp;pics=https://pic.ik87.cn/2019/06/8/P8a8dKqx.png&amp;title=Hello,你好 我是李文祥&amp;summary=这是我的个人主页 通过我的个人主页就可以找到我的博客和github啦 里面有精选的文章等着你们哦~&amp;desc=我叫李文祥,今年23, 致力于学习前后端开发 分享更多的知识 喜欢与人交流  汲取经验 收获新的能量 希望看到此分享的人能够有朝一日成为你心目中的大牛~"><i
+													aria-label="icon: usergroup-add"
+													class="anticon anticon-usergroup-add"><svg viewBox="64 64 896 896"
+														focusable="false" class="" data-icon="usergroup-add" width="1em"
+														height="1em" fill="currentColor" aria-hidden="true">
+														<path
+															d="M892 772h-80v-80c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v80h-80c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h80v80c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-80h80c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8zM373.5 498.4c-.9-8.7-1.4-17.5-1.4-26.4 0-15.9 1.5-31.4 4.3-46.5.7-3.6-1.2-7.3-4.5-8.8-13.6-6.1-26.1-14.5-36.9-25.1a127.54 127.54 0 0 1-38.7-95.4c.9-32.1 13.8-62.6 36.3-85.6 24.7-25.3 57.9-39.1 93.2-38.7 31.9.3 62.7 12.6 86 34.4 7.9 7.4 14.7 15.6 20.4 24.4 2 3.1 5.9 4.4 9.3 3.2 17.6-6.1 36.2-10.4 55.3-12.4 5.6-.6 8.8-6.6 6.3-11.6-32.5-64.3-98.9-108.7-175.7-109.9-110.8-1.7-203.2 89.2-203.2 200 0 62.8 28.9 118.8 74.2 155.5-31.8 14.7-61.1 35-86.5 60.4-54.8 54.7-85.8 126.9-87.8 204a8 8 0 0 0 8 8.2h56.1c4.3 0 7.9-3.4 8-7.7 1.9-58 25.4-112.3 66.7-153.5 29.4-29.4 65.4-49.8 104.7-59.7 3.8-1.1 6.4-4.8 5.9-8.8zM824 472c0-109.4-87.9-198.3-196.9-200C516.3 270.3 424 361.2 424 472c0 62.8 29 118.8 74.2 155.5a300.95 300.95 0 0 0-86.4 60.4C357 742.6 326 814.8 324 891.8a8 8 0 0 0 8 8.2h56c4.3 0 7.9-3.4 8-7.7 1.9-58 25.4-112.3 66.7-153.5C505.8 695.7 563 672 624 672c110.4 0 200-89.5 200-200zm-109.5 90.5C690.3 586.7 658.2 600 624 600s-66.3-13.3-90.5-37.5a127.26 127.26 0 0 1-37.5-91.8c.3-32.8 13.4-64.5 36.3-88 24-24.6 56.1-38.3 90.4-38.7 33.9-.3 66.8 12.9 91 36.6 24.8 24.3 38.4 56.8 38.4 91.4-.1 34.2-13.4 66.3-37.6 90.5z">
+														</path>
+													</svg></i>分享给好友</a>
 										</div>
 									</li>
 								</ul>
 							</div>
 						</nav>
 					</div>
-					<div class="main-wrapper">
 
+					<div class="mx-4 mt-3 d-block my-2 my-lg-0 d-sm-none">
+						<input class=" search-cont form-control mr-sm-2" type="search" placeholder="搜索课程"
+							aria-label="Search">
+					</div>
+
+
+					<p class="text-center mt-5 d-block d-sm-none"> <a href="#windows" class="text-dark"> 点击直接跳转到课程栏目
+						</a> </p>
+
+
+
+					<div class="main-wrapper">
+						<!-- 路线 -->
 						<div class="row">
 							<div class="col-lg-6">
-								<div class="card">
-									<div class="card-body">
+								<div class="card" style="height:340px;padding-left: 15px;padding-right: 15px;">
+									<div class="card-header">
+										<h2>课程路线详解
+											<a target="_blank" class="small float-end text-dark"
+												href="https://g.gd-share.cn/p/wueksat1"
+												id="bk"><small>点击查看介绍</small></a>
+										</h2>
+									</div>
+									<div class="card-body route" style="height:300px;overflow-y: scroll;">
 
 
 
-										123
+										<!-- 第一阶段 -->
+										<blockquote class="px-3">
+											第一阶段 - 编程基础 + 前端基础
+										</blockquote>
+										<p class="text-warning"> 第一阶段课程建议大一上学期开始学<span class="text-danger">最</span>好
+											上学期学完本阶段就可以 </p>
+										<p>
+											第一阶段是关于Web前端的基础课程学习 实现静态网站的制作 包括PC和移动 以及一些编程基础 在课程中会编写多个案例项目来巩固我们的知识
+											然后在最后会教大家购买服务器和域名将咱们的项目放到互联网上 这样别人就可以在互联网中访问到咱们的项目啦 以及如何备案咱们的域名 .
+											几乎涉及到新编程技术的课程都会有对应的结课小项目和N多个案例
+										</p>
+										<p>
+											课程顺序：0基础学习按天学习3小时计约：67天 - 108天 = 2个月 - 3个半月</p>
+										<ol>
+											<li>Windows 与 编程基础(4 - 7 天)(已完结)</li>
+											<li>WPS Office 办公软件学习(2 - 4天 )(已完结)</li>
+											<li>HTML4(3 - 6天)(已完结)</li>
+											<li>MARKDOWN(1天)(已完结)</li>
+											<li>CSS2/CSS3(PC端)(10 - 16天)(已完结)</li>
+											<li>CSS3(移动界面+响应式)(10天 - 15天)(已完结)</li>
+											<li>XML/DTD/XPATH(3天)(已完结)</li>
+											<li>JavaScript(ES5)(25 - 40 天)(录制中)</li>
+											<li>HTML5(7 - 14 天)</li>
+											<li>服务器,域名,上线网站相关知识(2天)</li>
+										</ol>
 
-
+										<!-- 第二阶段 -->
+										<blockquote class="px-3">
+											第二阶段 - 后端基础 + 前端进阶 + 前后交互
+										</blockquote>
+										<p class="text-warning"> 第二阶段课程建议大一下学期开始学<span class="text-danger">最</span>好
+											下学期学完本阶段就可以 </p>
+										<p>
+											第二阶段我们已经掌握了前端的基础知识 在这个阶段我们能学多许多好用的UI框架 CSS的预处理器 加速我们的界面开发速度
+											以及好用的JS库帮助我们简化原生JS操作 并且会学习一门易用的后端语言 学习前后端数据的交互 以及一些JS的最新语法 最后做一个简易的个人博客
+											让你从此拥有属于自己的动态网站 几乎涉及到新编程技术的课程都会有对应的结课小项目和N多个案例
+										</p>
+										<p>
+											课程顺序：0基础学习按天学习3小时计约：67天 - 108天 = 2个月 - 3个半月</p>
+										<ol>
+											<li>Sass/Less/PostCss(5 - 7 天)</li>
+										</ol>
 
 									</div>
 								</div>
+
+
+
 							</div>
 							<div class="col-lg-6">
 								<div class="row">
-									<div class="col-lg-6">
-										<div class="card stats-card">
-											<div class="card-body">
-												<div class="stats-info">
-													<h5 class="card-title">$30K<span
-															class="stats-change stats-change-danger">-8%</span></h5>
-													<p class="stats-text">Total revenue</p>
-												</div>
-												<div class="stats-icon change-danger">
-													<i class="material-icons">trending_down</i>
-												</div>
-											</div>
+
+									<div class="card" style="height:380px;padding-left: 15px;padding-right: 15px;">
+										<div class="card-header">
+											<h2 class="px-3">扫码关注微信公众号
+												<a target="_blank" class="small float-end text-dark"
+													href="https://g.gd-share.cn/p/wueksat1" id="bk"></a>
+											</h2>
 										</div>
-									</div>
-									<div class="col-lg-6">
-										<div class="card stats-card">
-											<div class="card-body">
-												<div class="stats-info">
-													<h5 class="card-title">$21K<span
-															class="stats-change stats-change-danger">-8%</span></h5>
-													<p class="stats-text">Total revenue</p>
-												</div>
-												<div class="stats-icon change-danger">
-													<i class="material-icons">trending_down</i>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-lg-6">
-										<div class="card stats-card">
-											<div class="card-body">
-												<div class="stats-info">
-													<h5 class="card-title">1681<span
-															class="stats-change stats-change-success">+16%</span></h5>
-													<p class="stats-text">Unique visitors</p>
-												</div>
-												<div class="stats-icon change-success">
-													<i class="material-icons">trending_up</i>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-6">
-										<div class="card stats-card">
-											<div class="card-body">
-												<div class="stats-info">
-													<h5 class="card-title">4743<span
-															class="stats-change stats-change-success">+12%</span></h5>
-													<p class="stats-text">Total investments</p>
-												</div>
-												<div class="stats-icon change-success">
-													<i class="material-icons">trending_up</i>
-												</div>
-											</div>
+										<div class="card-body text-center route d-sm-flex" style="height:300px;overflow-y: scroll;">
+											<a title="公众号"   href="./static/picture/zfb.jpg"><img class="wow fadeIn"
+													src="./static/picture/qrcode.jpg" class="w-lg"
+													style="height: 240px;;" alt="" /></a>
+													<p class="px-sm-3 " style="margin-top: 15px;">获取配套源码，资料，课件，阅读技术文章，最新课程通知，插件案例获取</p>
 										</div>
 									</div>
 								</div>
 							</div>
+
+							<div class="row">
+								<h2 class="col text-center mt-3"> 全阶段课程 - <small>从0出发</small> </h2>
+								<p class="text-center"> 所有课程都会随着时间一直更新 </p>
+							</div>
+
+							<div class="row p-4">
+
+								<!-- Begin -->
+
+								<!-- 900*500 -->
+								<div class=" col-md-6 col-lg-4 wow  flipInX" id="windows">
+									<div class="card widget widget-info card-bg" id="计算机基础">
+										<img src="static/picture/1-1.jpg" class="card-img-top" id="windows10"
+											alt="Windows 基础实践">
+										<div class="card-body p-4" id="win">
+											<p class="d-flex" id="bat"> <span class="badge  bg-gradient" id="dos">基础 -
+													时长：
+													10:33:14</span></p>
+
+											<div class="mb-2"><small class="bg-dark text-light px-2 py-1 ">第一阶段(1) -
+													难度(6★满)：★★</small></div>
+											<p class="d-flex justify-content-between mt-3"><span
+													class="badge  bg-warning">0基础预计学习周期：4 - 7 (天/3h) </span> </p>
+											<h5 class="widget-info-title text-white">
+												<a class="text-light"
+													href="https://www.bilibili.com/video/BV18E41127wx">
+													Windows 与 编程基础
+												</a>
+											</h5>
+											<p class="widget-info-text">这是针对零基础的同学而录制的入门编程教程 专门针对学习编程方向的同学的
+												希望在学习完本系列课程之后
+												能够对计算机有所了解 并能够熟悉windows系统的基本使用 领略编程的基本思维</p>
+
+											<p> 点击 <a target="_blank" href="static/picture/qrcode.jpg">阿祥说</a> 扫码关注公众号
+												回复
+												<span class="text-warning">windows</span> 获取配套源码+项目源码
+											</p>
+
+											<div class="mb-3">
+												<a href="" class="col-sm-6" title="点击跳转到B站学习" target="_blank"
+													class="btn btn-link widget-info-action">点击阅读课程文档</a>
+											</div>
+											<div>
+												<a href="https://www.bilibili.com/video/BV18E41127wx" title="点击跳转到B站学习"
+													target="_blank"
+													class="btn btn-info mt-3 widget-info-action">开始去学习</a>
+												<a title="查看课程目录" href="javascript:void(0)"
+													class="btn btn-info widget-info-action mt-3 dir" data-type="windows"
+													data-toggle="modal" data-target="#directory "></i>查看课程目录</a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="col-md-6 col-lg-4 wow flipInX" id="wps">
+									<div class="card widget widget-info card-bg" id="office">
+										<img src="static/picture/1-2.jpg" id="wps office" class="card-img-top"
+											alt="WPS OFFICE">
+										<div class="card-body p-4" id="word">
+											<p class="d-flex" id="excel"> <span class="badge  bg-gradient">基础 - 时长：
+													08:03:14</span></p>
+
+											<div class="mb-2" id="ppt"><small
+													class="bg-dark text-light px-2 py-1 ">第一阶段(2)
+													-
+													难度(6★满)：★</small></div>
+											<p class="d-flex justify-content-between mt-3"><span
+													class="badge  bg-warning">0基础预计学习周期：2 - 4 (天/3h) </span> </p>
+											<h5 class="widget-info-title text-white">
+												<a class="text-light"
+													href="https://www.bilibili.com/video/BV18E41127wx">
+													WPS OFFICE 快速入门
+												</a>
+											</h5>
+											<p class="widget-info-text">
+												WPS OFFICE 是非常流行的办公软件 现在从事互联网职业的几乎每个人都会 所以是个必学课程 不过我们没必要精通WPS OFFICE
+												能够知道如何使用即可 本套课程能带领你们快速入门
+											</p>
+
+											<p> WPS OFFICE 课程 由于较为简单没有制作获取资料的地址</p>
+
+											<div class="mb-3">
+												<a href="" class="col-sm-6" title="点击跳转到B站学习" target="_blank"
+													class="btn btn-link  widget-info-action">点击阅读课程文档</a>
+											</div>
+											<div>
+												<a href="https://www.bilibili.com/video/BV1rE411a7NE" title="点击跳转到B站学习"
+													target="_blank"
+													class="btn btn-info widget-info-action mt-3">开始去学习</a>
+												<a title="查看课程目录" href="javascript:void(0)"
+													class="btn btn-info widget-info-action mt-3 dir" data-type="wps"
+													data-toggle="modal" data-target="#directory"></i>查看课程目录</a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6 col-lg-4  wow flipInX" id="html">
+									<div class="card widget widget-info card-bg" id="html4">
+										<img src="static/picture/1-3.jpg" class="card-img-top" id="xhtml" alt="html4">
+										<div class="card-body p-4" id="htm">
+											<p class="d-flex"> <span class="badge  bg-gradient">前端 - 时长： 06:27:27</span>
+											</p>
+
+											<div class="mb-2"><small class="bg-dark text-light px-2 py-1 ">第一阶段(3) -
+													难度(6★满)：★★</small></div>
+											<p class="d-flex justify-content-between mt-3"><span
+													class="badge  bg-warning">0基础预计学习周期：3 - 6 (天/3h) </span> </p>
+											<h5 class="widget-info-title text-white">
+												<a class="text-light"
+													href="https://www.bilibili.com/video/BV18E41127wx">
+													HTML4教程最全讲解
+												</a>
+											</h5>
+											<p class="widget-info-text">
+												HTML4 是超文本标记语言 初入前端的第一门课 用来制作网页 也是最重要的课程之一 虽然难度不大可用处很大 主要掌控网站界面的骨架
+												唯一的难点在于需要记忆大量标签
+											</p>
+
+											<p> 点击 <a target="_blank" href="static/picture/qrcode.jpg">阿祥说</a> 扫码关注公众号
+												回复
+												<span class="text-warning">html4</span> 获取配套源码+项目源码
+											</p>
+
+											<div class="mb-3">
+												<a href="" class="col-sm-6" title="点击跳转到B站学习" target="_blank"
+													class="btn btn-link widget-info-action ">点击阅读课程文档</a>
+											</div>
+											<div>
+												<a href="https://www.bilibili.com/video/BV14v411B754" title="点击跳转到B站学习"
+													target="_blank"
+													class="btn btn-info widget-info-action mt-3">开始去学习</a>
+												<a title="查看课程目录" href="javascript:void(0)"
+													class="btn btn-info widget-info-action mt-3 dir" data-type="html"
+													data-toggle="modal" data-target="#directory "></i>查看课程目录</a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- End -->
+							</div>
+
+
 						</div>
-						<div class="row p-4">
-							
-							<!-- Begin -->
+						<div class="page-footer p-4 ">
+							<a href="https://space.bilibili.com/366914054" target="_blank" title="路克森的B站">Lucson &copy;
+								版权所有
 
-							<!-- 900*500 -->
-							<div class="col-sm-6 col-md-4" >
-								<div class="card widget widget-info card-bg">
-									<img src="static/picture/1-1.jpg"  class="card-img-top" alt="Windows 基础实践">
-									<div class="card-body p-4">
-										<p class="d-flex"> <span class="badge  bg-gradient">基础 - 时长： 10:33:14</span></p>
-							
-									   <div class="mb-2"><small class="bg-dark text-light px-2 py-1 ">第一阶段(1) - 难度(6★满)：★★</small></div>
-									   		   <p class="d-flex justify-content-between mt-3"><span class="badge  bg-warning">0基础预计学习周期：4 - 7 (天/3h) </span> </p>
-										<h5 class="widget-info-title text-white">
-										<a class="text-light" href="https://www.bilibili.com/video/BV18E41127wx">
-											  Windows 与 编程基础 
-											  </a>
-										</h5>
-										<p class="widget-info-text">这是针对零基础的同学而录制的入门编程教程 专门针对学习编程方向的同学的 希望在学习完本系列课程之后 能够对计算机有所了解 并能够熟悉windows系统的基本使用 领略编程的基本思维</p>
-										
-										<p> 点击 <a target="_blank" href="static/picture/qrcode.jpg">阿祥说</a> 扫码关注公众号 回复 <span class="text-warning">windows课件</span> 即可获取文档</p>
-										
-											<div class="mb-3">
-												<a  href="" class="col-sm-6" title="点击跳转到B站学习" target="_blank" class="btn btn-link widget-info-action">点击阅读课程文档</a>
-											</div>
-											<div>
-												<a href="https://www.bilibili.com/video/BV18E41127wx" title="点击跳转到B站学习" target="_blank" class="btn btn-info widget-info-action">开始去学习</a>
-											</div>
-									</div>
-								</div>
-							</div>
-							
-							
-							<div class="col-sm-6 col-md-4" >
-								<div class="card widget widget-info card-bg">
-									<img src="static/picture/1-2.jpg" class="card-img-top" alt="WPS OFFICE">
-									<div class="card-body p-4">
-										<p class="d-flex"> <span class="badge  bg-gradient">基础 - 时长： 08:03:14</span></p>
-							
-									   <div class="mb-2"><small class="bg-dark text-light px-2 py-1 ">第一阶段(2) - 难度(6★满)：★</small></div>
-									   		   <p class="d-flex justify-content-between mt-3"><span class="badge  bg-warning">0基础预计学习周期：2 - 4 (天/3h) </span> </p>
-										<h5 class="widget-info-title text-white">
-										<a class="text-light" href="https://www.bilibili.com/video/BV18E41127wx">
-											  WPS OFFICE 快速入门
-											  </a>
-										</h5>
-										<p class="widget-info-text">
-										WPS OFFICE 是非常流行的办公软件 现在从事互联网职业的几乎每个人都会 所以是个必学课程 不过我们没必要精通WPS OFFICE 能够知道如何使用即可 本套课程能带领你们快速入门
-										</p>
-										
-										<p> WPS OFFICE 课程 由于较为简单没有制作获取课件的地址</p>
-										
-											<div class="mb-3">
-												<a  href="" class="col-sm-6" title="点击跳转到B站学习" target="_blank" class="btn btn-link widget-info-action">点击阅读课程文档</a>
-											</div>
-											<div>
-												<a href="https://www.bilibili.com/video/BV1rE411a7NE" title="点击跳转到B站学习" target="_blank" class="btn btn-info widget-info-action">开始去学习</a>
-											</div>
-									</div>
-								</div>
-							</div>
-							
-							<div class="col-sm-6 col-md-4" >
-								<div class="card widget widget-info card-bg">
-									<img src="static/picture/1-3.jpg" class="card-img-top" alt="html4">
-									<div class="card-body p-4">
-										<p class="d-flex"> <span class="badge  bg-gradient">前端 - 时长： 12:04:27</span></p>
-							
-									   <div class="mb-2"><small class="bg-dark text-light px-2 py-1 ">第一阶段(3) - 难度(6★满)：★★</small></div>
-									   		   <p class="d-flex justify-content-between mt-3"><span class="badge  bg-warning">0基础预计学习周期：3 - 6 (天/3h) </span> </p>
-										<h5 class="widget-info-title text-white">
-										<a class="text-light" href="https://www.bilibili.com/video/BV18E41127wx">
-											 HTML4教程最全讲解
-											  </a>
-										</h5>
-										<p class="widget-info-text">
-										HTML4 是超文本标记语言 初入前端的第一门课 用来制作网页  也是最重要的课程之一 虽然难度不大可用处很大 主要掌控网站界面的骨架  唯一的难点在于需要记忆大量标签
-										</p>
-										
-										<p> 点击 <a target="_blank" href="static/picture/qrcode.jpg">阿祥说</a> 扫码关注公众号 回复 <span class="text-warning">html4课件</span> 即可获取文档</p>
-										
-											<div class="mb-3">
-												<a  href="" class="col-sm-6" title="点击跳转到B站学习" target="_blank" class="btn btn-link widget-info-action">点击阅读课程文档</a>
-											</div>
-											<div>
-												<a href="https://www.bilibili.com/video/BV14v411B754" title="点击跳转到B站学习" target="_blank" class="btn btn-info widget-info-action">开始去学习</a>
-											</div>
-									</div>
-								</div>
-							</div>
-							
-
-							<!-- End -->
-						</div>
-
-
-					</div>
-					<div class="page-footer p-4">
-							<a href="https://space.bilibili.com/366914054" target="_blank" title="路克森的B站"
-								 >Lucson &copy; 版权所有 
-								 
 								<br> 站内所有在 BliBli
 								的课程不得搬运到其他平台</a>
+						</div>
 					</div>
 				</div>
-			</div>
 
 
-		
-						<!-- Javascripts -->
-						<script src="static/js/jquery-3.4.1.min.js"></script>
-						<script src="static/js/637b3e92eab44245b5ba6109ba908b93.js"></script>
-						<script src="static/js/bootstrap.min.js"></script>
-						<script src="static/js/9bf6b9af02dd4c9999597a8e72c1a3a3.js"></script>
-						<script src="static/js/perfect-scrollbar.min.js"></script>
-						<!-- <script src="static/js/pace.min.js"></script> -->
-						<script src="static/js/main.min.js"></script>
+				<!-- Javascripts -->
+				<script src="static/js/jquery-3.4.1.min.js"></script>
+				<script src="static/js/637b3e92eab44245b5ba6109ba908b93.js"></script>
+				<script src="./static/js/bootstrap.min.js"></script>
+				<script src="./static/js/bootstrap.bundle.js"></script>
+				<script src="static/js/9bf6b9af02dd4c9999597a8e72c1a3a3.js"></script>
+				<script src="static/js/perfect-scrollbar.min.js"></script>
+				<script src="static/js/pace.min.js"></script>
+				<script src="static/js/main.min.js"></script>
+				<script src="https://cdn.bootcdn.net/ajax/libs/wow/1.1.2/wow.js"></script>
+				<script>
+					new WOW().init();
+
+					$(".icon,.alert").hide();
+
+					var isBeginSearch = true;
+
+
+					//  加载跳转
+
+					$(".search-cont").on("keydown", function(e) {
+						e = event || window.event;
+						if (e.keyCode == 13) {
+							if (isBeginSearch) {
+								isBeginSearch = false;
+								$(".icon").css("opacity", 1).fadeIn();
+								setTimeout(() => {
+									$(".icon").fadeOut();
+									var isExists = document.getElementById($(this).val());
+									if (!isExists) {
+										isBeginSearch = true;
+										$(".alert").css("opacity", 1).fadeIn();
+										setTimeout(() => {
+											$(".alert").fadeOut();
+										}, 1500);
+									} else {
+										isBeginSearch = true;
+										location.href = location.href.substring(0, location.href.indexOf("#")) + "#" +
+											$(
+												this).val()
+									}
+								}, 1500);
+							}
+						}
+
+					});
+
+
+					// 课程配置
+
+					var dataDir = {
+						"windows": ["计算机基础课程介绍", "计算机阐述", "windows10基础", "windows10 常用快捷键", "Internet 使用", "浏览器快捷键",
+							"IP地址,域名,DNS介绍", "DOS 命令", "环境变量", "Hosts", "批处理(上)", "批处理(下)", "驱动", "WPS Office 安装", " 注册表",
+							"BIOS", "U盘启动盘制作和在线安装系统", "U盘安装系统", "Windows系统激活", "bat 转 exe", "exe 设置图标", "POWERSHELL 和 任务管理器",
+							"还有旧版本20多集(可不看)"
+						],
+						"wps": ["WPS 课程介绍和安装", "Word 文档初始", "Word 文档开始面板", "Word 插入面板表格", "Word 插入面板图片", "Word 插入面板其他",
+							"Word 页面布局面板 ", "Word 引用审阅视图章节 ", "简约个人简历制作", " Excel 入门学习(40+分钟)", " PowerPoint 入门学习",
+							"除去上面的还有旧版本20多集除了PPT部分其他均可不看"
+						],
+						"html": ["HTML4 前端是什么", "HTML4 介绍 ", "HTML4 常用浏览器", "HTML4 基本结构", "HTML4 文档定义和结构语义", " HTML4 节点树",
+							" HTML4 常用标签", "HTML4 格式化标签 ", "HTML4 计算机输出标签", " HTML4 其他不常用标签", "HTML4 URL", "HTML4 字符编码和路径问题 ",
+							"HTML超链接", "HTML Head 子元素", "HTML4 图像和热点", "HTML4 Tabel", " HTML4 列表", " HTML4 内联和区块 ",
+							"HTML4 DIV 和 Span", "HTML4 表单", "HTML4 Label", "HTML4 Iframe 框架", "HTML4 Color", "HTML4 Script ",
+							" HTML Marquee", "HTML4 Entity ", "HTML4 表单补充和多媒体", "HTML4 多媒体补充", " HTML4 实战",
+							"其余20多集旧版本可不看(实际本课程时长为6小时多)"
+						]
+					}
+
+					$("[class*=dir]").on("click", function() {
+						var type = $(this).data("type");
+						var list = $("#list");
+						list.empty();
+						list.siblings("h5").html(type + "课程目录 - 共" + dataDir[type].length + "集");
+						dataDir[type].forEach(function(v, i) {
+							list.append("<li>" + v + "</li>");
+						});
+					});
+				</script>
 	</body>
 </html>
