@@ -556,7 +556,7 @@
 					// 分享地址复制
 					var copy = new ClipboardJS('.copy_url', {
 						text: function(trigger) {
-							return document.location.href + "#" + $(that).parents(".post").attr("id");
+							return document.location.href.substring(0,document.location.href.indexOf("#")) + "#" + $(that).parents(".post").attr("id");
 						}
 					});
 					
