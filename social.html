@@ -84,6 +84,7 @@
 				transform: translate(-50%);
 				background-color: slateblue;
 				color: #CCCCCC;
+				opacity: 0;
 			}
 			
 			.code{
@@ -563,9 +564,9 @@
 					copy.on('success', function(e) {
 						clearTimeout(t);
 						$(".tip").html("文章地址已复制到粘贴板：" + e.text);
-						$(".tip").fadeIn();
+						$(".tip").css("opacity",1).fadeIn();
 						t = setTimeout(() => {
-							$(".tip").fadeOut();
+							$(".tip").css("opacity",0).fadeOut();
 						}, 3000);
 					});
 					
@@ -579,9 +580,9 @@
 					clearTimeout(t);
 					e.text += "\n\n\n转载请备注来源：http://lucsons.github.io\n原作者：Lucson\n哔哩哔哩：https://www.bilibili.com/";
 					$(".tip").html("复制成功");
-					$(".tip").fadeIn();
+					$(".tip").css("opacity",1).fadeIn();
 					t = setTimeout(() => {
-						$(".tip").fadeOut();
+						$(".tip").css("opacity",0).fadeOut();
 					}, 1000);
 				});
 			</script>
