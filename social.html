@@ -35,18 +35,84 @@
 			blockquote {
 				font-size: 18px;
 			}
-			
-			
+
+
 			.page-header .navbar {
 				padding: 14px 0;
 			}
-			
 
-		
+
+			pre {
+				color: #CCCCCC;
+				width: 100%;
+				max-height: 400px;
+				background: #373D3F;
+				padding: 10px;
+				border-radius: 5px;
+			}
+
+			span.copy,
+			a.copy_url {
+				cursor: pointer;
+				user-select: none;
+			}
+
+			span:active {
+				background-color: #333;
+			}
+
+			.tip {
+				width: auto;
+				padding: 0 10px;
+				height: 40px;
+				position: fixed;
+				left: 50%;
+				z-index: 9999;
+				text-align: center;
+				line-height: 40px;
+				border-radius: 5px;
+				top: 50%;
+				transform: translate(-50%);
+				background-color: slateblue;
+				color: #CCCCCC;
+			}
 		</style>
 	</head>
 
 	<body class="page-sidebar-collapsed">
+
+
+		<div class="tip"> 复制成功 </div>
+
+
+
+		<!-- Modal -->
+		<div class="modal fade " id="modal" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">关于本站</h5>
+					</div>
+					<div class="modal-body">
+						<h5>本站点作用</h5>
+						本站是前台的小站点 主要用来展示课程信息 汇总课程 提供引导 获取资料等作用 课程会慢慢更新....
+
+						开发这个小站点主要目的就是为了和大家分享一些日常学习中的知识 进行交流 通过这种方式和大家进行沟通交流学习 本人录制的视频都是会在b站中投稿的~ 并且每一个视频课程都有对应的资料和配套代码
+
+						希望通过这种方式也能够来提高自己 其中也会发现自己的不足和缺乏的地方 会改过自新 迎接美好的未来~
+
+						<h5 class="mt-4">授课方式</h5>
+						整体的课程规划 会根据时间慢慢更新 还请观看我课程童鞋多多担待 其中我可能就是会将一些后面学到的内容但是和当前所学的有所联系的东西提前加到前面 这样的话可能你现在接触第一次不懂没关系
+						在之后学习了对应的课程再回来看 相信你的收获会是不一样的
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">知道了</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
 
 		<div class="page-container">
 			<div class="page-container">
@@ -202,19 +268,20 @@
 														</path>
 													</svg></i>分享到微博</a>
 											<div class="dropdown-divider"></div>
-
-											<a target="_blank" class="dropdown-item"
-												href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://lucsons.github.io&pics=https://raw.githubusercontent.com/lucsons/lucsons.github.io/master/static/picture/cover.jpg&title=Lucson的小教室"><svg
-													viewBox="64 64 896 896" focusable="false" class="" data-icon="qq"
+											<a class="text-muted dropdown-item" target="_blank"
+												href="http://connect.qq.com/widget/shareqq/index.html?url=http://lucsons.github.io/social.html&sharesource=qzone&pics=static/picture/cover.jpg&title=Hello,你好 我是李文祥&summary=这是我的个人主页 通过我的个人主页就可以找到我的博客和github啦 里面有精选的文章等着你们哦~&desc=我叫李文祥,今年21, 致力于学习前后端开发 分享更多的知识 喜欢与人交流  汲取经验 收获新的能量 希望看到此分享的人能够有朝一日成为你心目中的大牛~">
+												<svg viewBox="64 64 896 896" focusable="false" class="" data-icon="qq"
 													width="1em" height="1em" fill="currentColor" aria-hidden="true">
 													<path
 														d="M824.8 613.2c-16-51.4-34.4-94.6-62.7-165.3C766.5 262.2 689.3 112 511.5 112 331.7 112 256.2 265.2 261 447.9c-28.4 70.8-46.7 113.7-62.7 165.3-34 109.5-23 154.8-14.6 155.8 18 2.2 70.1-82.4 70.1-82.4 0 49 25.2 112.9 79.8 159-26.4 8.1-85.7 29.9-71.6 53.8 11.4 19.3 196.2 12.3 249.5 6.3 53.3 6 238.1 13 249.5-6.3 14.1-23.8-45.3-45.7-71.6-53.8 54.6-46.2 79.8-110.1 79.8-159 0 0 52.1 84.6 70.1 82.4 8.5-1.1 19.5-46.4-14.5-155.8z">
 													</path>
-												</svg>分享到QQ空间</a>
+												</svg>
+												分享到QQ空间
+											</a>
 
 
 											<a target="_blank" class="dropdown-item"
-												href="http://connect.qq.com/widget/shareqq/index.html?url=http://connect.qq.com/widget/shareqq/index.html?url=http://lucsons.github.io&sharesource=qzone&pics=https://raw.githubusercontent.com/lucsons/lucsons.github.io/master/static/picture/cover.jpg&title=Hello,你好 我是李文祥&summary=这是我的个人主页 通过我的个人主页就可以找到我的博客和github啦 里面有精选的文章等着你们哦~&desc=我叫李文祥,今年21, 致力于学习前后端开发 分享更多的知识 喜欢与人交流  汲取经验 收获新的能量 希望看到此分享的人能够有朝一日成为你心目中的大牛~"><i
+												href="http://connect.qq.com/widget/shareqq/index.html?url=http://lucsons.github.io/social.html&sharesource=qzone&pics=static/picture/cover.jpg&title=Hello,你好 我是李文祥&summary=这是我的个人主页 通过我的个人主页就可以找到我的博客和github啦 里面有精选的文章等着你们哦~&desc=我叫李文祥,今年21, 致力于学习前后端开发 分享更多的知识 喜欢与人交流  汲取经验 收获新的能量 希望看到此分享的人能够有朝一日成为你心目中的大牛~"><i
 													aria-label="icon: usergroup-add"
 													class="anticon anticon-usergroup-add"><svg viewBox="64 64 896 896"
 														focusable="false" class="" data-icon="usergroup-add" width="1em"
@@ -238,7 +305,9 @@
 								<div class="profile-cover"></div>
 								<div class="profile-header">
 									<div class="profile-img">
-										<img src="static/images/me.png" class="me" alt="路克森">
+										<a href="index.html">
+											<img src="static/images/me.png" class="me" alt="路克森">
+										</a>
 									</div>
 									<div class="profile-name">
 										<h3>Lucson - 路克森</h3>
@@ -284,7 +353,9 @@
 											</div>
 
 											<div class="story d-flex">
-												<a href="#serucity"><img src="https://img1.baidu.com/it/u=3140958831,606641020&fm=26&fmt=auto&gp=0.jpg" alt=""></a>
+												<a href="#serucity"><img
+														src="https://img1.baidu.com/it/u=3140958831,606641020&fm=26&fmt=auto&gp=0.jpg"
+														alt=""></a>
 												<div class="story-info">
 													<a href="#serucity"><span class="story-author">web 安全</span></a>
 													<span class="story-time">web 领域安全问题</span>
@@ -304,8 +375,8 @@
 							</div>
 
 							<div class=" col-md-6">
-							
-							
+
+
 								<!-- web -->
 								<div class="row px-4 px-md-0" id="web">
 									<blockquote class="text-center pb-2">
@@ -313,9 +384,9 @@
 									</blockquote>
 									<div class="card  card-bg">
 										<div class="card-body ">
-										
-										    <!-- 1 -->
-											<div class="post" id="1">
+
+											<!-- 1 -->
+											<div class="post" id="web1">
 												<div class="post-header">
 													<img src="http://q4.qlogo.cn/headimg_dl?dst_uin=2857734156&spec=100"
 														alt="">
@@ -324,37 +395,84 @@
 														<span class="post-date">2021/8/28</span>
 													</div>
 													<div class=" float-end">
-														<a class="text-muted" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lucsons.github.io/social.html#1&sharesource=qzone&pics=https://raw.githubusercontent.com/lucsons/lucsons.github.io/master/static/picture/cover.jpg&title=我的博客诞生啦!!!!"><i class="far fa-paper-plane"></i> 分享</a>
+
+														<a class="copy_url" target="_blank"><i
+																class="far fa-paper-plane"></i> 分享</a>
 													</div>
 												</div>
-												
+
 												<div class="post-body">
-													<p>我的博客诞生啦！！！！！！
-													</p>
-													<img src="static/picture/card2.jpeg" class="post-image" alt="">
+													<h4> 测试复制代码 </h4>
+<div class="code">
+<pre id="test">
+<span class="badge bg-gradient float-end copy" data-clipboard-target="#test">复制代码</span>
+	
+&lt;p&gt;请在输入框内贴入你需要转换的HTML代码&lt;/p&gt;
+&lt;p&gt;HTML转换工具，可以将HTML代码转换为HTML转义字符串&lt;/p&gt; 
+&lt;p&gt;直接将你所要用程序输出的大串HTML代码贴到输入框中，即可一键生成&lt;/p&gt; 
+&lt;p&gt;如果您觉得好用，请记得收藏我们的地址！&lt;/p&gt;
+</pre>
+</div>
 												</div>
 											</div>
-										
-											
-											
-											
-										
+
+					
+					<!-- 2 -->
+																<div class="post" id="web2">
+																	<div class="post-header">
+																		<img src="http://q4.qlogo.cn/headimg_dl?dst_uin=2857734156&spec=100"
+																			alt="">
+																		<div class="post-info">
+																			<span class="post-author">lucson</span><br>
+																			<span class="post-date">2021/8/28</span>
+																		</div>
+																		<div class=" float-end">
+					
+																			<a class="copy_url" target="_blank"><i
+																					class="far fa-paper-plane"></i> 分享</a>
+																		</div>
+																	</div>
+					
+																	<div class="post-body">
+																		<h4> 测试复制代码 </h4>
+<div class="code">
+<pre id="test2">
+<span class="badge bg-gradient float-end copy" data-clipboard-target="#test2">复制代码</span>
+
+&lt;p&gt;请在输入框内贴入你需要转换的HTML代码&lt;/p&gt;
+&lt;p&gt;HTML转换工具，可以将HTML代码转换为HTML转义字符串&lt;/p&gt; 
+&lt;p&gt;直接将你所要用程序输出的大串HTML代码贴到输入框中，即可一键生成&lt;/p&gt; 
+&lt;p&gt;如果您觉得好用，请记得收藏我们的地址！&lt;/p&gt;
+</pre>
+</div>
+																	</div>
+																</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+
 										</div>
 									</div>
 								</div>
-							
-							
-							    <!-- java -->
-								
+
+
+								<!-- java -->
+
 								<!-- python -->
-							
-							    <!-- security -->
-							
-							     <!-- me -->
-							
-							
-							
-							
+
+								<!-- security -->
+
+								<!-- me -->
+
+
+
+
 							</div>
 
 
@@ -364,11 +482,15 @@
 										<h5 class="card-title">关于我</h5>
 										<p></p>
 										<ul class="list-unstyled profile-about-list">
-											<li><i class="far fa-edit m-r-xxs"></i><span> 学历：普通专科 升本中 </li>
 											<li><i class="far fa-edit m-r-xxs"></i><span> 姓名：李文祥 </li>
 											<li><i class="far fa-building m-r-xxs"></i> 年龄：<span id="age"></span> 岁</li>
-											<li><i class="far fa-compass m-r-xxs"></i><span>来自 <a href="https://baike.baidu.com/item/%E6%B2%B3%E5%8D%97/132980?fr=aladdin">中国, 河南</a></span></li>
-											<li><i class="far fa-compass m-r-xxs"></i>爱好：指弹,街健,popping</span></li>
+											<li><i class="far fa-edit m-r-xxs"></i><span> 性格：随和</li>
+											<li><i class="far fa-edit m-r-xxs"></i><span> 生日：8.17</li>
+											<li><i class="far fa-compass m-r-xxs"></i><span> 来自 <a
+														href="https://baike.baidu.com/item/%E6%B2%B3%E5%8D%97/132980?fr=aladdin">中国,
+														河南</a></span></li>
+											<li><i class="far fa-edit m-r-xxs"></i><span> 学历：普通专科 升本中</li>
+											<li><i class="far fa-compass m-r-xxs"></i> 爱好：指弹,街健,popping</span></li>
 										</ul>
 									</div>
 								</div>
@@ -404,12 +526,51 @@
 			<script src="static/js/pace.min.js"></script>
 			<script src="static/js/main.min.js"></script>
 			<script src="https://cdn.bootcdn.net/ajax/libs/wow/1.1.2/wow.js"></script>
+			<script src="./static/js/clipboard.min.js"></script>
 			<script>
+			
+				var t = null;
+			
+				$(".tip").hide();
+
 				new WOW().init();
-				
 				var date = new Date();
-				
 				$("#age").html(date.getFullYear() - 2000);
+
+				
+				$(".copy_url").click(function(){
+					var that = this;
+					// 分享地址复制
+					var copy = new ClipboardJS('.copy_url', {
+						text: function(trigger) {
+							return document.location.href + "#" + $(that).parents(".post").attr("id");
+						}
+					});
+					
+					copy.on('success', function(e) {
+						clearTimeout(t);
+						$(".tip").html("文章地址已复制到粘贴板：" + e.text);
+						$(".tip").fadeIn();
+						t = setTimeout(() => {
+							$(".tip").fadeOut();
+						}, 3000);
+					});
+					
+					copy = null;
+				});
+				
+
+				// 代码复制	
+				var clipboard = new ClipboardJS('.copy');
+				clipboard.on('success', function(e) {
+					clearTimeout(t);
+					e.text += "\n\n\n转载请备注来源：http://lucsons.github.io\n原作者：Lucson\n哔哩哔哩：https://www.bilibili.com/";
+					$(".tip").html("复制成功");
+					$(".tip").fadeIn();
+					t = setTimeout(() => {
+						$(".tip").fadeOut();
+					}, 1000);
+				});
 			</script>
 	</body>
 </html>
