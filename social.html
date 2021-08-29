@@ -23,9 +23,7 @@
 		<script src="static/js/prism.js"></script>
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING:Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-        <script src="static/js/html5shiv.min.js"></script>
-        <script src="static/js/respond.min.js"></script>
+		<!--[if lt IE]>
         <![endif]-->
 		<style>
 			
@@ -98,7 +96,7 @@
 
 			span.copy {
 				position: absolute;
-				bottom: 5px;
+				bottom: 10px;
 				right: 10px;
 				z-index: 8888;
 			}
@@ -136,6 +134,11 @@
 			h5.small{
 				font-size:16px ;
 			}
+			
+			pre.display{
+				display: none;
+			}
+		
 		</style>
 	</head>
 
@@ -516,10 +519,80 @@
 													<!-- 代码块 -->
 													<div class="code">
 														<span class="badge bg-gradient float-end copy">复制代码</span>
-														<pre>
-<code class="line-numbers language-html">
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
+														
+<pre class="display">
+   &lt;!DOCTYPE html&gt;
+   &lt;html&gt;
+   	&lt;head&gt;
+   		&lt;meta charset=&quot;utf-8&quot;&gt;
+   		&lt;title&gt;&lt;/title&gt;
+   	&lt;/head&gt;
+   	&lt;link rel=&quot;stylesheet&quot; href=&quot;./static/css/prism.css&quot;&gt;
+   	&lt;script src=&quot;static/js/prism.js&quot;&gt;&lt;/script&gt;
+   	&lt;body&gt;
+   
+   	&lt;div id=&quot;list&quot;&gt;
+   	&lt;/div&gt;
+   
+   	&lt;script&gt;
+   			
+   			// 定义数据的结构 结构一定要正确
+   			// children 是用来判断是否有子级菜单的依据
+   			var data = [
+   				{
+   					name:&quot;第一级菜单&quot;,
+   					children:[
+   						{
+   							name:&quot;第二级菜单&quot;,
+   							children:[
+   								{
+   									name:&quot;第三级菜单&quot;,
+   									children:[]
+   								}
+   							]
+   						}
+   					]
+   				}
+   			];
+   			
+   			// 获取到往内部插入元素的DOM节点
+   			var list = document.querySelector(&quot;#list&quot;);
+   			
+   			// 递归函数
+   			function render(list){
+   				// 创建 ul
+   				var ul = document.createElement(&quot;ul&quot;);
+   				// 由于第一次传进来的是数组 所以需要循环遍历一次 给每一个子项都遍历一遍
+   				for(var i = 0 ; i &lt; list.length; i++){
+   					// 创建li
+   					var li = document.createElement(&quot;li&quot;);
+   					// 设置li的内容
+   					li.innerHTML = list[i].name;
+   					// 判断是否还有子项 此步骤非常重要
+   					if(list[i].children.length != 0){
+   						// 递归调用 将当前项传递到函数中再次调用 调用后children也是个数组 会从 函数的开始再次执行循环遍历 ....
+   						// 将结果追加到li中  返回的就是我们创建好的ul 每一次都要返回 可以理解为一个层级一个ul
+   						li.appendChild(render(list[i].children))
+   					}
+   					// 将li追加到ul中
+   					ul.appendChild(li);
+   				}	
+   				// 最终返回生成的ul 这个步骤同样重要  递归函数是先挨个进后挨个出的  如果不返回则啥也不会渲染
+   				return ul;
+   			}
+   			
+   			// 追加返回的ul到对应的DOM节点中
+   			list.appendChild(render(data));
+   		
+   		&lt;/script&gt;
+   	&lt;/body&gt;
+   &lt;/html&gt;
+</pre>
+																
+<pre>
+ <code class="line-numbers language-html">
+ &lt;!DOCTYPE html&gt;
+ &lt;html&gt;
 	&lt;head&gt;
 		&lt;meta charset=&quot;utf-8&quot;&gt;
 		&lt;title&gt;&lt;/title&gt;
@@ -583,8 +656,8 @@
 		
 		&lt;/script&gt;
 	&lt;/body&gt;
-&lt;/html&gt;
-</code>
+ &lt;/html&gt;
+ </code>
 </pre>
 													</div>
 												</div>
@@ -593,6 +666,14 @@
 											<!-- web1 End -->
 
 
+
+<!-- Web2Start -->
+
+
+
+
+
+<!-- Web2End -->
 
 
 
@@ -710,8 +791,8 @@
 					var that = this;
 					var copy = new ClipboardJS('.copy', {
 						text: function(trigger) {
-							return $(that).next().html() +
-								"\n\n\n转载请备注来源：http://lucsons.github.io\n原作者：Lucson\n哔哩哔哩：https://www.bilibili.com";
+							return $(that).next(".display").html().replace(/&lt;/g,'<').replace(/&gt;/g,">") +
+								"\n\n\n转载请备注来源：http://lucsons.github.io\n原作者：Lucson\n哔哩哔哩：https://space.bilibili.com/366914054";
 						}
 					});
 
