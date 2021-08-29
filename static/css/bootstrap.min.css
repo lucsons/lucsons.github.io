@@ -253,9 +253,8 @@ a:not([href]):not([class]):hover {
 	text-decoration: none
 }
 
-code,
+
 kbd,
-pre,
 samp {
 	font-family: var(--bs-font-monospace);
 	font-size: 1em;
@@ -264,46 +263,16 @@ samp {
 }
 
 pre {
-	display: block;
 	margin-top: 0;
 	margin-bottom: 1rem;
 	overflow: auto;
-	font-size: .875em
 }
 
-pre code {
-	font-size: inherit;
-	color: inherit;
-	word-break: normal
-}
 
-code {
-	font-size: .875em;
-	color: #d63384;
-	word-wrap: break-word
-}
 
-a>code {
-	color: inherit
-}
 
-kbd {
-	padding: .2rem .4rem;
-	font-size: .875em;
-	color: #fff;
-	background-color: #212529;
-	border-radius: .2rem
-}
 
-kbd kbd {
-	padding: 0;
-	font-size: 1em;
-	font-weight: 700
-}
 
-figure {
-	margin: 0 0 1rem
-}
 
 img,
 svg {
