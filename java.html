@@ -26,6 +26,14 @@
 		<!--[if lt IE]>
         <![endif]-->
 		<style>
+			hr {
+				margin: 30px 0 50px 0;
+			}
+			
+			.page-sidebar {
+				z-index: 10002;
+			}
+
 			.article,
 			.about {
 				background-color: #181821;
@@ -34,10 +42,6 @@
 				top: 0;
 			}
 
-		
-			hr{
-				margin: 30px 0  50px 0;
-			}
 
 			@media all and (max-width:768px) {
 
@@ -70,6 +74,7 @@
 
 			pre {
 				width: 100%;
+				max-height: 500px;
 				padding: 10px;
 				box-shadow: inset 0 0 10px 5px #262635;
 				padding-top: 35px;
@@ -123,7 +128,7 @@
 				display: none;
 			}
 
-			
+
 
 			.code {
 				width: 100%;
@@ -227,8 +232,8 @@
 							<a href="#"><i data-feather="command"></i>课程列表<i
 									class="fas fa-chevron-right dropdown-icon"></i></a>
 							<ul class="">
-								<li><a href="contact.html#al" target="_blank"><i class="far fa-circle"></i> 案例</a></li>
-								<li><a href="contact.html#gj" target="_blank"><i class="far fa-circle"></i> 工具</a></li>
+								<li><a href="contact.html#al" ><i class="far fa-circle"></i> 案例</a></li>
+								<li><a href="contact.html#gj"><i class="far fa-circle"></i> 工具</a></li>
 
 								<li><a href="https://space.bilibili.com/366914054/channel/detail?cid=121222"
 										target="_blank"><i class="far fa-circle"></i> 系列课</a></li>
@@ -246,16 +251,27 @@
 							</ul>
 						</li>
 
-
 						<li>
-							<a href="#"><i data-feather="users"></i>友情链接<i
+							<a href="javascript:void(0)"><i data-feather="users"></i>友情链接<i
 									class="fas fa-chevron-right dropdown-icon"></i></a>
 							<ul class="">
 								<li><a href="" target="_blank"><i class="far fa-circle"></i> 暂无</a></li>
-
+						
 							</ul>
 						</li>
-
+						
+						
+						<li>
+							<a title="科目测试" href="./test.html"><i
+									data-feather="code"></i>科目测试</a>
+						</li>
+						
+						
+						<li>
+							<a title="待办事项" href="todo.html"><i
+									data-feather="code"></i>待办事项</a>
+						</li>
+						
 						<li>
 							<a title="关于本站" href="javascript:void(0)" data-toggle="modal" data-target="#modal"><i
 									data-feather="send"></i>关于本站</a>
@@ -264,8 +280,9 @@
 
 
 
+
 						<li>
-							<a href="./index.html"><i data-feather="home"></i>home</a>
+							<a href="./index.html"><i data-feather="home"></i>返回首页</a>
 						</li>
 
 
@@ -284,9 +301,9 @@
 
 					<div class="page-header">
 						<nav class="navbar navbar-expand-lg d-flex justify-content-evenly">
-							<a href="#" id="sidebar-toggle"><i data-feather="arrow-left"></i></a>
+							<a href="javascript:void(0)" id="sidebar-toggle"><i data-feather="arrow-left"></i></a>
 							<div class="header-title">
-								<h5 class="text-success bold"><a href="web.html">Lucson</a> </h5>
+								<h5 class="text-success bold"><a href="index.html">Lucson</a> </h5>
 							</div>
 							<div class="" id="headerNav">
 
@@ -350,7 +367,7 @@
 
 
 											<a target="_blank" class="dropdown-item"
-												href="http://connect.qq.com/widget/shareqq/index.html?url=http://lucsons.github.io/social.html&sharesource=qzone&pics=static/picture/cover.jpg&title=Hello,你好 我是李文祥&summary=这是我的个人主页 通过我的个人主页就可以找到我的博客和github啦 里面有精选的文章等着你们哦~&desc=我叫李文祥,今年21, 致力于学习前后端开发 分享更多的知识 喜欢与人交流  汲取经验 收获新的能量 希望看到此分享的人能够有朝一日成为你心目中的大牛~"><i
+												href="http://connect.qq.com/widget/shareqq/index.html?url=http://lucsons.github.io/web.html&sharesource=qzone&pics=static/picture/cover.jpg&title=Hello,你好 我是李文祥&summary=这是我的个人主页 通过我的个人主页就可以找到我的博客和github啦 里面有精选的文章等着你们哦~&desc=我叫李文祥,今年21, 致力于学习前后端开发 分享更多的知识 喜欢与人交流  汲取经验 收获新的能量 希望看到此分享的人能够有朝一日成为你心目中的大牛~"><i
 													aria-label="icon: usergroup-add"
 													class="anticon anticon-usergroup-add"><svg viewBox="64 64 896 896"
 														focusable="false" class="" data-icon="usergroup-add" width="1em"
@@ -394,57 +411,94 @@
 										<h5 class="card-title">文章分类</h5>
 										<div class="story-list wow fadeIn">
 											<div class="story d-flex">
-												<a href="web.html"><img src="./static/picture/web.webp" alt=""></a>
+												<a href="web.html#web"><img src="./static/picture/web.webp" alt=""></a>
 												<div class="story-info">
 													<!-- 前端 -->
-													<a href="web.html"><span class="story-author">前端
+													<a href="web.html#web"><span class="story-author">前端
 														</span></a>
 													<span class="story-time">大前端相关 </<span></span>
 												</div>
 											</div>
 											<div class="story d-flex">
-												<a href="java.html"><img
+												<a href="java.html#java"><img
 														src="https://img0.baidu.com/it/u=4084129530,3438713827&fm=26&fmt=auto&gp=0.jpg"
 														alt=""></a>
 												<div class="story-info">
-													<a href="java.html"><span class="story-author">Java</span></a>
+													<a href="java.html#java"><span class="story-author">Java</span></a>
 													<span class="story-time">Java后端 和 安卓相关</span>
 												</div>
 											</div>
 											<div class="story d-flex">
-												<a href="python.html"><img
+												<a href="python.html#python"><img
 														src="https://img0.baidu.com/it/u=2064728167,1364513690&fm=26&fmt=auto&gp=0.jpg"
 														alt=""></a>
 												<div class="story-info">
-													<a href="python.html"><span class="story-author">Python</span></a>
+													<a href="python.html#python"><span
+															class="story-author">Python</span></a>
 													<span class="story-time">爬虫方向的分享</span>
 												</div>
 											</div>
 
 											<div class="story d-flex">
-												<a href="security.html"><img
+												<a href="security.html#security"><img
 														src="https://img1.baidu.com/it/u=3140958831,606641020&fm=26&fmt=auto&gp=0.jpg"
 														alt=""></a>
 												<div class="story-info">
-													<a href="security.html"><span class="story-author">web 安全</span></a>
+													<a href="security.html#security"><span class="story-author">web
+															安全</span></a>
 													<span class="story-time">web 领域安全问题</span>
 												</div>
 											</div>
 
 											<div class="story d-flex">
-												<a href="plugins.html"><img
+												<a href="plugins.html#plugin"><img
 														src="https://img2.baidu.com/it/u=3370945038,1392993288&fm=26&fmt=auto&gp=0.jpg"
 														alt=""></a>
 												<div class="story-info">
-													<a href="plugins.html"><span class="story-author">我的插件</span></a>
+													<a href="plugins.html#plugin"><span
+															class="story-author">我的插件</span></a>
 													<span class="story-time">自己做的功能性插件整理</span>
 												</div>
 											</div>
 
 											<div class="story d-flex">
-												<a href="me.html"><img src="static/images/me.jpg" alt=""></a>
+												<a href="algorithm.html#algorithm"><img
+														src="https://img2.baidu.com/it/u=3328080000,1998940620&fm=26&fmt=auto&gp=0.jpg"
+														alt=""></a>
 												<div class="story-info">
-													<a href="me.html"><span class="story-author">我的日常</span></a>
+													<a href="algorithm.html#algorithm"><span
+															class="story-author">算法整理</span></a>
+													<span class="story-time">算法题整理</span>
+												</div>
+											</div>
+
+											<div class="story d-flex">
+												<a href="database.html#database"><img
+														src="https://img2.baidu.com/it/u=1998750341,342732462&fm=26&fmt=auto&gp=0.jpg"
+														alt=""></a>
+												<div class="story-info">
+													<a href="database.html#database"><span
+															class="story-author">数据库</span></a>
+													<span class="story-time">关系型和非关系型数据库整理</span>
+												</div>
+											</div>
+
+
+											<div class="story d-flex">
+												<a href="issue.html#issue"><img
+														src="https://img0.baidu.com/it/u=2813585581,395939567&fm=26&fmt=auto&gp=0.jpg"
+														alt=""></a>
+												<div class="story-info">
+													<a href="issue.html#issue"><span
+															class="story-author">开发问题</span></a>
+													<span class="story-time">开发中碰到的问题收集</span>
+												</div>
+											</div>
+
+											<div class="story d-flex">
+												<a href="me.html#me"><img src="static/images/me.jpg" alt=""></a>
+												<div class="story-info">
+													<a href="me.html#me"><span class="story-author">我的日常</span></a>
 													<span class="story-time">分享生活和爱好</span>
 												</div>
 											</div>
@@ -456,10 +510,10 @@
 							<div class=" col-md-6">
 
 
-								<!-- web -->
-								<div class="row px-4 px-md-0" id="web">
+								<!-- java -->
+								<div class="row px-4 px-md-0" id="java">
 									<blockquote class="text-center pb-2">
-										Java 相关技术文章
+										Java 相关文章
 									</blockquote>
 									<div class="card  card-bg">
 										<div class="card-body ">
@@ -484,13 +538,13 @@
 												<!-- Article Start -->
 												<div class="post-body">
 
-							
+
 												</div>
 												<!-- Article End -->
-												
+
 											</div>
 											<!-- 1 End-->
-										
+
 											<!-- ----------------- -->
 										</div>
 									</div>
@@ -552,8 +606,8 @@
 			<script src="./static/js/clipboard.min.js"></script>
 			<script>
 				var t = null;
-					
-				$(".tip").hide();	
+
+				$(".tip").hide();
 
 				new WOW().init();
 				var date = new Date();
@@ -578,7 +632,7 @@
 						$(".tip").html("已复制文章地址：" + e.text);
 						$(".tip").show();
 						t = setTimeout(() => {
-							$(".tip").hide();	
+							$(".tip").hide();
 						}, 3000);
 					});
 
@@ -601,7 +655,7 @@
 						$(".tip").html("复制成功");
 						$(".tip").show();
 						t = setTimeout(() => {
-						$(".tip").hide();
+							$(".tip").hide();
 						}, 2000);
 					});
 

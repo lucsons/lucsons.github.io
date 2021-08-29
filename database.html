@@ -19,6 +19,8 @@
 		<link href="static/css/main.min.css" rel="stylesheet">
 		<link href="static/css/custom.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="static/css/animate.min.css" />
+		<link rel="stylesheet" type="text/css" href="static/css/paraiso-dark.css" />
+		<script src="static/js/rainbow-custom.min.js"></script>
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING:Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE]>
@@ -27,6 +29,8 @@
 			hr {
 				margin: 30px 0 50px 0;
 			}
+
+
 			.page-sidebar {
 				z-index: 10002;
 			}
@@ -229,8 +233,8 @@
 							<a href="#"><i data-feather="command"></i>课程列表<i
 									class="fas fa-chevron-right dropdown-icon"></i></a>
 							<ul class="">
-								<li><a href="contact.html#al" ><i class="far fa-circle"></i> 案例</a></li>
-								<li><a href="contact.html#gj" ><i class="far fa-circle"></i> 工具</a></li>
+								<li><a href="contact.html#al"><i class="far fa-circle"></i> 案例</a></li>
+								<li><a href="contact.html#gj"><i class="far fa-circle"></i> 工具</a></li>
 
 								<li><a href="https://space.bilibili.com/366914054/channel/detail?cid=121222"
 										target="_blank"><i class="far fa-circle"></i> 系列课</a></li>
@@ -249,30 +253,29 @@
 						</li>
 
 						<li>
-							<a href="#"><i data-feather="users"></i>友情链接<i
+							<a href="javascript:void(0)"><i data-feather="users"></i>友情链接<i
 									class="fas fa-chevron-right dropdown-icon"></i></a>
 							<ul class="">
 								<li><a href="" target="_blank"><i class="far fa-circle"></i> 暂无</a></li>
-						
+
 							</ul>
 						</li>
-						
-										
+
+
 						<li>
-							<a title="科目测试" href="./test.html"><i
-									data-feather="code"></i>科目测试</a>
+							<a title="科目测试" href="./test.html"><i data-feather="code"></i>科目测试</a>
 						</li>
-						
-						
+
+
 						<li>
-							<a title="待办事项" href="todo.html"><i
-									data-feather="code"></i>待办事项</a>
+							<a title="待办事项" href="todo.html"><i data-feather="code"></i>待办事项</a>
 						</li>
-						
+
 						<li>
 							<a title="关于本站" href="javascript:void(0)" data-toggle="modal" data-target="#modal"><i
 									data-feather="send"></i>关于本站</a>
 						</li>
+
 
 
 
@@ -506,16 +509,16 @@
 							<div class=" col-md-6">
 
 
-								<!-- me -->
-								<div class="row px-4 px-md-0" id="me">
+								<!-- database -->
+								<div class="row px-4 px-md-0" id="database">
 									<blockquote class="text-center pb-2">
-										我的爱好和动态
+										数据库相关文章
 									</blockquote>
 									<div class="card  card-bg">
 										<div class="card-body ">
 
 											<!-- 1 Start-->
-											<div class="post wow fadeIn" id="me1">
+											<div class="post wow fadeIn" id="database1">
 												<div class="post-header">
 													<img src="http://q4.qlogo.cn/headimg_dl?dst_uin=2857734156&spec=100"
 														alt="">
@@ -636,6 +639,26 @@
 				});
 
 
+				// 代码复制	
+				$(".copy").click(function() {
+					var that = this;
+					var copy = new ClipboardJS('.copy', {
+						text: function(trigger) {
+							return $(that).next(".display").html().replace(/&lt;/g, '<').replace(/&gt;/g, ">") +
+								"\n\n\n转载请备注来源：http://lucsons.github.io\n原作者：Lucson\n哔哩哔哩：https://space.bilibili.com/366914054";
+						}
+					});
+
+					copy.on('success', function(e) {
+						clearTimeout(t);
+						$(".tip").html("复制成功");
+						$(".tip").show();
+						t = setTimeout(() => {
+							$(".tip").hide();
+						}, 2000);
+					});
+
+				});
 			</script>
 	</body>
 </html>
