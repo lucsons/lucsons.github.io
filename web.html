@@ -115,7 +115,7 @@
 				height: auto;
 				position: fixed;
 				left: 50%;
-				z-index: 9999;
+				z-index: 10000;
 				text-align: center;
 				line-height: 40px;
 				border-radius: 5px;
@@ -148,15 +148,49 @@
 			pre.display {
 				display: none;
 			}
+			
+			
+			.mask{
+				width:100vw;
+				height:100vh;
+				background-color: black;
+				opacity: 0.8;
+				z-index: 10000;
+				position: fixed;
+				top:0;
+				font-size: 50px;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				align-items: center;
+				display: none;
+			}
+			
+			@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+			       /* 在这儿写IE10+ 的css样式代码 */
+			       .mask{
+							 display: flex;
+					 }
+					 
+					 body{
+						 overflow: hidden;
+					 }
+			}
 		</style>
 	</head>
 
 	<body class="page-sidebar-collapsed">
 
 
+		<div class="mask">
+		   <p>什么年代了 还在用IE  快换个浏览器吧~</p>
+		   <p>本站点不支持IE浏览器浏览~</p>
+		   推荐<a target="_blank" href="https://www.google.cn/chrome/">Chrome</a>或者<a target="_blank" href="http://browser.360.cn/">360 安全浏览器</a>
+		 </div>
+
 		<div class="tip"> 复制成功 </div>
 
-
+		
 
 		<!-- Modal -->
 		<div class="modal fade " id="modal" tabindex="-1">
@@ -276,7 +310,7 @@
 
 
 					</ul>
-					<a href="#" id="sidebar-collapsed-toggle"><i data-feather="arrow-right"></i></a>
+					<a href="javascript:void(0)" id="sidebar-collapsed-toggle"><i data-feather="arrow-right"></i></a>
 				</div>
 
 				<!--  侧边栏结束 -->
@@ -287,9 +321,9 @@
 
 					<div class="page-header">
 						<nav class="navbar navbar-expand-lg d-flex justify-content-evenly">
-							<a href="#" id="sidebar-toggle"><i data-feather="arrow-left"></i></a>
+							<a href="javascript:void(0)" id="sidebar-toggle"><i data-feather="arrow-left"></i></a>
 							<div class="header-title">
-								<h5 class="text-success bold"><a href="social.html">Lucson</a> </h5>
+								<h5 class="text-success bold"><a href="index.html">Lucson</a> </h5>
 							</div>
 							<div class="" id="headerNav">
 
@@ -353,7 +387,7 @@
 
 
 											<a target="_blank" class="dropdown-item"
-												href="http://connect.qq.com/widget/shareqq/index.html?url=http://lucsons.github.io/social.html&sharesource=qzone&pics=static/picture/cover.jpg&title=Hello,你好 我是李文祥&summary=这是我的个人主页 通过我的个人主页就可以找到我的博客和github啦 里面有精选的文章等着你们哦~&desc=我叫李文祥,今年21, 致力于学习前后端开发 分享更多的知识 喜欢与人交流  汲取经验 收获新的能量 希望看到此分享的人能够有朝一日成为你心目中的大牛~"><i
+												href="http://connect.qq.com/widget/shareqq/index.html?url=http://lucsons.github.io/web.html&sharesource=qzone&pics=static/picture/cover.jpg&title=Hello,你好 我是李文祥&summary=这是我的个人主页 通过我的个人主页就可以找到我的博客和github啦 里面有精选的文章等着你们哦~&desc=我叫李文祥,今年21, 致力于学习前后端开发 分享更多的知识 喜欢与人交流  汲取经验 收获新的能量 希望看到此分享的人能够有朝一日成为你心目中的大牛~"><i
 													aria-label="icon: usergroup-add"
 													class="anticon anticon-usergroup-add"><svg viewBox="64 64 896 896"
 														focusable="false" class="" data-icon="usergroup-add" width="1em"

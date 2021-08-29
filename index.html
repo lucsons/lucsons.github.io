@@ -20,10 +20,7 @@
 		<link href="static/css/custom.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="static/css/animate.min.css" />
 		<link rel="shortcut icon" href="static/images/ico.ico" type="image/x-icon" />
-		<!--[if lt IE 9]>
-<script src="static/js/html5shiv.min.js"></script>
-<script src="static/js/respond.min.js"></script>
-<![endif]-->
+
 		<style>
 			.card-title {
 				margin-bottom: 5px;
@@ -81,9 +78,51 @@
 				z-index: 9999;
 				top: 30%;
 			}
+
+			.mask {
+				width: 100vw;
+				height: 100vh;
+				background-color: black;
+				opacity: 0.8;
+				z-index: 10000;
+				position: fixed;
+				top: 0;
+				font-size: 50px;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				align-items: center;
+				display: none;
+			}
+
+
+			@media all and (-ms-high-contrast: none),
+			(-ms-high-contrast: active) {
+
+				/* 在这儿写IE10+ 的css样式代码 */
+				.mask {
+					display: flex;
+				}
+
+				body {
+					overflow: hidden;
+				}
+			}
 		</style>
+
+
+
 	</head>
 	<body class="page-sidebar-collapsed">
+
+		<div class="mask">
+			<p>什么年代了 还在用IE 快换个浏览器吧~</p>
+			<p>本站点不支持IE浏览器浏览~</p>
+			推荐<a target="_blank" href="https://www.google.cn/chrome/">Chrome</a>或者<a target="_blank"
+				href="http://browser.360.cn/">360 安全浏览器</a>
+		</div>
+
+
 
 
 		<div class="alert alert-primary w-50" role="alert">
@@ -240,7 +279,7 @@
 
 
 					</ul>
-					<a href="#" id="sidebar-collapsed-toggle"><i data-feather="arrow-right"></i></a>
+					<a href="javascript:void(0)" id="sidebar-collapsed-toggle"><i data-feather="arrow-right"></i></a>
 				</div>
 
 				<!--  侧边栏结束 -->
@@ -251,9 +290,9 @@
 
 					<div class="page-header">
 						<nav class="navbar navbar-expand-lg d-flex justify-content-evenly">
-							<a href="#" id="sidebar-toggle"><i data-feather="arrow-left"></i></a>
+							<a href="javascript:void(0)" id="sidebar-toggle"><i data-feather="arrow-left"></i></a>
 							<div class="header-title">
-								<h5 class="text-success bold"><a href="social.html">Lucson</a> </h5>
+								<h5 class="text-success bold"><a href="web.html">Lucson</a> </h5>
 							</div>
 							<div class="mx-4  d-none d-sm-block my-2 my-lg-0">
 								<input class="form-control mr-sm-2 search-cont" type="search" placeholder="搜索课程"
@@ -408,7 +447,7 @@
 											课程顺序：0基础学习按天学习3小时计约：67天 - 108天 = 2个月 - 3个半月</p>
 										<ol>
 											<li>Sass/Less/PostCss(5 - 7 天)</li>
-										</ol> 
+										</ol>
 
 									</div>
 								</div>
@@ -466,7 +505,7 @@
 												希望在学习完本系列课程之后
 												能够对计算机有所了解 并能够熟悉windows系统的基本使用 领略编程的基本思维</p>
 
-											<p> 点击 <a target="_blank" href="static/picture/qrcode.jpg">阿祥说</a> 扫码关注公众号
+											<p> 点击 <a target="_blank" href="static/picture/qrcode.webp">阿祥说</a> 扫码关注公众号
 												回复
 												<span class="text-warning">windows</span> 获取配套源码+项目源码
 											</p>
@@ -553,7 +592,7 @@
 												唯一的难点在于需要记忆大量标签
 											</p>
 
-											<p> 点击 <a target="_blank" href="static/picture/qrcode.jpg">阿祥说</a> 扫码关注公众号
+											<p> 点击 <a target="_blank" href="static/picture/qrcode.webp">阿祥说</a> 扫码关注公众号
 												回复
 												<span class="text-warning">html4</span> 获取配套源码+项目源码
 											</p>
@@ -580,7 +619,7 @@
 										<div class="card-body p-4" id="down">
 											<p class="d-flex"> <span class="badge  bg-gradient">前端 - 时长： 00:30:00</span>
 											</p>
-								
+
 											<div class="mb-2"><small class="bg-dark text-light px-2 py-1 ">第一阶段(4) -
 													难度(6★满)：★</small></div>
 											<p class="d-flex justify-content-between mt-3"><span
@@ -592,12 +631,13 @@
 												</a>
 											</h5>
 											<p class="widget-info-text">
-												MARKDOWN 是一个优秀的标记语言 经常被用来当做各种项目的描述文件 有的博客也是用的MARKDOWN格式进行编辑 可以用来写笔记  所以掌握MARKDOWN 还是有必要的 MARKDOWN 很简单
+												MARKDOWN 是一个优秀的标记语言 经常被用来当做各种项目的描述文件 有的博客也是用的MARKDOWN格式进行编辑 可以用来写笔记
+												所以掌握MARKDOWN 还是有必要的 MARKDOWN 很简单
 											</p>
-								
-											<p> MARKDOWN 过于简单 没有配套代码
+
+											<p> Markdown 教程 由于较为简单没有制作获取资料的地址
 											</p>
-								
+
 											<div class="mb-3">
 												<a href="" class="col-sm-6" title="点击跳转到B站学习" target="_blank"
 													class="btn btn-link widget-info-action ">点击阅读课程文档</a>
@@ -607,17 +647,155 @@
 													target="_blank"
 													class="btn btn-info widget-info-action mt-3">开始去学习</a>
 												<a title="查看课程目录" href="javascript:void(0)"
-													class="btn btn-info widget-info-action mt-3 dir" data-type="markdown"
+													class="btn btn-info widget-info-action mt-3 dir"
+													data-type="markdown" data-toggle="modal"
+													data-target="#directory "></i>查看课程目录</a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="col-md-6 col-lg-4  wow flipInX" id="css">
+									<div class="card widget widget-info card-bg" id="css3">
+										<img src="static/picture/1-5.webp" class="card-img-top" id="css2" alt="html4">
+										<div class="card-body p-4">
+											<p class="d-flex"> <span class="badge  bg-gradient">前端 - 时长： 33:29:07</span>
+											</p>
+
+											<div class="mb-2"><small class="bg-dark text-light px-2 py-1 ">第一阶段(5) -
+													难度(6★满)：★★★</small></div>
+											<p class="d-flex justify-content-between mt-3"><span
+													class="badge  bg-warning">0基础预计学习周期：10 - 16 (天/3h) </span> </p>
+											<h5 class="widget-info-title text-white">
+												<a class="text-light"
+													href="https://www.bilibili.com/video/BV18E41127wx">
+													CSS2/CSS3 层叠样式表
+												</a>
+											</h5>
+											<p class="widget-info-text">
+												CSS是前端里面必不可缺的一项技术 它主要掌控界面的布局和美化 我们如今看到的网页都离不开CSS的功劳 如果你想要你的网站看起来很精彩
+												那CSS就是必学的同样的如果不学CSS那前端就学不下去
+											</p>
+
+
+											<p> 点击 <a target="_blank" href="static/picture/qrcode.webp">阿祥说</a> 扫码关注公众号
+												回复
+												<span class="text-warning">CSS3 或者 CSS</span> 获取配套源码+项目源码
+											</p>
+
+											<div class="mb-3">
+												<a href="" class="col-sm-6" title="点击跳转到B站学习" target="_blank"
+													class="btn btn-link widget-info-action ">点击阅读课程文档</a>
+											</div>
+											<div>
+												<a href="https://www.bilibili.com/video/BV1C64y1X74b" title="点击跳转到B站学习"
+													target="_blank"
+													class="btn btn-info widget-info-action mt-3">开始去学习</a>
+												<a title="查看课程目录" href="javascript:void(0)"
+													class="btn btn-info widget-info-action mt-3 dir" data-type="css"
 													data-toggle="modal" data-target="#directory "></i>查看课程目录</a>
 											</div>
 										</div>
 									</div>
 								</div>
-								
-								
-								
-								
-								
+
+
+								<div class="col-md-6 col-lg-4  wow flipInX" id="flex">
+									<div class="card widget widget-info card-bg" id="grid">
+										<img src="static/picture/1-6.webp" class="card-img-top" id="media" alt="html4">
+										<div class="card-body p-4">
+											<p class="d-flex"> <span class="badge  bg-gradient">前端 - 时长： 19:27:18</span>
+											</p>
+
+											<div class="mb-2"><small class="bg-dark text-light px-2 py-1 ">第一阶段(6) -
+													难度(6★满)：★★★</small></div>
+											<p class="d-flex justify-content-between mt-3"><span
+													class="badge  bg-warning">0基础预计学习周期：10 - 15 (天/3h) </span> </p>
+											<h5 class="widget-info-title text-white">
+												<a class="text-light"
+													href="https://www.bilibili.com/video/BV18E41127wx">
+													CSS3 移动端界面响应式界面开发
+												</a>
+											</h5>
+											<p class="widget-info-text">
+												随着现在移动设备的日渐增多 作为一个合格的前端工程师 对于移动设备的界面和响应式界面也要能够开发
+												本套课程详细介绍了CSS原生的制作移动界面和响应式界面的方式 并且有多个案例练习
+											</p>
+
+
+											<p> 点击 <a target="_blank" href="static/picture/qrcode.webp">阿祥说</a> 扫码关注公众号
+												回复
+												<span class="text-warning">CSS3 或者 CSS</span> 获取配套源码+项目源码
+											</p>
+
+											<div class="mb-3">
+												<a href="" class="col-sm-6" title="点击跳转到B站学习" target="_blank"
+													class="btn btn-link widget-info-action ">点击阅读课程文档</a>
+											</div>
+											<div>
+												<a href="https://www.bilibili.com/video/BV1Vq4y1Q75G" title="点击跳转到B站学习"
+													target="_blank"
+													class="btn btn-info widget-info-action mt-3">开始去学习</a>
+												<a title="查看课程目录" href="javascript:void(0)"
+													class="btn btn-info widget-info-action mt-3 dir" data-type="mobile"
+													data-toggle="modal" data-target="#directory "></i>查看课程目录</a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+
+
+								<div class="col-md-6 col-lg-4  wow flipInX" id="xml">
+									<div class="card widget widget-info card-bg" id="dtd">
+										<img src="static/picture/1-7.webp" class="card-img-top" id="xpath" alt="html4">
+										<div class="card-body p-4">
+											<p class="d-flex"> <span class="badge  bg-gradient">前端 - 时长： 03:04:11 *
+													已加速</span>
+											</p>
+
+											<div class="mb-2"><small class="bg-dark text-light px-2 py-1 ">第一阶段(7) -
+													难度(6★满)：★★</small></div>
+											<p class="d-flex justify-content-between mt-3"><span
+													class="badge  bg-warning">0基础预计学习周期：3 (天/3h) </span> </p>
+											<h5 class="widget-info-title text-white">
+												<a class="text-light"
+													href="https://www.bilibili.com/video/BV18E41127wx">
+													XML/DTD/XPATH
+												</a>
+											</h5>
+											<p class="widget-info-text">
+												XML 在很多地方用作配置文件 如果你不学习后端可能用不到 但是作为前端也许以后会碰到XML的数据格式进行传输所以需要学习. DTD
+												是定义XML格式的 了解即可 。 XPATH 是抓取数据的 很有用
+											</p>
+
+
+											<p> 点击 <a target="_blank" href="static/picture/qrcode.webp">阿祥说</a> 扫码关注公众号
+												回复
+												<span class="text-warning">XML</span> 获取配套源码
+											</p>
+
+											<div class="mb-3">
+												<a href="" class="col-sm-6" title="点击跳转到B站学习" target="_blank"
+													class="btn btn-link widget-info-action ">点击阅读课程文档</a>
+											</div>
+											<div>
+												<a href="https://www.bilibili.com/video/BV1zU4y1E7Ho" title="点击跳转到B站学习"
+													target="_blank"
+													class="btn btn-info widget-info-action mt-3">开始去学习</a>
+												<a title="查看课程目录" href="javascript:void(0)"
+													class="btn btn-info widget-info-action mt-3 dir" data-type="xml"
+													data-toggle="modal" data-target="#directory "></i>查看课程目录</a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+
+
 								<!-- End -->
 							</div>
 
@@ -701,7 +879,82 @@
 							" HTML Marquee", "HTML4 Entity ", "HTML4 表单补充和多媒体", "HTML4 多媒体补充", " HTML4 实战",
 							"其余20多集旧版本可不看(实际本课程时长为6小时多)"
 						],
-						"markdown":["Markdown 介绍与工具下载","Markdown 标题","Markdown 标题","Markdown 图片","Markdown 链接","Makdown 文本样式设置","Markdown 列表","Markdown 单行代码","markdown 代码块","Markdown Typora 使用"]
+						"markdown": ["Markdown 介绍与工具下载", "Markdown 标题", "Markdown 标题", "Markdown 图片", "Markdown 链接",
+							"Makdown 文本样式设置", "Markdown 列表", "Markdown 单行代码", "markdown 代码块", "Markdown Typora 使用"
+						],
+						"css": ["CSS 开篇", "什么是CSS", "为什么要学习CSS", "CSS版本和模块", "CSS 基本语法", "CSS 三种使用方式", "CSS 样式优先级", "CSS 常用计量单位",
+							"CSS 语法规则", "CSS 基础选择器和优先级", "CSS 文本样式", "CSS 字体样式", "CSS 背景样式", "CSS 色彩模式", "CSS 精灵图", "CSS 列表样式",
+							"CSS 伪类", "CSS 伪元素", "CSS 高级选择器", "CSS 尺寸", "CSS 盒子模型", "CSS 布局练习", "CSS 区块元素和内联元素", "CSS 图片廊(上)",
+							"CSS 图片廊(下)", " CSS 悬浮显示", "CSS 表单布局", "CSS 浮动", "CSS BFC", "CSS 浮动菜单练习", "CSS 定位(上)", "CSS定位(下)",
+							"CSS 定位 sticky 应用", "CSS 居中方式", " CSS 透明度和滤镜", "CSS 两栏布局", "CSS 圣杯布局", "CSS 知乎注册界面(1)",
+							"CSS 知乎注册界面(2)", "CSS 知乎注册界面(3)", "CSS 知乎注册界面(4)", " CSS3 Border 样式", "CSS3 BoxShadow",
+							"CSS3 图像双边框效果", "CSS3 私有前缀", "CSS3 渐变", "CSS3 @fontFace", "CSS 三角形案例", "CSS 提示工具案例", "CSS 分页按钮案例",
+							"CSS3 Transition 过渡", "CSS3 Transition 时钟案例", "CSS3 Transition 时钟案例", "CSS3 Transition 动态双边框案例",
+							"CSS3 Transition 手风琴案例",
+							"CSS3 Transform2D转换", "CSS3 TransformOrigin", "CSS3 TransformOrigin圆周动画案例",
+							"CSS3 TransformOrigin加载动画案例", "CSS3 Transform图像缩放案例",
+							"CSS3 Transform 3D 转换", "CSS3 Transform 3D 立方体案例", "CSS3 Transform 3D 反转图像案例",
+							"CSS3 Transform 3D 开门案例", "CSS3 Transform 3D 开门案例", "CSS3 Animation 动画", "CSS3 Animation 加载动画案例",
+							"CSS3 Animation 背景渐变案例", "CSS3 Animation 图像切换案例", "CSS3 Animation 图像轮播案例",
+							"CSS Font Awesome 字体图标库", "CSS3 Animation 爱心点赞案例", "CSS3  小黄人案例(1)", "CSS3  小黄人案例(2)",
+							"CSS3  小黄人案例(2)", "CSS3 小黄人案例(3)",
+							"CSS IE兼容性问题(1)", "CSS IE兼容性问题(2)", "CSS IE 兼容性问题(3)", "CSS IE 兼容性问题(4)", "CSS IE 兼容性问题(5)",
+							"CSS IE 兼容性问题(6)", "CSS IE 兼容性问题(7)", "CSS Hack介绍", "CSS 属性Hack", "CSS 选择器Hack", "CSS 条件注释",
+							"CSS htc 使用", "CSS nth-of-type 选择器(遗漏)", "CSS Margin负值问题", "CSS 文本圆形环绕", "CSS Outline制作边框",
+							"CSS3 水波案例", "CSS3 轮播图案例", "CSS PC 淘宝项目 - 项目准备", "CSS PC 淘宝项目 - 导航条", "CSS PC 淘宝项目 - 背景和页脚制作",
+							"CSS PC 淘宝项目 - 导航条下拉列表", "CSS PC 淘宝项目 - 网站导航下拉列表适配", "CSS PC 淘宝项目 - 活动区域制作",
+							"CSS PC 淘宝项目 - 清除浮动的改进方案", "CSS PC 淘宝项目 - 搜索栏区域(上)", "CSS PC 淘宝项目 - 搜索栏区域(下)",
+							"CSS PC 淘宝项目 - 搜索栏BUG解决(UP的错狗头保命@。@)", "CSS PC 淘宝项目 - 主题市场部分制作", "CSS PC 淘宝项目 - 主内容区域结构布局",
+							"CSS PC 淘宝项目 - 样式文件拆分", "CSS PC 淘宝项目 - 主内容区域侧边栏", "CSS PC 淘宝项目 - 主内容区域结构外边距设置",
+							"CSS PC 淘宝项目 - 主内容区域中间布局(1)",
+							"CSS PC 淘宝项目 - 主内容区域用户栏目", "CSS PC 淘宝项目 - 用户栏目TAB卡Bug修复", "CSS PC 淘宝项目 - 主内容区域服务栏目",
+							"CSS PC 淘宝项目 - 主内容区域轮播CSS实现", "CSS PC 淘宝项目 - 用JS实现轮播(现阶段了解即可)", "CSS PC 淘宝项目 - 内容区域列表实现",
+							"CSS PC 淘宝项目 -  内容区域有好货部分实现", "CSS PC 淘宝项目.-  内容区域猜你喜欢部分实现",
+							"CSS PC 淘宝项目 -  右侧固定导航制作", "CSS PC 淘宝项目 - IE浏览器兼容和头尾部样式拆分(完结)", "拓展  - 内嵌式文本打字机特效",
+							"拓展 - CSS3 文本遮盖特效", "拓展 - 导航案例", "CSS3 3D 按钮", "拓展 - shade-outside", "拓展 -  -webkit-scrollbar",
+							"拓展 -  scroll-snap-type", "拓展 - 案例演示", "拓展 - 工具栏实现", " 拓展 - 侧边栏实现", " 拓展 - 点击切换侧边栏",
+							"拓展 - CSS 实现时钟", "拓展 - 加载动画进度条", "拓展 - Loading 加载动画"
+						],
+						"mobile": ["课程项目案例演示", "VSCode 安装使用", "CSS3 多列布局", "CSS3 多列布局案例", "移动端调试方式", "视口理解", "CSS像素和物理像素理解", "二倍图",
+							"移动端样式初始化", "移动端常见布局方式", "移动端浏览器内核", "box-sizing回顾", "CSS3 媒体查询介绍和视口设置", "CSS3 媒体查询 style 标签监控设备",
+							"CSS3 媒体查询 link 标签监控设备", "CSS3 媒体查询 @import 监控设备", "CSS3 媒体查询 @media语法监控设备 not only",
+							"CSS3 媒体查询 max-width 关键字", "CSS3 媒体查询 min-width 关键字", "CSS3 媒体查询 and 关键字", "CSS3 媒体查询 , 关键字",
+							"CSS3 媒体查询案例", "CSS3 Bootstrap框架栅格类体验", "CSS3 响应式项目 - 实现Bootstrap的栅格类", "CSS3 响应式项目 - 项目介绍",
+							"CSS3 响应式项目 - Header部分制作并适配", "CSS3 响应式项目 - Header超小屏幕侧边栏导航适配", "CSS3 响应式项目 - Banner区域(1)",
+							"CSS3 响应式项目 - Banner区域(2)", "CSS3 响应式项目 - 其他区域制作(完结)", "CSS3 流式布局理解", "CSS3 流式布局项目 - 项目初始化准备",
+							"CSS3 流式布局项目(京东) - 底部导航", "CSS3  流式布局项目(京东) - 头部导航(1)", "CSS3 流式布局项目(京东) - 头部导航(2)",
+							"CSS3 流式布局项目(京东) - 主内容区域Banner", "CSS3 流式布局项目(京东) - 主内容区域菜单", "CSS3 流式布局项目(京东) - 来点好货部分",
+							"CSS3 流式布局项目(京东) - 热销商品(1)", "CSS3 流式布局项目(京东) - 热销商品(2)", "CSS3 流式布局项目(京东) - 商品列表和底部(完结)",
+							"CSS3 Flex 布局介绍", "CSS3 Flex布局 - 传统两栏布局方案", "CSS3 Flex 布局 - 弹性两栏布局方案", "CSS3 Flex 布局 - 底部菜单实现方案对比",
+							"CSS3 Flex 布局 -  弹性盒子定义", "CSS3 Flex 布局 - 轴线概念和Flex-direction",
+							"CSS3 Flex 布局 - flex-warp,flex-flow", "CSS3 Flex 布局 - jusifty-content",
+							"CSS3 Flex 布局 - align-items,align-content", "CSS3 Flex布局 - align-self",
+							"CSS3 Flex 布局 - flex-grow  flex-shrink  flex-basis  flex  order", "CSS3 Flex 布局 -  布局技巧",
+							"CSS3 Flex 布局 - 实现栅格类", "CSS3 Flex项目(小米) - 项目初始化", "CSS3 Flex 项目(小米) - Header 部分",
+							"CSS3 Flex 项目(小米) - Footer 部分", "CSS3 Flex 项目(小米) - Banner区域和列表区域", "CSS Flex项目(小米) - 热销产品",
+							"CSS3 Flex项目(小米) - 商品列表和结尾", "Grid 布局 - grid  网格布局介绍", "Grid 布局 - grid 内的概念理解",
+							"Grid 布局 - grid container 定义", "Grid 布局 - grid-template-columns,grid-template-rows(1)",
+							"Grid 布局 - grid-template-columns,grid-template-rows(2)", "Grid 布局 - grid-template",
+							"Grid 布局 - column-gap,row-gap,gap,底部导航，两栏布局实现", "Grid 布局 - grid-column,grid-row,grid-row-start(1)",
+							"Grid 布局 - grid-column,grid-row(2)", "Grid 布局 - grid 实现栅格类", "Grid 布局 - grid-area",
+							"Grid 布局 - grid-template-area",
+							"Grid 布局 - jusifty-content,jusifty-items,align-content.align-items", "Grid 布局 - grid-auto-flow",
+							"Grid项目 - 传统样式实现后台结构布局", "Grid 项目 - 初始化工作", "Grid 项目 - 设置通用样式", "Grid 项目 - 实现后台整体结构",
+							"Grid项目 - 实现顶部内容", "Grid项目 - 左侧导航列表实现", "Grid 项目 - 管理控制台界面制作", "Grid 项目 - 优化admin界面",
+							"Grid 项目 - 站点管理界面制作", "Grid 项目 - 短信管理界面制作", "Grid 项目 - 账号管理界面制作", "Grid 项目 - 实名认证界面制作",
+							"Grid 项目 - 消息中心界面制作", "Grid 项目 - 金币管理界面制作", "Grid 项目 - 订单管理界面制作(完结)",
+							"rem布局 - max-device-width 介绍", "rem布局 - rem的认识和介绍", "rem 布局 - 如何使用rem进行移动端布局", "rem 项目(淘宝) - 项目准备",
+							"rem 项目(淘宝) - Header 部分", "rem 项目(淘宝) - 列表区域和幻灯片区域", "rem 项目(淘宝) - footer区域和返回顶部+打开淘宝",
+							"rem 项目(淘宝) - 商品板块(上)", "rem 项目(淘宝) - 商品板块(下)", "rem项目(淘宝) - 列表区域", "rem项目(淘宝) - 问题解决",
+							"cssrem 插件", "flexible.js 适配方案", "animate.css，wow.js 动画插件", "二倍背景图精灵图", "flexible项目 - 项目准备",
+							"flexible项目 - Header 实现", "flexible项目 - 图片内容区域", "flexible项目 - 服务区域", "flexible项目 - work区域",
+							"flexible 项目 - 文本信息模块制作", "flexible项目 - footer 区域(完结)"
+						],
+						"xml": ["XML是什么和HTML有啥区别", "GML,SGML,HTML,XML,HTML5", "HTML里的标签从哪里来", "第一个XML程序和语法规则", "XML实体,注释,命名规则,属性",
+							"XML 命名空间(1)", "XML 命名空间(2)", "DTD  介绍", "DTD XML 的构建模块", "内部DTD和外部DTD", "DTD 元素定义", "DTD 属性定义",
+							"DTD 实体定义", "DTD 实战案例", "Xpath 介绍", "Xpath 节点类型", "Xpath 选取节点", "Xpath 谓语", "Xpath 未知节点和路径拼接",
+							"Xpath 轴 和 运算符", " Xpath 函数", "Xpath 实例"
+						]
 					}
 
 					$("[class*=dir]").on("click", function() {
