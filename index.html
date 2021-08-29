@@ -21,6 +21,7 @@
 		<link rel="stylesheet" type="text/css" href="static/css/animate.min.css" />
 		<link rel="stylesheet" href="./static/css/music.css">
 		<link rel="shortcut icon" href="static/images/ico.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="static/css/contextmenu.css">
 
 		<style>
 			.card-title {
@@ -111,11 +112,17 @@
 			}
 		</style>
 
-
+		
 
 	</head>
 	<body class="page-sidebar-collapsed">
-
+		
+		<ul class="nav nav-pills flex-column  contextmenu" id="contextmenu">
+			 <li><a target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lucsons.github.io/web.html&sharesource=qzone&pics=static/picture/cover.jpg&title=Hello,你好 我是李文祥&summary=这是我的个人主页 通过我的个人主页就可以找到我的博客和github啦 里面有精选的文章等着你们哦~&desc=我叫李文祥,今年21, 致力于学习前后端开发 分享更多的知识 喜欢与人交流  汲取经验 收获新的能量 希望看到此分享的人能够有朝一日成为你心目中的大牛~">分享本博客</a></li>
+			  <li><a href="test.html">测评科目</a></li>
+			   <li><a href="javascript:void(0)" id="u_copy">复制</a></li>
+		</ul>
+		
 
 		<div class="mask">
 			<p>什么年代了 还在用IE 快换个浏览器吧~</p>
@@ -373,7 +380,7 @@
 
 
 											<a target="_blank" class="dropdown-item"
-												href="http://connect.qq.com/widget/shareqq/index.html?url=http://lucsons.github.io/social.html&sharesource=qzone&pics=static/picture/cover.jpg&title=Hello,你好 我是李文祥&summary=这是我的个人主页 通过我的个人主页就可以找到我的博客和github啦 里面有精选的文章等着你们哦~&desc=我叫李文祥,今年21, 致力于学习前后端开发 分享更多的知识 喜欢与人交流  汲取经验 收获新的能量 希望看到此分享的人能够有朝一日成为你心目中的大牛~"><i
+												href="http://connect.qq.com/widget/shareqq/index.html?url=http://lucsons.github.io/web.html&sharesource=qzone&pics=static/picture/cover.jpg&title=Hello,你好 我是李文祥&summary=这是我的个人主页 通过我的个人主页就可以找到我的博客和github啦 里面有精选的文章等着你们哦~&desc=我叫李文祥,今年21, 致力于学习前后端开发 分享更多的知识 喜欢与人交流  汲取经验 收获新的能量 希望看到此分享的人能够有朝一日成为你心目中的大牛~"><i
 													aria-label="icon: usergroup-add"
 													class="anticon anticon-usergroup-add"><svg viewBox="64 64 896 896"
 														focusable="false" class="" data-icon="usergroup-add" width="1em"
@@ -835,6 +842,7 @@
 				<script src="static/js/main.min.js"></script>
 				<script src="https://cdn.bootcdn.net/ajax/libs/wow/1.1.2/wow.js"></script>
 				<script src="./static/js/music.js"></script>
+				<script src="static/js/contextmenu.js"></script>
 				<script>
 					new WOW().init();
 

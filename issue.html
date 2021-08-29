@@ -21,6 +21,7 @@
 		<link rel="stylesheet" type="text/css" href="static/css/animate.min.css" />
 		<link rel="stylesheet" type="text/css" href="static/css/paraiso-dark.css" />
 		<script src="static/js/rainbow-custom.min.js"></script>
+		<link rel="stylesheet" href="static/css/contextmenu.css">
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING:Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE]>
@@ -29,7 +30,7 @@
 			hr {
 				margin: 30px 0 50px 0;
 			}
-			
+
 			.page-sidebar {
 				z-index: 10002;
 			}
@@ -154,7 +155,13 @@
 	</head>
 
 	<body class="page-sidebar-collapsed">
-
+		<ul class="nav nav-pills flex-column  contextmenu" id="contextmenu">
+			<li><a target="_blank"
+					href="http://connect.qq.com/widget/shareqq/index.html?url=http://lucsons.github.io/web.html&sharesource=qzone&pics=static/picture/cover.jpg&title=Hello,你好 我是李文祥&summary=这是我的个人主页 通过我的个人主页就可以找到我的博客和github啦 里面有精选的文章等着你们哦~&desc=我叫李文祥,今年21, 致力于学习前后端开发 分享更多的知识 喜欢与人交流  汲取经验 收获新的能量 希望看到此分享的人能够有朝一日成为你心目中的大牛~">分享本博客</a>
+			</li>
+			<li><a href="test.html">测评科目</a></li>
+			<li><a href="javascript:void(0)" id="u_copy">复制</a></li>
+		</ul>
 
 		<div class="tip"> 复制成功 </div>
 
@@ -232,8 +239,8 @@
 							<a href="#"><i data-feather="command"></i>课程列表<i
 									class="fas fa-chevron-right dropdown-icon"></i></a>
 							<ul class="">
-								<li><a href="contact.html#al" ><i class="far fa-circle"></i> 案例</a></li>
-								<li><a href="contact.html#gj" ><i class="far fa-circle"></i> 工具</a></li>
+								<li><a href="contact.html#al"><i class="far fa-circle"></i> 案例</a></li>
+								<li><a href="contact.html#gj"><i class="far fa-circle"></i> 工具</a></li>
 
 								<li><a href="https://space.bilibili.com/366914054/channel/detail?cid=121222"
 										target="_blank"><i class="far fa-circle"></i> 系列课</a></li>
@@ -251,26 +258,24 @@
 							</ul>
 						</li>
 
-					<li>
+						<li>
 							<a href="javascript:void(0)"><i data-feather="users"></i>友情链接<i
 									class="fas fa-chevron-right dropdown-icon"></i></a>
 							<ul class="">
 								<li><a href="" target="_blank"><i class="far fa-circle"></i> 暂无</a></li>
-						
+
 							</ul>
 						</li>
-						
+
 						<li>
-							<a title="科目测试" href="./test.html"><i
-									data-feather="code"></i>科目测试</a>
+							<a title="科目测试" href="./test.html"><i data-feather="code"></i>科目测试</a>
 						</li>
-						
-						
+
+
 						<li>
-							<a title="待办事项" href="todo.html"><i
-									data-feather="code"></i>待办事项</a>
+							<a title="待办事项" href="todo.html"><i data-feather="code"></i>待办事项</a>
 						</li>
-						
+
 						<li>
 							<a title="关于本站" href="javascript:void(0)" data-toggle="modal" data-target="#modal"><i
 									data-feather="send"></i>关于本站</a>
@@ -603,6 +608,7 @@
 			<script src="static/js/main.min.js"></script>
 			<script src="https://cdn.bootcdn.net/ajax/libs/wow/1.1.2/wow.js"></script>
 			<script src="./static/js/clipboard.min.js"></script>
+			<script src="static/js/contextmenu.js"></script>
 			<script>
 				var t = null;
 
