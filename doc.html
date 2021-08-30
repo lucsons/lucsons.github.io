@@ -15,22 +15,15 @@
 		<link href="static/css/bootstrap.min.css" rel="stylesheet">
 		<link href="static/css/all.min.css" rel="stylesheet">
 		<link href="static/css/perfect-scrollbar.css" rel="stylesheet">
-		<link href="static/css/pace.css" rel="stylesheet"><!-- Theme Styles -->
+		<link href="static/css/pace.css" rel="stylesheet">
 		<link href="static/css/main.min.css" rel="stylesheet">
 		<link href="static/css/custom.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="static/css/animate.min.css" />
-		<link rel="stylesheet" type="text/css" href="static/css/paraiso-dark.css" />
-		<script src="static/js/rainbow-custom.min.js"></script>
 		<link rel="stylesheet" href="static/css/contextmenu.css">
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING:Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE]>
         <![endif]-->
 		<style>
-			hr {
-				margin: 30px 0 50px 0;
-			}
-
+			
 
 			.page-sidebar {
 				z-index: 10002;
@@ -64,10 +57,7 @@
 			}
 
 
-			blockquote {
-				font-size: 18px;
-			}
-
+		
 
 			.page-header .navbar {
 				padding: 14px 0;
@@ -152,52 +142,17 @@
 			pre.display {
 				display: none;
 			}
-			
-			#top{
-				  position:fixed;
-				  z-index: 10002;
-				  right:20px;
-				  bottom:50px;
-				  width: 50px;
-				  background-color: seagreen;
-				  color:white;
-				  text-align: center;
-				  border-radius: 3px;
-				  font-size: 12px;
-				  padding:10px 0;
-				  transition-property: background-color;
-				  transition-duration: .5s;
-				    display: none;
-			}
-			
-			#top:hover{
-				color:white;
-				background-color: darkslategrey;
+
+			iframe {
+				width: 100%;
+				height: 600px;
+				background-color: white;
 			}
 		</style>
 	</head>
 
 	<body class="page-sidebar-collapsed">
-	
-	
-		<a href="#" id="top"> 返回 <br> 顶部 </a>
-		
-		<script>
-		
-		    window.onload = function(){
-				var t =  document.getElementById("top");
-				var t_top  = t.offsetTop;
-				document.onscroll = function(){
-								  if(document.documentElement.scrollTop > t_top){
-									  console.log(t);
-									  t.style["display"] = "block";
-								  }else{
-									  t.style["display"] = "none"; 
-								  };
-				};
-			}
-		
-		</script>
+
 
 		<ul class="nav nav-pills flex-column  contextmenu" id="contextmenu">
 			<li><a target="_blank"
@@ -206,10 +161,6 @@
 			<li><a href="test.html">测评科目</a></li>
 			<li><a href="javascript:void(0)" id="u_copy">复制</a></li>
 		</ul>
-
-		<div class="tip"> 复制成功 </div>
-
-
 
 		<!-- Modal -->
 		<div class="modal fade " id="modal" tabindex="-1">
@@ -303,7 +254,7 @@
 						</li>
 
 						<li>
-							<a href="javascript:void(0)"><i data-feather="users"></i>友情链接<i
+							<a href="#"><i data-feather="users"></i>友情链接<i
 									class="fas fa-chevron-right dropdown-icon"></i></a>
 							<ul class="">
 								<li><a href="" target="_blank"><i class="far fa-circle"></i> 暂无</a></li>
@@ -327,26 +278,16 @@
 						</li>
 
 
-
-
-
 						<li>
 							<a href="./index.html"><i data-feather="home"></i>返回首页</a>
 						</li>
-
-
-
-
-
 					</ul>
 					<a href="javascript:void(0)" id="sidebar-collapsed-toggle"><i data-feather="arrow-right"></i></a>
 				</div>
 
-				<!--  侧边栏结束 -->
 
 
-
-				<div class="page-content">
+				<div class="page-content ">
 
 					<div class="page-header">
 						<nav class="navbar navbar-expand-lg d-flex justify-content-evenly">
@@ -355,7 +296,7 @@
 								<h5 class="text-success bold"><a href="index.html">Lucson</a> </h5>
 							</div>
 							<div class="" id="headerNav">
-
+					
 								<ul class="navbar-nav">
 									<li class="nav-item dropdown">
 										<a class="nav-link profile-dropdown" href="#" id="profileDropDown" role="button"
@@ -371,7 +312,7 @@
 											<a target="_blank" class="dropdown-item"
 												href="https://github.com/lucsons"><i
 													data-feather="github"></i>Github</a>
-
+					
 											<a target="_blank" class="dropdown-item" href="https://gitee.com/lucson"><i
 													aria-label="icon: codepen-circle"
 													class="anticon anticon-codepen-circle"><svg viewBox="64 64 896 896"
@@ -413,8 +354,8 @@
 												</svg>
 												分享到QQ空间
 											</a>
-
-
+					
+					
 											<a target="_blank" class="dropdown-item"
 												href="http://connect.qq.com/widget/shareqq/index.html?url=http://lucsons.github.io/web.html&sharesource=qzone&pics=static/picture/cover.jpg&title=Hello,你好 我是李文祥&summary=这是我的个人主页 通过我的个人主页就可以找到我的博客和github啦 里面有精选的文章等着你们哦~&desc=我叫李文祥,今年21, 致力于学习前后端开发 分享更多的知识 喜欢与人交流  汲取经验 收获新的能量 希望看到此分享的人能够有朝一日成为你心目中的大牛~"><i
 													aria-label="icon: usergroup-add"
@@ -431,209 +372,13 @@
 							</div>
 						</nav>
 					</div>
+					
+					
 
+					 <div class="main-wrapper">
+						  <iframe src="./docs/html4.html" id="doc"></iframe>
+					 </div>
 
-
-					<div class="main-wrapper">
-						<div class="row">
-							<div class="col-xl-12 wow fadeIn">
-								<div class="profile-cover"></div>
-								<div class="profile-header">
-									<div class="profile-img">
-										<a href="index.html">
-											<img src="static/images/me.jpg " alt="路克森">
-										</a>
-									</div>
-									<div class="profile-name">
-										<h3 style="text-align: left;">Lucson - 路克森</h3>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-
-
-
-							<div class=" col-md-3">
-								<div class="card article">
-									<div class="card-body">
-										<h5 class="card-title">文章分类</h5>
-										<div class="story-list wow fadeIn">
-											<div class="story d-flex">
-												<a href="web.html#web"><img src="./static/picture/web.webp" alt=""></a>
-												<div class="story-info">
-													<!-- 前端 -->
-													<a href="web.html#web"><span class="story-author">前端
-														</span></a>
-													<span class="story-time">大前端相关 </<span></span>
-												</div>
-											</div>
-											<div class="story d-flex">
-												<a href="java.html#java"><img
-														src="https://img0.baidu.com/it/u=4084129530,3438713827&fm=26&fmt=auto&gp=0.jpg"
-														alt=""></a>
-												<div class="story-info">
-													<a href="java.html#java"><span class="story-author">Java</span></a>
-													<span class="story-time">Java后端 和 安卓相关</span>
-												</div>
-											</div>
-											<div class="story d-flex">
-												<a href="python.html#python"><img
-														src="https://img0.baidu.com/it/u=2064728167,1364513690&fm=26&fmt=auto&gp=0.jpg"
-														alt=""></a>
-												<div class="story-info">
-													<a href="python.html#python"><span
-															class="story-author">Python</span></a>
-													<span class="story-time">爬虫方向的分享</span>
-												</div>
-											</div>
-
-											<div class="story d-flex">
-												<a href="security.html#security"><img
-														src="https://img1.baidu.com/it/u=3140958831,606641020&fm=26&fmt=auto&gp=0.jpg"
-														alt=""></a>
-												<div class="story-info">
-													<a href="security.html#security"><span class="story-author">web
-															安全</span></a>
-													<span class="story-time">web 领域安全问题</span>
-												</div>
-											</div>
-
-											<div class="story d-flex">
-												<a href="plugins.html#plugin"><img
-														src="https://img2.baidu.com/it/u=3370945038,1392993288&fm=26&fmt=auto&gp=0.jpg"
-														alt=""></a>
-												<div class="story-info">
-													<a href="plugins.html#plugin"><span
-															class="story-author">我的插件</span></a>
-													<span class="story-time">自己做的功能性插件整理</span>
-												</div>
-											</div>
-
-											<div class="story d-flex">
-												<a href="algorithm.html#algorithm"><img
-														src="https://img2.baidu.com/it/u=3328080000,1998940620&fm=26&fmt=auto&gp=0.jpg"
-														alt=""></a>
-												<div class="story-info">
-													<a href="algorithm.html#algorithm"><span
-															class="story-author">算法整理</span></a>
-													<span class="story-time">算法题整理</span>
-												</div>
-											</div>
-
-											<div class="story d-flex">
-												<a href="database.html#database"><img
-														src="https://img2.baidu.com/it/u=1998750341,342732462&fm=26&fmt=auto&gp=0.jpg"
-														alt=""></a>
-												<div class="story-info">
-													<a href="database.html#database"><span
-															class="story-author">数据库</span></a>
-													<span class="story-time">关系型和非关系型数据库整理</span>
-												</div>
-											</div>
-
-
-											<div class="story d-flex">
-												<a href="issue.html#issue"><img
-														src="https://img0.baidu.com/it/u=2813585581,395939567&fm=26&fmt=auto&gp=0.jpg"
-														alt=""></a>
-												<div class="story-info">
-													<a href="issue.html#issue"><span
-															class="story-author">开发问题</span></a>
-													<span class="story-time">开发中碰到的问题收集</span>
-												</div>
-											</div>
-
-											<div class="story d-flex">
-												<a href="me.html#me"><img src="static/images/me.jpg" alt=""></a>
-												<div class="story-info">
-													<a href="me.html#me"><span class="story-author">我的日常</span></a>
-													<span class="story-time">分享生活和爱好</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class=" col-md-6">
-
-
-								<!-- database -->
-								<div class="row px-4 px-md-0" id="database">
-									<blockquote class="text-center pb-2">
-										数据库相关文章
-									</blockquote>
-									<div class="card  card-bg">
-										<div class="card-body ">
-
-											<!-- 1 Start-->
-											<div class="post wow fadeIn" id="database1">
-												<div class="post-header">
-													<img src="http://q4.qlogo.cn/headimg_dl?dst_uin=2857734156&spec=100"
-														alt="">
-													<div class="post-info">
-														<span class="post-author">lucson</span><br>
-														<span class="post-date">2021/8/29 1:54::15</span>
-													</div>
-													<div class=" float-end">
-
-														<a class="copy_url" target="_blank"><i
-																class="far fa-paper-plane"></i> 分享</a>
-													</div>
-												</div>
-
-
-												<!-- Article Start -->
-												<div class="post-body">
-
-
-												</div>
-												<!-- Article End -->
-
-											</div>
-											<!-- 1 End-->
-
-											<!-- ----------------- -->
-										</div>
-									</div>
-								</div>
-
-							</div>
-
-
-							<div class="col-md-3">
-								<div class="card about">
-									<div class="card-body">
-										<h5 class="card-title">关于我</h5>
-										<p></p>
-										<ul class="list-unstyled profile-about-list">
-											<li><i class="far fa-edit m-r-xxs"></i><span> 姓名：李文祥 </li>
-											<li><i class="far fa-building m-r-xxs"></i> 年龄：<span id="age"></span> 岁</li>
-											<li><i class="far fa-edit m-r-xxs"></i><span> 性格：随和</li>
-											<li><i class="far fa-edit m-r-xxs"></i><span> 生日：8.17</li>
-											<li><i class="far fa-compass m-r-xxs"></i><span> 来自 <a
-														href="https://baike.baidu.com/item/%E6%B2%B3%E5%8D%97/132980?fr=aladdin">中国,
-														河南</a></span></li>
-											<li><i class="far fa-edit m-r-xxs"></i><span> 学历：普通专科 升本中</li>
-											<li><i class="far fa-compass m-r-xxs"></i> 爱好：指弹,街健,popping</span></li>
-										</ul>
-									</div>
-								</div>
-								<div class="card">
-									<div class="card-body">
-										<h5 class="card-title">其他信息</h5>
-										<ul class="list-unstyled profile-about-list">
-											<li><i class="far fa-envelope m-r-xxs"></i><span>15236148260@163.com</span>
-											</li>
-											<li><i class="far fa-envelope m-r-xxs"></i><span>2857734156@qq.com</span>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 					<div class="page-footer p-4">
 						<a href="https://space.bilibili.com/366914054" target="_blank" title="路克森的B站">Lucson &copy; 版权所有
 							<br> 站内所有在 BliBli
@@ -641,7 +386,7 @@
 					</div>
 				</div>
 
-			</div>
+	</div>
 			<!-- Javascripts -->
 			<script src="static/js/jquery-3.4.1.min.js"></script>
 			<script src="static/js/637b3e92eab44245b5ba6109ba908b93.js"></script>
@@ -654,62 +399,21 @@
 			<script src="https://cdn.bootcdn.net/ajax/libs/wow/1.1.2/wow.js"></script>
 			<script src="./static/js/clipboard.min.js"></script>
 			<script src="static/js/contextmenu.js"></script>
+			
+			
 			<script>
-				var t = null;
-
-				$(".tip").hide();
-
-				new WOW().init();
-				var date = new Date();
-				$("#age").html(date.getFullYear() - 2000);
-
-
-				$(".copy_url").click(function() {
-					var that = this;
-					// 分享地址复制
-					var copy = new ClipboardJS('.copy_url', {
-						text: function(trigger) {
-							var endIndex = document.location.href.indexOf("#") == -1 ? document.location.href
-								.length : document.location.href.indexOf("#");
-							console.log(endIndex);
-							return document.location.href.substring(0, endIndex) + "#" + $(that).parents(
-								".post").attr("id");
-						}
-					});
-
-					copy.on('success', function(e) {
-						clearTimeout(t);
-						$(".tip").html("已复制文章地址：" + e.text);
-						$(".tip").show();
-						t = setTimeout(() => {
-							$(".tip").hide();
-						}, 3000);
-					});
-
-					copy = null;
-				});
-
-
-				// 代码复制	
-				$(".copy").click(function() {
-					var that = this;
-					var copy = new ClipboardJS('.copy', {
-						text: function(trigger) {
-							return $(that).next(".display").html().replace(/&lt;/g, '<').replace(/&gt;/g, ">") +
-								"\n\n\n转载请备注来源：http://lucsons.github.io\n原作者：Lucson\n哔哩哔哩：https://space.bilibili.com/366914054";
-						}
-					});
-
-					copy.on('success', function(e) {
-						clearTimeout(t);
-						$(".tip").html("复制成功");
-						$(".tip").show();
-						t = setTimeout(() => {
-							$(".tip").hide();
-						}, 2000);
-					});
-
-				});
+				
+					var docs = {
+						"#windows":"./docs/windows.html",
+						"#html4":"./docs/html4.html",
+						"#css":"./docs/css.html",
+						"#mobile":"./docs/mobile.html",
+						"#xml":"./docs/xml.html",
+						"#js":"./docs/js.html"
+					};
+					
+					$("#doc").attr("src",docs[location.hash])
+					
 			</script>
 	</body>
 </html>
