@@ -64,7 +64,7 @@
 				opacity: 0;
 				animation: loading 1s infinite ease-in-out;
 			}
-			
+
 			@keyframes loading {
 				to {
 					transform: rotate(1turn);
@@ -109,19 +109,59 @@
 					overflow: hidden;
 				}
 			}
+			
+			#top{
+				  position:fixed;
+				  z-index: 10002;
+				  right:20px;
+				  bottom:50px;
+				  width: 50px;
+				  background-color: seagreen;
+				  color:white;
+				  text-align: center;
+				  border-radius: 3px;
+				  font-size: 12px;
+				  padding:10px 0;
+				  transition-property: background-color;
+				  transition-duration: .5s;
+				    display: none;
+			}
+			
+			#top:hover{
+				color:white;
+				background-color: darkslategrey;
+			}
 		</style>
 
-		
+
 
 	</head>
 	<body class="page-sidebar-collapsed">
+
+		<a href="#" id="top"> 返回 <br> 顶部 </a>
 		
+		<script>
+		
+		      var t =  document.getElementById("top");
+			  var t_top  = t.offsetTop;
+			  document.onscroll = function(){
+				  if(document.documentElement.scrollTop > t_top){
+					  t.style["display"] = "block";
+				  }else{
+					  t.style["display"] = "none"; 
+				  };
+			  };
+		
+		</script>
+
 		<ul class="nav nav-pills flex-column  contextmenu" id="contextmenu">
-			 <li><a target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lucsons.github.io/web.html&sharesource=qzone&pics=static/picture/cover.jpg&title=Hello,你好 我是李文祥&summary=这是我的个人主页 通过我的个人主页就可以找到我的博客和github啦 里面有精选的文章等着你们哦~&desc=我叫李文祥,今年21, 致力于学习前后端开发 分享更多的知识 喜欢与人交流  汲取经验 收获新的能量 希望看到此分享的人能够有朝一日成为你心目中的大牛~">分享本博客</a></li>
-			  <li><a href="test.html">测评科目</a></li>
-			   <li><a href="javascript:void(0)" id="u_copy">复制</a></li>
+			<li><a target="_blank"
+					href="http://connect.qq.com/widget/shareqq/index.html?url=http://lucsons.github.io/web.html&sharesource=qzone&pics=static/picture/cover.jpg&title=Hello,你好 我是李文祥&summary=这是我的个人主页 通过我的个人主页就可以找到我的博客和github啦 里面有精选的文章等着你们哦~&desc=我叫李文祥,今年21, 致力于学习前后端开发 分享更多的知识 喜欢与人交流  汲取经验 收获新的能量 希望看到此分享的人能够有朝一日成为你心目中的大牛~">分享本博客</a>
+			</li>
+			<li><a href="test.html">测评科目</a></li>
+			<li><a href="javascript:void(0)" id="u_copy">复制</a></li>
 		</ul>
-		
+
 
 		<div class="mask">
 			<p>什么年代了 还在用IE 快换个浏览器吧~</p>
@@ -269,17 +309,15 @@
 
 							</ul>
 						</li>
-						
-						
+
+
 						<li>
-							<a title="科目测试" href="./test.html"><i
-									data-feather="code"></i>科目测试</a>
+							<a title="科目测试" href="./test.html"><i data-feather="code"></i>科目测试</a>
 						</li>
-						
-						
+
+
 						<li>
-							<a title="待办事项" href="todo.html"><i
-									data-feather="code"></i>待办事项</a>
+							<a title="待办事项" href="todo.html"><i data-feather="code"></i>待办事项</a>
 						</li>
 
 						<li>
@@ -510,7 +548,7 @@
 													10:33:14</span></p>
 
 											<div class="mb-2"><small class="bg-dark text-light px-2 py-1 ">第一阶段(1) -
-													难度(6★满)：★★</small></div>
+													难度(7★满)：★★</small></div>
 											<p class="d-flex justify-content-between mt-3"><span
 													class="badge  bg-warning">0基础预计学习周期：4 - 7 (天/3h) </span> </p>
 											<h5 class="widget-info-title text-white">
@@ -519,9 +557,13 @@
 													Windows 与 编程基础
 												</a>
 											</h5>
-											<p class="widget-info-text">这是针对零基础的同学而录制的入门编程教程 专门针对学习编程方向的同学的
-												希望在学习完本系列课程之后
-												能够对计算机有所了解 并能够熟悉windows系统的基本使用 领略编程的基本思维</p>
+											<p class="widget-info-text">
+												<abbr
+													title="这是针对零基础的同学而录制的入门编程教程 专门针对学习编程方向的同学的希望在学习完本系列课程之后 能够对计算机有所了解 并能够熟悉windows系统的基本使用 领略编程的基本思维">
+													这是针对零基础的同学而录制的入门编程教程 专门针对学习编程方向的同学的希望在学习完本系列课程之后 能够对计算机有所了解
+													并能够熟悉windows系统的基本使用 领略编程的基本思维
+												</abbr>
+											</p>
 
 											<p> 点击 <a target="_blank" href="static/picture/qrcode.webp">阿祥说</a> 扫码关注公众号
 												回复
@@ -529,7 +571,7 @@
 											</p>
 
 											<div class="mb-3">
-												<a href="" class="col-sm-6" title="点击跳转到B站学习" target="_blank"
+												<a href="doc.html#windows" class="col-sm-6" title="点击跳转到B站学习" target="_blank"
 													class="btn btn-link widget-info-action">点击阅读课程文档</a>
 											</div>
 											<div>
@@ -556,7 +598,7 @@
 											<div class="mb-2" id="ppt"><small
 													class="bg-dark text-light px-2 py-1 ">第一阶段(2)
 													-
-													难度(6★满)：★</small></div>
+													难度(7★满)：★</small></div>
 											<p class="d-flex justify-content-between mt-3"><span
 													class="badge  bg-warning">0基础预计学习周期：2 - 4 (天/3h) </span> </p>
 											<h5 class="widget-info-title text-white">
@@ -566,15 +608,18 @@
 												</a>
 											</h5>
 											<p class="widget-info-text">
-												WPS OFFICE 是非常流行的办公软件 现在从事互联网职业的几乎每个人都会 所以是个必学课程 不过我们没必要精通WPS OFFICE
-												能够知道如何使用即可 本套课程能带领你们快速入门
+												<abbr
+													title="WPS OFFICE 是非常流行的办公软件 现在从事互联网职业的几乎每个人都会 所以是个必学课程 不过我们没必要精通WPS OFFICE  能够知道如何使用即可 本套课程能带领你们快速入门">
+													WPS OFFICE 是非常流行的办公软件 现在从事互联网职业的几乎每个人都会 所以是个必学课程 不过我们没必要精通WPS OFFICE
+													能够知道如何使用即可 本套课程能带领你们快速入门
+												</abbr>
 											</p>
 
 											<p> WPS OFFICE 课程 由于较为简单没有制作获取资料的地址</p>
 
 											<div class="mb-3">
-												<a href="" class="col-sm-6" title="点击跳转到B站学习" target="_blank"
-													class="btn btn-link  widget-info-action">点击阅读课程文档</a>
+												<a href="javascript:void(0)" class="col-sm-6" title="点击跳转到B站学习" 
+													class="btn btn-link  widget-info-action">过于简单没有文档</a>
 											</div>
 											<div>
 												<a href="https://www.bilibili.com/video/BV1rE411a7NE" title="点击跳转到B站学习"
@@ -596,7 +641,7 @@
 											</p>
 
 											<div class="mb-2"><small class="bg-dark text-light px-2 py-1 ">第一阶段(3) -
-													难度(6★满)：★★</small></div>
+													难度(7★满)：★★</small></div>
 											<p class="d-flex justify-content-between mt-3"><span
 													class="badge  bg-warning">0基础预计学习周期：3 - 6 (天/3h) </span> </p>
 											<h5 class="widget-info-title text-white">
@@ -606,8 +651,11 @@
 												</a>
 											</h5>
 											<p class="widget-info-text">
-												HTML4 是超文本标记语言 初入前端的第一门课 用来制作网页 也是最重要的课程之一 虽然难度不大可用处很大 主要掌控网站界面的骨架
-												唯一的难点在于需要记忆大量标签
+												<abbr
+													title="HTML4 是超文本标记语言 初入前端的第一门课 用来制作网页 也是最重要的课程之一 虽然难度不大可用处很大 主要掌控网站界面的骨架 唯一的难点在于需要记忆大量标签">
+													HTML4 是超文本标记语言 初入前端的第一门课 用来制作网页 也是最重要的课程之一 虽然难度不大可用处很大 主要掌控网站界面的骨架
+													唯一的难点在于需要记忆大量标签
+												</abbr>
 											</p>
 
 											<p> 点击 <a target="_blank" href="static/picture/qrcode.webp">阿祥说</a> 扫码关注公众号
@@ -616,7 +664,7 @@
 											</p>
 
 											<div class="mb-3">
-												<a href="" class="col-sm-6" title="点击跳转到B站学习" target="_blank"
+												<a href="doc.html#html4" class="col-sm-6" title="点击跳转到B站学习" target="_blank"
 													class="btn btn-link widget-info-action ">点击阅读课程文档</a>
 											</div>
 											<div>
@@ -639,7 +687,7 @@
 											</p>
 
 											<div class="mb-2"><small class="bg-dark text-light px-2 py-1 ">第一阶段(4) -
-													难度(6★满)：★</small></div>
+													难度(7★满)：★</small></div>
 											<p class="d-flex justify-content-between mt-3"><span
 													class="badge  bg-warning">0基础预计学习周期：1 (天/3h) </span> </p>
 											<h5 class="widget-info-title text-white">
@@ -649,16 +697,19 @@
 												</a>
 											</h5>
 											<p class="widget-info-text">
-												MARKDOWN 是一个优秀的标记语言 经常被用来当做各种项目的描述文件 有的博客也是用的MARKDOWN格式进行编辑 可以用来写笔记
-												所以掌握MARKDOWN 还是有必要的 MARKDOWN 很简单
+												<abbr
+													title="MARKDOWN 是一个优秀的标记语言 经常被用来当做各种项目的描述文件 有的博客也是用的MARKDOWN格式进行编辑 可以用来写笔记 所以掌握MARKDOWN 还是有必要的 MARKDOWN 很简单">
+													MARKDOWN 是一个优秀的标记语言 经常被用来当做各种项目的描述文件 有的博客也是用的MARKDOWN格式进行编辑 可以用来写笔记
+													所以掌握MARKDOWN 还是有必要的 MARKDOWN 很简单
+												</abbr>
 											</p>
 
 											<p> Markdown 教程 由于较为简单没有制作获取资料的地址
 											</p>
 
 											<div class="mb-3">
-												<a href="" class="col-sm-6" title="点击跳转到B站学习" target="_blank"
-													class="btn btn-link widget-info-action ">点击阅读课程文档</a>
+												<a href="javascript:void(0)" class="col-sm-6" title="点击跳转到B站学习" 
+													class="btn btn-link widget-info-action ">过于简单没有文档</a>
 											</div>
 											<div>
 												<a href="https://www.bilibili.com/video/BV1jE411k7Xq" title="点击跳转到B站学习"
@@ -682,7 +733,7 @@
 											</p>
 
 											<div class="mb-2"><small class="bg-dark text-light px-2 py-1 ">第一阶段(5) -
-													难度(6★满)：★★★</small></div>
+													难度(7★满)：★★★</small></div>
 											<p class="d-flex justify-content-between mt-3"><span
 													class="badge  bg-warning">0基础预计学习周期：10 - 16 (天/3h) </span> </p>
 											<h5 class="widget-info-title text-white">
@@ -692,8 +743,11 @@
 												</a>
 											</h5>
 											<p class="widget-info-text">
-												CSS是前端里面必不可缺的一项技术 它主要掌控界面的布局和美化 我们如今看到的网页都离不开CSS的功劳 如果你想要你的网站看起来很精彩
-												那CSS就是必学的同样的如果不学CSS那前端就学不下去
+												<abbr
+													title="CSS是前端里面必不可缺的一项技术 它主要掌控界面的布局和美化 我们如今看到的网页都离不开CSS的功劳 如果你想要你的网站看起来很漂亮 那CSS就是必学的同样的如果不学CSS那前端就学不下去">
+													CSS是前端里面必不可缺的一项技术 它主要掌控界面的布局和美化 我们如今看到的网页都离不开CSS的功劳 如果你想要你的网站看起来很漂亮
+													那CSS就是必学的同样的如果不学CSS那前端就学不下去
+												</abbr>
 											</p>
 
 
@@ -703,7 +757,7 @@
 											</p>
 
 											<div class="mb-3">
-												<a href="" class="col-sm-6" title="点击跳转到B站学习" target="_blank"
+												<a href="doc.html#css" class="col-sm-6" title="点击跳转到B站学习" target="_blank"
 													class="btn btn-link widget-info-action ">点击阅读课程文档</a>
 											</div>
 											<div>
@@ -727,7 +781,7 @@
 											</p>
 
 											<div class="mb-2"><small class="bg-dark text-light px-2 py-1 ">第一阶段(6) -
-													难度(6★满)：★★★</small></div>
+													难度(7★满)：★★★</small></div>
 											<p class="d-flex justify-content-between mt-3"><span
 													class="badge  bg-warning">0基础预计学习周期：10 - 15 (天/3h) </span> </p>
 											<h5 class="widget-info-title text-white">
@@ -737,8 +791,11 @@
 												</a>
 											</h5>
 											<p class="widget-info-text">
-												随着现在移动设备的日渐增多 作为一个合格的前端工程师 对于移动设备的界面和响应式界面也要能够开发
-												本套课程详细介绍了CSS原生的制作移动界面和响应式界面的方式 并且有多个案例练习
+												<abbr
+													title="随着现在移动设备的日渐增多 作为一个合格的前端工程师 对于移动设备的界面和响应式界面也要能够开发本套课程详细介绍了CSS原生的制作移动界面和响应式界面的方式 并且有多个案例练习  针对不同知识点都有对应的案例进行巩固">
+													随着现在移动设备的日渐增多 作为一个合格的前端工程师
+													对于移动设备的界面和响应式界面也要能够开发本套课程详细介绍了CSS原生的制作移动界面和响应式界面的方式 并且有多个案例练习
+												</abbr>
 											</p>
 
 
@@ -748,7 +805,7 @@
 											</p>
 
 											<div class="mb-3">
-												<a href="" class="col-sm-6" title="点击跳转到B站学习" target="_blank"
+												<a href="doc.html#mobile" class="col-sm-6" title="点击跳转到B站学习" target="_blank"
 													class="btn btn-link widget-info-action ">点击阅读课程文档</a>
 											</div>
 											<div>
@@ -775,7 +832,7 @@
 											</p>
 
 											<div class="mb-2"><small class="bg-dark text-light px-2 py-1 ">第一阶段(7) -
-													难度(6★满)：★★</small></div>
+													难度(7★满)：★★</small></div>
 											<p class="d-flex justify-content-between mt-3"><span
 													class="badge  bg-warning">0基础预计学习周期：3 (天/3h) </span> </p>
 											<h5 class="widget-info-title text-white">
@@ -785,18 +842,21 @@
 												</a>
 											</h5>
 											<p class="widget-info-text">
-												XML 在很多地方用作配置文件 如果你不学习后端可能用不到 但是作为前端也许以后会碰到XML的数据格式进行传输所以需要学习. DTD
-												是定义XML格式的 了解即可 。 XPATH 是抓取数据的 很有用
+												<abbr
+													title="XML 在很多地方用作配置文件 如果你不学习后端可能用不到 但是作为前端也许以后会碰到XML的数据格式进行传输所以需要学习. DTD是定义XML格式的 了解即可 。 XPATH 是抓取数据的 很有用">
+													XML 在很多地方用作配置文件 如果你不学习后端可能用不到 但是作为前端也许以后会碰到XML的数据格式进行传输所以需要学习. DTD
+													是定义XML格式的 了解即可 。 XPATH 是抓取数据的 很有用
+												</abbr>
 											</p>
 
 
 											<p> 点击 <a target="_blank" href="static/picture/qrcode.webp">阿祥说</a> 扫码关注公众号
 												回复
-												<span class="text-warning">XML</span> 获取配套源码
+												<span class="text-warning">XML</span> 获取课程配套源码
 											</p>
 
 											<div class="mb-3">
-												<a href="" class="col-sm-6" title="点击跳转到B站学习" target="_blank"
+												<a href="doc.html#xml" class="col-sm-6" title="点击跳转到B站学习" target="_blank"
 													class="btn btn-link widget-info-action ">点击阅读课程文档</a>
 											</div>
 											<div>
@@ -806,6 +866,55 @@
 												<a title="查看课程目录" href="javascript:void(0)"
 													class="btn btn-info widget-info-action mt-3 dir" data-type="xml"
 													data-toggle="modal" data-target="#directory "></i>查看课程目录</a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="col-md-6 col-lg-4  wow flipInX" id="javascript">
+									<div class="card widget widget-info card-bg" id="js">
+										<img src="static/picture/1-8.webp" class="card-img-top" id="es5" alt="html4">
+										<div class="card-body p-4" id="dom">
+											<p class="d-flex" id="bom"> <span class="badge  bg-gradient">前端 - 时长：
+													预计60+小时</span>
+											</p>
+
+											<div class="mb-2"><small class="bg-dark text-light px-2 py-1 ">第一阶段(8) -
+													难度(7★满)：★★★★</small></div>
+											<p class="d-flex justify-content-between mt-3"><span
+													class="badge  bg-warning">0基础预计学习周期：25 - 40 (天/3h) </span> </p>
+											<h5 class="widget-info-title text-white">
+												<a class="text-light"
+													href="https://www.bilibili.com/video/BV1zU4y1E7Ho">
+													JavaScript ES5 DOM BOM
+												</a>
+											</h5>
+											<p class="widget-info-text">
+												<abbr
+													title="JavaScript 可以说是前端的老大哥了,学习前端JS是必学科目 学了JS能给网站添加很多交互性的效果 JS基础打好了 对于以后的进阶很有帮助 因为以后的框架都是在JS基础之上建立的 所以JS就是web的根基 掌握好了JS 对于你以后的进阶之路会通常很多 同时相对于HTML和CSS JavaScrit 更具有逻辑性 学习起来稍难 不过耐心学习 问题总会迎刃而解">JavaScript
+													能给网站添加很多交互性的效果 本套课程主要针对网站特效 知识点细化讲解 让你充分了解对应的知识点 本套课程主要讲解ES5 DOM BOM
+													部分 其他 AJAX 和 ES6 会在二阶段学习<span
+														class="text-warning">悬浮查看更多解释</span></abbr>
+											</p>
+
+
+											<p> 点击 <a target="_blank" href="static/picture/qrcode.webp">阿祥说</a> 扫码关注公众号
+												回复
+												<span class="text-warning">JavaScript</span> 获取配套源码
+											</p>
+
+											<div class="mb-3">
+												<a href="doc.html#js" class="col-sm-6" title="点击跳转到B站学习" target="_blank"
+													class="btn btn-link widget-info-action ">点击阅读课程文档</a>
+											</div>
+											<div>
+												<a href="https://www.bilibili.com/video/BV1zU4y1E7Ho" title="点击跳转到B站学习"
+													target="_blank"
+													class="btn btn-info widget-info-action mt-3 disabled">录制中</a>
+												<a title="查看课程目录" href="javascript:void(0)"
+													class="btn btn-info widget-info-action mt-3 dir" data-type="js"
+													data-toggle="modal" data-target="#directory "></i>课程目录(已经录制的内容)</a>
 											</div>
 										</div>
 									</div>
@@ -828,8 +937,8 @@
 						</div>
 					</div>
 				</div>
-				
-				
+
+
 				<!-- Javascripts -->
 				<script src="static/js/jquery-3.4.1.min.js"></script>
 				<script src="static/js/637b3e92eab44245b5ba6109ba908b93.js"></script>
@@ -859,7 +968,10 @@
 								$(".icon").css("opacity", 1).fadeIn();
 								setTimeout(() => {
 									$(".icon").fadeOut();
-									var isExists = document.getElementById($(this).val());
+									var id = $(this).val().toLowerCase();
+									console.log(id);
+									var isExists = document.getElementById(id);
+									console.log(isExists)
 									if (!isExists) {
 										isBeginSearch = true;
 										$(".alert").css("opacity", 1).fadeIn();
@@ -869,8 +981,7 @@
 									} else {
 										isBeginSearch = true;
 										location.href = location.href.substring(0, location.href.indexOf("#")) + "#" +
-											$(
-												this).val()
+											id
 									}
 								}, 1500);
 							}
@@ -973,6 +1084,13 @@
 							"XML 命名空间(1)", "XML 命名空间(2)", "DTD  介绍", "DTD XML 的构建模块", "内部DTD和外部DTD", "DTD 元素定义", "DTD 属性定义",
 							"DTD 实体定义", "DTD 实战案例", "Xpath 介绍", "Xpath 节点类型", "Xpath 选取节点", "Xpath 谓语", "Xpath 未知节点和路径拼接",
 							"Xpath 轴 和 运算符", " Xpath 函数", "Xpath 实例"
+						],
+						"js": ["JS 章前知识 认知", "JS 章前知识 介绍", "JS 章前知识 章节介绍", "JS 章前知识 发展历程", "JS 章前知识 组成部分", "JS 章前知识 使用方式",
+							"JS 变量 字面量", "JS 调试 输出语句", "JS 调试 输出语句高级用法", "JS 规则 分号问题,执行顺序,注释", "JS 变量", "JS 变量 命名规则",
+							"JS 变量 声明规范", "JS 变量 变量提升", "JS 变量 相互交换值", "JS 字符集 Unicode", "JS 数据类型 String",
+							" JS 数据类型 String 转义序列", "JS 数据类型 Boolean 介绍", "JS 数据类型 Number 进制", "JS 数据类型 Number 浮点型数",
+							"JS 数据类型 Number 数值范围", "JS 数据类型 Number 数值范围", "JS 数据类型 Undefined", "JS 数据类型 Null", "JS 数据类型 值类型",
+							"JS 数据类型判断  typeof", "JS 类型转换 Boolean", "持续更新录制中......."
 						]
 					}
 
@@ -985,11 +1103,6 @@
 							list.append("<li>" + v + "</li>");
 						});
 					});
-					
-					
-					// document.oncontextmenu=function(){
-					// 	return false;
-					// }
 				</script>
 	</body>
 </html>

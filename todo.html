@@ -150,6 +150,28 @@
 			pre.display {
 				display: none;
 			}
+
+			th,
+			td {
+				white-space: nowrap;
+			}
+
+			.success {
+				text-decoration: line-through;
+				color: #666;
+				cursor: no-drop;
+			}
+
+			.todo_tip {
+				color: crimson;
+				display: none;
+			}
+
+			.todo_vaild:focus {
+				-moz-box-shadow: 0px 1px 5px #FF0A3B;
+				-webkit-box-shadow: 0px 1px 5px #FF0A3B;
+				box-shadow: 0px 1px 5px #FF0A3B;
+			}
 		</style>
 	</head>
 
@@ -392,7 +414,58 @@
 
 
 
-					待办事项页面
+					<div class="main-wrapper">
+
+						<div class="jumbotron">
+							<h1 class="display-4" id="todo_time">上午好,新的一天新的风景 ！</h1>
+							<h4 id="todo_desc"> 开启新一天的任务 做一个有规划的人 ！ </h4>
+							<p class="lead"> 这个 Todo 应用是基于本地缓存的 数据没有进行持久化 所以和您的设备关联 </p>
+							<hr class="my-4">
+							<p class="text-warning">已完成的待办事项 打上对勾即可 无需删除 第二天自动移动前天未完成任务到今天 已完成任务则自动删除</p>
+						</div>
+
+						<div class="card bg-gradient">
+							<div class="card-body">
+								<h5 class="card-title">今天还有<span class="todo_numbers">0</span>件事要做</h5>
+								<p class="card-text">
+									<input type="text" id="todo_content" class="form-control " autofocus="autofocus"
+										placeholder="添加你今天要办的事情">
+								<p class="todo_tip">
+									不能为空哦！
+								</p>
+								</p>
+								<button href="#"  class="btn btn-sm btn-primary"
+									id="todo_submit">添加待办事项</button>
+									<button href="#"  class="btn btn-sm btn-danger"
+										id="todo_clear">清空任务</button>
+								<div class="table-responsive">
+									<table class="table table-hover table-bordered ">
+										<thead class="thead-dark">
+											<tr>
+												<th width="100">勾选已完成</th>
+												<th>内容</th>
+												<th>首次添加时间</th>
+												<th>距今已过(天)</th>
+												<th>操作</th>
+											</tr>
+										</thead>
+										<tbody id="todo_list_content">
+										</tbody>
+										<tfoot>
+											 <td colspan="5" align="center" id="todo_no" style="display: none;">没有任务</td>
+										</tfoot>
+									</table>
+								</div>
+
+							</div>
+							<div class="card-footer">
+								已完成 <span id="todo_success"> 0 </span> 未完成 <span class="todo_fail"> 0 </span> 总共 <span
+									class="todo_total"> 0 </span>
+							</div>
+						</div>
+
+
+					</div>
 
 
 
@@ -417,9 +490,6 @@
 			<script src="https://cdn.bootcdn.net/ajax/libs/wow/1.1.2/wow.js"></script>
 			<script src="./static/js/clipboard.min.js"></script>
 			<script src="static/js/contextmenu.js"></script>
-			<script>
-
-
-			</script>
+			<script src="./static/js/todo.js"></script>
 	</body>
 </html>

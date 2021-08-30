@@ -150,11 +150,52 @@
 			pre.display {
 				display: none;
 			}
+			
+			#top{
+				  position:fixed;
+				  z-index: 10002;
+				  right:20px;
+				  bottom:50px;
+				  width: 50px;
+				  background-color: seagreen;
+				  color:white;
+				  text-align: center;
+				  border-radius: 3px;
+				  font-size: 12px;
+				  padding:10px 0;
+				  transition-property: background-color;
+				  transition-duration: .5s;
+				    display: none;
+			}
+			
+			#top:hover{
+				color:white;
+				background-color: darkslategrey;
+			}
 		</style>
 	</head>
 
 	<body class="page-sidebar-collapsed">
-
+	
+	
+		<a href="#" id="top"> 返回 <br> 顶部 </a>
+		
+		<script>
+		
+		    window.onload = function(){
+				var t =  document.getElementById("top");
+				var t_top  = t.offsetTop;
+				document.onscroll = function(){
+								  if(document.documentElement.scrollTop > t_top){
+									  console.log(t);
+									  t.style["display"] = "block";
+								  }else{
+									  t.style["display"] = "none"; 
+								  };
+				};
+			}
+		
+		</script>
 
 		<ul class="nav nav-pills flex-column  contextmenu" id="contextmenu">
 			<li><a target="_blank"

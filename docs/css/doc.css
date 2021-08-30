@@ -1,0 +1,120 @@
+body,
+td {
+	font-family:Verdana, Geneva, Tahoma, sans-serif
+	font-size: 10pt;
+	font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+}
+
+a{
+	color:white;
+	text-decoration: none;
+}
+
+
+a:hover{
+	color:white;
+	text-decoration: underline;
+}
+
+.wrapper{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	overflow-y: hidden;
+}
+
+.wrapper .left{
+	width:150px;
+	height: auto;
+	background-color: #2F1E2E;
+}
+
+.wrapper .left ul{
+	list-style: none;
+	padding-left: 0;
+	color:white;
+	width: 150px;
+	height: 100vh;
+	position: fixed;
+	overflow-y: scroll;
+}
+
+.wrapper .left ul li{
+	line-height: 25px;
+	transition: all .5s;
+	cursor: pointer;
+}
+
+.wrapper .left ul li.t1{
+	font-size:14px;
+	text-indent: 0.5em;
+}
+
+.wrapper .left ul li.t2{
+	font-size:12px;
+	text-indent: 1.5em;
+}
+
+
+.wrapper .left ul li:hover{
+	background-color: #055160 !important;
+}
+
+::-webkit-scrollbar {
+				width: 8px;
+				height: 5px;
+			}
+
+::-webkit-scrollbar-track {
+	background-color: #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: seagreen;
+}
+
+.wrapper .right {
+	padding-left: 10px;
+	padding-top:10px;
+	overflow-y: scroll;
+	flex: 1;
+}
+
+blockquote{
+	margin-top:10px;
+	border-left: 5px solid seagreen;
+	padding-left: 10px;
+	font-size:18px;
+}
+
+blockquote.tip{
+	margin-top:10px;
+	border-left: 5px solid #999;
+	padding-left: 10px;
+	font-size:12px;
+	color:#666;
+}
+
+blockquote.tip:before{
+	content:"小提示：";
+}
+
+
+@media  all and (max-width:968px){
+	.wrapper .left{
+		width:0px;
+	}
+	.wrapper .left ul{
+		left: -150px ;
+	}
+	
+	.wrapper .right{
+		padding:0 5px;
+	}
+	
+}
+
+
+code {
+	color:seagreen;
+}
