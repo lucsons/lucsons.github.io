@@ -19,11 +19,9 @@
 		<link href="static/css/main.min.css" rel="stylesheet">
 		<link href="static/css/custom.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="static/css/animate.min.css" />
+		<link rel="stylesheet" type="text/css" href="static/css/paraiso-dark.css" />
+		<script src="static/js/rainbow-custom.min.js"></script>
 		<link rel="stylesheet" href="static/css/contextmenu.css">
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING:Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE]>
-        <![endif]-->
 		<style>
 			hr {
 				margin: 30px 0 50px 0;
@@ -154,13 +152,22 @@
 				width:100%;
 				height: 600px;
 			}
+			
+			
+			code {
+				outline: none;
+			}
+			
+			button{
+				margin:5px 0;
+			}
 		</style>
 	</head>
 
 	<body class="page-sidebar-collapsed">
 
 
-<ul class="nav nav-pills flex-column  contextmenu" id="contextmenu">
+		<ul class="nav nav-pills flex-column  contextmenu" id="contextmenu">
 			 <li><a target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lucsons.github.io/web.html&sharesource=qzone&pics=static/picture/cover.jpg&title=Hello,你好 我是李文祥&summary=这是我的个人主页 通过我的个人主页就可以找到我的博客和github啦 里面有精选的文章等着你们哦~&desc=我叫李文祥,今年21, 致力于学习前后端开发 分享更多的知识 喜欢与人交流  汲取经验 收获新的能量 希望看到此分享的人能够有朝一日成为你心目中的大牛~">分享本博客</a></li>
 			  <li><a href="test.html">测评科目</a></li>
 			   <li><a href="javascript:void(0)" id="u_copy">复制</a></li>
@@ -301,13 +308,7 @@
 					</ul>
 					<a href="javascript:void(0)" id="sidebar-collapsed-toggle"><i data-feather="arrow-right"></i></a>
 				</div>
-
-				<!--  侧边栏结束 -->
-
-
-
 				<div class="page-content">
-
 					<div class="page-header">
 						<nav class="navbar navbar-expand-lg d-flex justify-content-evenly">
 							<a href="javascript:void(0)" id="sidebar-toggle"><i data-feather="arrow-left"></i></a>
@@ -392,18 +393,54 @@
 						</nav>
 					</div>
 
-
 	
-				<!-- Content -->   考试测试页面
+				<!-- Content -->  
+				<div class="main-wrapper px-4" >
+					
+					
+					<h3> 所有测试题均为Lucson收集的面试题 - 跟随视频教程同步 - 测试阶段 还没有实际题目哦~</h3>
+					
+					
+					<div style="width: 100%;max-height: 300px;overflow: scroll;">
+						<button data-type="windows" class="test btn btn-primary">Windows 基础实践  测试题</button>
+						<button data-type="html4-1" class="test btn btn-info">HTML4 初级测试</button>
+						<button data-type="html4-2" class="test btn btn-danger">HTML4 中级测试</button>
+						<button data-type="html4-3" class="test btn btn-primary">HTML4 高级测试</button>
+						<button data-type="markdown" class="test btn btn-info">Markdown 测试</button>
+						<button data-type="css-1" class="test btn btn-danger">CSS 初级测试</button>
+						<button data-type="css-2" class="test btn btn-info">CSS 中级测试</button>
+						<button data-type="css-3" class="test btn btn-primary">CSS 高级测试</button>
+						<button data-type="css-4" class="test btn btn-danger">原生 CSS 移动端 测试题</button>
+						<button data-type="xml" class="test btn btn-primary">XML 测试题</button>
+						<button data-type="dtd" class="test btn btn-info">DTD 测试题</button>
+						<button data-type="xpath" class="test btn btn-danger">Xpath 测试题</button>
+						<button data-type="js-1" class="test btn btn-primary">JavaScript 初级</button>
+						<button data-type="js-2" class="test btn btn-info">JavaScript 中级</button>
+						<button data-type="js-3" class="test btn btn-danger">JavaScript 高级</button>
+					</div>
+					
+					<div class="col">
+						<h4 id="title">点击上方选择您的测试题目 </h4>
+						<h6 id="error" class="text-primary"></h6>
+					</div>
+					<form action="javascript:void(0)" name="test">
+						<ol>
+							
+						</ol>
+						只有第一个按钮有测试数据   正确答案是第一个选项三个都是 测试中.....
+						<br>
+						<button type="submit" class="btn btn-success"> 交卷 </button>
+					</form>
+				</div>
 				
 					
 					
-					<div class="page-footer p-4">
-						<a href="https://space.bilibili.com/366914054" target="_blank" title="路克森的B站">Lucson &copy; 版权所有
-							<br> 站内所有在 BliBli
-							的课程不得搬运到其他平台</a>
-					</div>
+				<div class="page-footer p-4">
+					<a href="https://space.bilibili.com/366914054" target="_blank" title="路克森的B站">Lucson &copy; 版权所有
+						<br> 站内所有在 BliBli
+						的课程不得搬运到其他平台</a>
 				</div>
+		</div>
 
 			</div>
 			<!-- Javascripts -->
@@ -418,5 +455,6 @@
 			<script src="https://cdn.bootcdn.net/ajax/libs/wow/1.1.2/wow.js"></script>
 			<script src="./static/js/clipboard.min.js"></script>
 			<script src="static/js/contextmenu.js"></script>
+			<script src="static/js/test.js"></script>
 	</body>
 </html>
