@@ -421,12 +421,12 @@
 							<h4 id="todo_desc"> 开启新一天的任务 做一个有规划的人 ！ </h4>
 							<p class="lead"> 这个 Todo 应用是基于本地缓存的 数据没有进行持久化 所以和您的设备关联 </p>
 							<hr class="my-4">
-							<p class="text-warning">已完成的待办事项 打上对勾即可 无需删除 第二天自动移动前天未完成任务到今天 已完成任务则自动删除</p>
+							<p class="text-warning">已完成的待办事项 打上对勾 删除即可</p>
 						</div>
 
 						<div class="card bg-gradient">
 							<div class="card-body">
-								<h5 class="card-title">今天还有<span class="todo_numbers">0</span>件事要做</h5>
+								<h5 class="card-title">今天还有 <span id="todo_numbers" class="text-primary"> 0 </span> 件事要做 - 快来添加今天要做的事  <span class="float-end" id="now_time"></span> </h5>
 								<p class="card-text">
 									<input type="text" id="todo_content" class="form-control " autofocus="autofocus"
 										placeholder="添加你今天要办的事情">
@@ -444,7 +444,8 @@
 											<tr>
 												<th width="100">勾选已完成</th>
 												<th>内容</th>
-												<th>首次添加时间</th>
+												<th>首次添加</th>
+												<th>今日日期</th>
 												<th>距今已过(天)</th>
 												<th>操作</th>
 											</tr>
@@ -452,15 +453,15 @@
 										<tbody id="todo_list_content">
 										</tbody>
 										<tfoot>
-											 <td colspan="5" align="center" id="todo_no" style="display: none;">没有任务</td>
+											 <td colspan="6" align="center" id="todo_no" style="display: none;">没有任务</td>
 										</tfoot>
 									</table>
 								</div>
 
 							</div>
 							<div class="card-footer">
-								已完成 <span id="todo_success"> 0 </span> 未完成 <span class="todo_fail"> 0 </span> 总共 <span
-									class="todo_total"> 0 </span>
+								已完成 <span id="todo_success"> 0 </span> 未完成 <span id="todo_fail"> 0 </span> 总共 <span
+									id="todo_total"> 0 </span>
 							</div>
 						</div>
 
@@ -487,7 +488,6 @@
 			<script src="static/js/perfect-scrollbar.min.js"></script>
 			<script src="static/js/pace.min.js"></script>
 			<script src="static/js/main.min.js"></script>
-			<script src="https://cdn.bootcdn.net/ajax/libs/wow/1.1.2/wow.js"></script>
 			<script src="./static/js/clipboard.min.js"></script>
 			<script src="static/js/contextmenu.js"></script>
 			<script src="./static/js/todo.js"></script>
