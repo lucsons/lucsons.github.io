@@ -61,6 +61,7 @@ function render(id){
 						<td>${v.first_add_time}</td>
 						<td>${v.out_time}</td>
 						<td>${v.over_date}</td>
+						<td>${v.state}</td>
 						<td class="todo_del" data-tid="${v.id}" style="cursor:pointer;text-decoration:underline;">
 							 删除
 						</td>
@@ -106,12 +107,20 @@ $("#todo_list_content").on("change",".check",function(){
 	   var res_datas = null;
 	   if($(this).prop("checked")){
 		   res_datas = todo_datas.map(v=>{
-		   		   if(v.id == id) v.is_success = true;
+		   		   if(v.id == id) {
+					   v.is_success = true;
+					   v.state = "已完成";
+				   };
+				   
 		   		   return v;
 		   });
 	   }else{
 		    res_datas = todo_datas.map(v=>{
-		    		   if(v.id == id) v.is_success = false;
+		    		   if(v.id == id) {
+						   v.is_success = false;
+						    v.state = "未完成";
+					   }
+					   
 		    		   return v;
 		    }); 
 	   }
@@ -158,7 +167,8 @@ $todo_submit.on("click",function(){
 		 			  			  content:$todo_data,
 		 			  			  first_add_time:d.toLocaleDateString(),
 		 			  			  over_date:0,
-								  out_time:d.toLocaleDateString()
+								  out_time:d.toLocaleDateString(),
+								  state:"未完成"
 		 			  };
 		 		     todo_datas.push(data);
 		 		     localStorage.setItem("todo_list",JSON.stringify(todo_datas));
