@@ -79,6 +79,8 @@ render();
 
 out_time();
 
+render();
+
 function out_time(){
 	if(todo_datas.length > 0){
 	   var date = new Date();
