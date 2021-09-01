@@ -1,32 +1,620 @@
-[
-	{
-		"name":"1",
-		"title":"测试题1",
-		"item":{
-			"a":"答案1",
-			"b":"答案2",
-			"c":"答案3"
+[{
+		"name": "1",
+		"title": "ctrl+c 是什么快捷键",
+		"item": {
+			"a": "粘贴",
+			"b": "复制",
+			"c": "剪切"
 		},
-		"success":"1"
+		"success": "2"
 	},
 	{
-		"name":"2",
-		"title":"测试题2",
-		"item":{
-			"a":"答案1",
-			"b":"答案2",
-			"c":"答案3"
+		"name": "2",
+		"title": "ctrl+v 是什么快捷键",
+		"item": {
+			"a": "粘贴",
+			"b": "复制",
+			"c": "剪切"
 		},
-		"success":"1"
+		"success": "1"
 	},
 	{
-		"name":"3",
-		"title":"测试题2",
-		"item":{
-			"a":"答案1",
-			"b":"答案2",
-			"c":"答案3"
+		"name": "3",
+		"title": "ctrl+a 是什么快捷键",
+		"item": {
+			"a": "复制",
+			"b": "撤销",
+			"c": "全选"
 		},
-		"success":"1"
+		"success": "3"
+	},
+	{
+		"name": "4",
+		"title": "alt + tab 是什么快捷键",
+		"item": {
+			"a": "切换程序",
+			"b": "重命名",
+			"c": "切换焦点"
+		},
+		"success": "1"
+	},
+	{
+		"name": "5",
+		"title": "alt+F4 是什么快捷键",
+		"item": {
+			"a": "切换程序",
+			"b": "重命名",
+			"c": "关闭应用程序"
+		},
+		"success": "3"
+	},
+	{
+		"name": "6",
+		"title": "F2 是什么快捷键",
+		"item": {
+			"a": "切换程序",
+			"b": "快速打开开始菜单",
+			"c": "重命名"
+		},
+		"success": "3"
+	},
+	{
+		"name": "7",
+		"title": "ctrl + y 是什么快捷键",
+		"item": {
+			"a": "删除文件",
+			"b": "回到撤銷之前的状态",
+			"c": "范围选中"
+		},
+		"success": "2"
+	},
+	{
+		"name": "8",
+		"title": "ctrl+鼠标左键 是什么快捷键",
+		"item": {
+			"a": "逐个选中",
+			"b": "剪切",
+			"c": "范围选中"
+		},
+		"success": "1"
+	},
+	{
+		"name": "9",
+		"title": "ctrl + p 在浏览器中是什么快捷键",
+		"item": {
+			"a": "关闭网页",
+			"b": "搜索",
+			"c": "调用打印机"
+		},
+		"success": "3"
+	},
+	{
+		"name": "10",
+		"title": "ctrl + n 在浏览器中是什么快捷键",
+		"item": {
+			"a": "关闭网页",
+			"b": "新建窗口",
+			"c": "调用打印机"
+		},
+		"success": "2"
+	},
+	{
+		"name": "11",
+		"title": "ctrl + f 在浏览器中是什么快捷键",
+		"item": {
+			"a": "网页内搜索",
+			"b": "新建窗口",
+			"c": "地址栏搜索"
+		},
+		"success": "1"
+	},
+	{
+		"name": "12",
+		"title": "ctrl + d 在浏览器中是什么快捷键",
+		"item": {
+			"a": "收藏书签",
+			"b": "关闭网页",
+			"c": "打开打印机"
+		},
+		"success": "1"
+	},
+	{
+		"name": "13",
+		"title": "ctrl + w 在浏览器中是什么快捷键",
+		"item": {
+			"a": "收藏书签",
+			"b": "关闭网页",
+			"c": "打开打印机"
+		},
+		"success": "2"
+	},
+	{
+		"name": "14",
+		"title": "IP是什么协议",
+		"item": {
+			"a": "超文本传输协议",
+			"b": "互联网地址协议",
+			"c": "传输控制协议"
+		},
+		"success": "2"
+	},
+	{
+		"name": "15",
+		"title": "IP地址是提供一种统一的地址格式，它为互联网上的每一个网络和每一台主机分配一个逻辑地址，以此来屏蔽物理地址的差异，此说法是否正确",
+		"item": {
+			"a": "正确",
+			"b": "错误",
+			"c": ""
+		},
+		"success": "1"
+	},
+	{
+		"name": "16",
+		"title": "IP地址通常用“点分十进制”表示成（a.b.c.d）的形式，其中，a,b,c,d都是0~255之间的十进制整数，此说法是否正确",
+		"item": {
+			"a": "正确",
+			"b": "错误",
+			"c": ""
+		},
+		"success": "1"
+	},
+	{
+		"name": "17",
+		"title": "IP地址是一个32位（bit）的二进制数，通常被分割为4个“8位二进制数，此说法是否正确",
+		"item": {
+			"a": "正确",
+			"b": "错误",
+			"c": ""
+		},
+		"success": "1"
+	},
+	{
+		"name": "18",
+		"title": "IP地址是一个32位（bit）的二进制数 也就是8个字节（byte），此说法是否正确",
+		"item": {
+			"a": "正确",
+			"b": "错误",
+			"c": ""
+		},
+		"success": "2"
+	},
+	{
+		"name": "19",
+		"title": "cmd 中输入 <code> calc </code> 会调用什么应用程序",
+		"item": {
+			"a": "记事本",
+			"b": "画图",
+			"c": "计算器"
+		},
+		"success": "3"
+	},
+	{
+		"name": "20",
+		"title": "cmd 中输入 <code> calc </code> 会调用什么应用程序",
+		"item": {
+			"a": "记事本",
+			"b": "画图",
+			"c": "计算器"
+		},
+		"success": "3"
+	},
+	{
+		"name": "21",
+		"title": "cmd 是windows的命令行窗口 此说法是否正确",
+		"item": {
+			"a": "正确",
+			"b": "错误",
+			"c": ""
+		},
+		"success": "1"
+	},
+	{
+		"name": "22",
+		"title": "ping 命令可以测试和另一台服务器是否能够进行通信",
+		"item": {
+			"a": "正确",
+			"b": "错误",
+			"c": ""
+		},
+		"success": "1"
+	},
+	{
+		"name": "23",
+		"title": "services.msc 命令可以调用什么",
+		"item": {
+			"a": "服务面板",
+			"b": "设置面板",
+			"c": "控制面板"
+		},
+		"success": "1"
+	},
+	{
+		"name": "24",
+		"title": "control 命令可以调用什么",
+		"item": {
+			"a": "服务面板",
+			"b": "设置面板",
+			"c": "控制面板"
+		},
+		"success": "3"
+	},
+	{
+		"name": "25",
+		"title": "下面哪一条命令可以查看Windows激活的过期时间",
+		"item": {
+			"a": "services.msc",
+			"b": "winver",
+			"c": "slmgr.vbs -xpr"
+		},
+		"success": "3"
+	},
+	{
+		"name": "26",
+		"title": "下面哪一条命令可以根据域名查看IP",
+		"item": {
+			"a": "ipconfig",
+			"b": "netstat",
+			"c": "nslookup"
+		},
+		"success": "3"
+	},
+	{
+		"name": "27",
+		"title": "如何查看本机 MAC 地址",
+		"item": {
+			"a": "ipconfig/all",
+			"b": "ipconfig",
+			"c": "powershell"
+		},
+		"success": "1"
+	},
+	{
+		"name": "28",
+		"title": "如下命令哪一条是可以创建一个完美的全新的文件",
+		"item": {
+			"a": "type nul>new.txt",
+			"b": "copy nul>new.txt",
+			"c": "move old.txt new.txt"
+		},
+		"success": "1"
+	},
+	{
+		"name": "29",
+		"title": "move nul>new.txt 可以创建一个全新的文件 说法正确吗",
+		"item": {
+			"a": "正确",
+			"b": "错误",
+			"c": ""
+		},
+		"success": "1"
+	},
+	{
+		"name": "30",
+		"title": "cd .>a.txt 可以创建一个全新的文件 说法正确吗",
+		"item": {
+			"a": "正确",
+			"b": "错误",
+			"c": ""
+		},
+		"success": "1"
+	},
+	{
+		"name": "31",
+		"title": "<code data-language='bat'> copy nul>abc.txt</code> 可以创建一个完美的全新文件 内部没有内容 说法正确吗",
+		"item": {
+			"a": "正确",
+			"b": "错误",
+			"c": ""
+		},
+		"success": "2"
+	},
+	{
+		"name": "32",
+		"title": "下列哪条命令可以在文件中追加内容",
+		"item": {
+			"a": "echo new content>>new.txt",
+			"b": "Date /t >> new.txt",
+			"c": "都可以"
+		},
+		"success": "3"
+	},
+	{
+		"name": "33",
+		"title": "<code data-language='bat'> curl www.baidu.com >> new.txt</code>  这条指令是否能将得到的结果追加到文件中",
+		"item": {
+			"a": "可以追加",
+			"b": "不可以追加",
+			"c": "会提示命令不正确"
+		},
+		"success": "1"
+	},
+	{
+		"name": "34",
+		"title": "<code data-language='bat'>Time /t >> b.txt</code>  这条指令是否能将得到的结果追加到文件中 并且如果文件不存在 还会自动创建",
+		"item": {
+			"a": "可以追加并自动创建",
+			"b": "可以追加但不会自动创建",
+			"c": "不会追加也不会自动创建"
+		},
+		"success": "1"
+	},
+	{
+		"name": "35",
+		"title": "<code data-language='bat'>netstat -a</code>  这条执令不可以查看端口占用情况",
+		"item": {
+			"a": "正确",
+			"b": "错误",
+			"c": ""
+		},
+		"success": "2"
+	},
+	{
+		"name": "36",
+		"title": "<code data-language='bat'>curl -o /dev/null -s -w %{http_code} www.baidu.com</code>  这条执令可以得到什么返回结果",
+		"item": {
+			"a": "状态码",
+			"b": "网页源代码",
+			"c": "以上两个都能得到"
+		},
+		"success": "1"
+	},
+	{
+		"name": "37",
+		"title": "DNS 是什么",
+		"item": {
+			"a": "域名解析服务器",
+			"b": "超文本传输协议",
+			"c": "超文本标记语言"
+		},
+		"success": "1"
+	},
+	{
+		"name": "38",
+		"title": "DNS 的作用是什么",
+		"item": {
+			"a": "让访问网站更方便",
+			"b": "使域名和服务器进行映射 从而能够通过域名访问到服务器的资源",
+			"c": "简化了复杂的IP地址，转化成便于记忆的字母，从而使用对应的字母来访问网站方便多了"
+		},
+		"success": "2"
+	},
+	{
+		"name": "39",
+		"title": "如何访问 windows 中的系统变量 或者 自定义的变量 假设变量名称为 <code> VAR </code>",
+		"item": {
+			"a": "%VAR",
+			"b": "%VAR%",
+			"c": "VAR"
+		},
+		"success": "2"
+	},
+	{
+		"name": "40",
+		"title": "如何删除一个目录",
+		"item": {
+			"a": "rd",
+			"b": "rd dir_name",
+			"c": "del"
+		},
+		"success": "2"
+	},
+	{
+		"name": "41",
+		"title": "如何删除多级目录",
+		"item": {
+			"a": "rd \\s dir_name",
+			"b": "rd dir_name",
+			"c": "rd \\s"
+		},
+		"success": "1"
+	},
+	{
+		"name": "42",
+		"title": "设置了对应的环境变量系统可以直接访问该目录下的文件或目录",
+		"item": {
+			"a": "正确",
+			"b": "错误",
+			"c": ""
+		},
+		"success": "1"
+	},
+	{
+		"name": "43",
+		"title": "Hosts 文件的作用 说法正确的是",
+		"item": {
+			"a": "帮助电脑加快域名解析 方便局域网用户",
+			"b": "屏蔽网站 可以当做虚拟域名",
+			"c": "以上都对"
+		},
+		"success": "3"
+	},
+	{
+		"name": "44",
+		"title": "以 bat 作为后缀的是什么文件",
+		"item": {
+			"a": "批处理文件",
+			"b": "shell 脚本",
+			"c": "markdown 文件"
+		},
+		"success": "1"
+	},
+	{
+		"name": "45",
+		"title": "如下代码结果是什么：<br/> <pre  style='width:200px;'>\n<code> set a = 1 + 1 \n echo %a% \n</code>\n</pre> ",
+		"item": {
+			"a": "2",
+			"b": "1 + 1",
+			"c": "什么也没有"
+		},
+		"success": "2"
+	},
+	{
+		"name": "46",
+		"title": "如下代码结果是什么：<br/> <pre  style='width:200px;'>\n<code> set \\a a = 1 + 1 \n echo %a% \n</code>\n</pre> ",
+		"item": {
+			"a": "2",
+			"b": "1 + 1",
+			"c": "什么也没有"
+		},
+		"success": "2"
+	},
+	{
+		"name": "47",
+		"title": "如下代码结果是什么：<br/> <pre  style='width:200px;'>\n<code> set /a a = 1 + 1 \n echo %a% \n</code>\n</pre> ",
+		"item": {
+			"a": "2",
+			"b": "1 + 1",
+			"c": "什么也没有"
+		},
+		"success": "1"
+	},
+	{
+		"name": "48",
+		"title": "set 指令 /p  参数的作用是什么 ",
+		"item": {
+			"a": "提示用户输入 并获取到用户输入的值",
+			"b": "能够和用户进行交互 ",
+			"c": "以上都对"
+		},
+		"success": "3"
+	},
+	{
+		"name": "49",
+		"title": "set 指令 /p  参数的作用是什么 ",
+		"item": {
+			"a": "提示用户输入 并获取到用户输入的值",
+			"b": "能够和用户进行交互 ",
+			"c": "以上都对"
+		},
+		"success": "3"
+	},
+	{
+		"name": "50",
+		"title": "@REM作用是什么 ",
+		"item": {
+			"a": "注释",
+			"b": "调用bat文件",
+			"c": "调用 goto 语句块"
+		},
+		"success": "1"
+	},
+	{
+		"name": "51",
+		"title": "net user 这条指令的作用是什么",
+		"item": {
+			"a": "查看本机的用户",
+			"b": "添加用户",
+			"c": "删除用户"
+		},
+		"success": "1"
+	},
+	{
+		"name": "52",
+		"title": "tree 这条指令的作用是什么",
+		"item": {
+			"a": "查看文件夹",
+			"b": "查看文件",
+			"c": "用树状结构给目录结构列出来"
+		},
+		"success": "3"
+	},
+	{
+		"name": "53",
+		"title": "如下批处理文件我在调用时  输入 a  对应输出的结果是什么  <pre  style='width:300px;'>\n<code>@ECHO OFF  \n set /p name=请输入您的姓名 \n IF %name% == a goto one\nIF %name% == b goto two\n :one\necho my name is one\npause>nul\nexit\n\n :two\necho my name is two\npause>nul\nexit\nPAUSE>NUL  \n</code>\n</pre> ",
+		"item": {
+			"a": " my name is one",
+			"b": "echo my name is two",
+			"c": "报错"
+		},
+		"success": "1"
+	},
+	{
+		"name": "54",
+		"title": "<code>for /L %%vv in (1,1,20) do echo %%vv</code> 该条指令语法正确吗 ",
+		"item": {
+			"a": "不正确",
+			"b": "正确",
+			"c": ""
+		},
+		"success": "1"
+	},
+	{
+		"name": "55",
+		"title": "<code>for /L %%vv in (1,1,20) do echo %%vv</code> 该条指令语法为什么不正确",
+		"item": {
+			"a": "变量名不能用两个字母 将 %%vv 修改为  %v 即可",
+			"b": "语法结构有错误",
+			"c": "少了关键字"
+		},
+		"success": "1"
+	},
+	{
+		"name": "56",
+		"title": "<code>  shutdown -s </code> 该条指令的作用",
+		"item": {
+			"a": "关机",
+			"b": "重启",
+			"c": "注销"
+		},
+		"success": "1"
+	},
+	{
+		"name": "57",
+		"title": "如何调用 powershell",
+		"item": {
+			"a": "cmd 中输入powershell",
+			"b": "在对应目录只能够按住 shift 键 点击鼠标右键",
+			"c": "以上都可以"
+		},
+		"success": "3"
+	},
+	{
+		"name": "58",
+		"title": "call 指令的作用是什么",
+		"item": {
+			"a": "调用其他 bat",
+			"b": "调用goto语句块",
+			"c": "注释"
+		},
+		"success": "1"
+	},
+	{
+		"name": "59",
+		"title": "bat 文件如何接受参数",
+		"item": {
+			"a": "通过 %1  %2 .... 这种形式接受",
+			"b": "bat 不能接受参数",
+			"c": "通过 $1 $2 这种形式接受"
+		},
+		"success": "1"
+	},
+	{
+		"name": "60",
+		"title": "Windows10 用哪种方式保证在任何版本系统都一定能修改用户名",
+		"item": {
+			"a": "我的电脑 - 管理 - 系统工具 - 本地用户和组 - 用户",
+			"b": "点开开始菜单设置",
+			"c": "以上都能保证在任何版本系统都能修改"
+		},
+		"success": "1"
 	}
 ]
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
