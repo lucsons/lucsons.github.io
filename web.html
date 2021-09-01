@@ -836,7 +836,107 @@
 														alt="">
 													<div class="post-info">
 														<span class="post-author">lucson</span><br>
-														<span class="post-date">2021/8/29 1:54::15</span>
+														<span class="post-date">2021/9/1   22:08:52</span>
+													</div>
+													<div class=" float-end">
+
+														<a class="copy_url" target="_blank"><i
+																class="far fa-paper-plane"></i> 分享</a>
+													</div>
+												</div>
+
+
+												<!-- Article Start -->
+												<div class="post-body">
+
+													<h5 class="mt-2 px-3"> JS 随机打乱数组 </h5>
+													<p class="pt-2">  在某些应用场景下 我们可能会需要将一个数组随机打乱 并且每一次的打乱结果还不能一样 就例如一个洗牌功能  今天这个案例代码 用最易理解的一种实现方式来实现 在 JavaScript 中并没有内置的打乱数组的方法 所以需要自己实现 但是在Java中是有对应的方法的 好了 废话不多说 我们来看如下的代码 注意注释的意思 </p>
+
+
+													<h5 class="mt-2 px-3 mb-3 small"> 代码 </h5>
+													
+<!-- 代码块 -->
+<div class="code">
+<span class="badge bg-gradient float-end copy">复制代码</span>
+<pre class="display">
+
+	// 定义一个数组
+	var arr = [1,5,8,9,6,3,2,20,30,15,14,2];
+
+	// 通过循环遍历数组 并在数组内每循环一次就生成一个随机数 这个随机数是 length - 1 的范围 
+	// 选取一个中间值 当到达中间值时就不在循环 保证数组的数据不会出现差错
+	for(var i = 0 , len = arr.length; i < len; i++){
+	     var random = parseInt(Math.random()*len - 1);
+	     // 通过中间变量来临时存储其中一个数组的值
+	     var item = arr[i];
+	     // 将存储数组的值改成随机生成的下标的值
+	     arr[i] = arr[random];
+	     // 将随机生成的下标的值改成当前遍历的数组下标的值
+	     arr[random] = item;
+	}
+
+</pre>
+<pre>
+<code data-language="javascript">
+
+// 定义一个数组
+var arr = [1,5,8,9,6,3,2,20,30,15,14,2];
+
+// 通过循环遍历数组 并在数组内每循环一次就生成一个随机数 这个随机数是 length - 1 的范围 
+// 每循环一次 i+1  len-1   当 i 不在小于 len 时 刚好 遍历数组的一半多一个所以数组的内容不会错乱
+for(var i = 0 , len = arr.length; i < len; i++){
+     var random = parseInt(Math.random()*len - 1);
+     // 通过中间变量来临时存储其中一个数组的值
+     var item = arr[i];
+     // 将存储数组的值改成随机生成的下标的值
+     arr[i] = arr[random];
+     // 将随机生成的下标的值改成当前遍历的数组下标的值
+     arr[random] = item;
+}
+
+</code>
+</pre>
+
+</div>
+<button onclick="shff()"> 点击数组顺序打乱 </button>
+<p id="shff" class="mt-2"></p>
+<script type="text/javascript">
+
+	var arr = [1,5,8,9,6,3,2,20,30,15,14,2];
+
+	var shff_ = document.getElementById("shff");
+	shff_.innerHTML = arr.join(",");
+
+	function shff(){
+		for(var i = 0 , len = arr.length; i < len; i++){
+			     var random = parseInt(Math.random()*len - 1);
+			     var item = arr[i];
+			     arr[i] = arr[random];
+			     arr[random] = item;
+		}
+		shff_.innerHTML = arr.join(",");
+	}
+</script>
+
+<p class="mt-3 text-info"> 注意： 该种实现方法是会修改原数组的 </p>
+
+
+												</div>
+											</div>
+
+											<!-- 新文章结束  -->
+
+
+
+											<!--  新文章开始  -->
+											<hr>
+											<div class="post wow fadeIn" id="web3">
+												<div class="post-header">
+													<img src="http://q4.qlogo.cn/headimg_dl?dst_uin=2857734156&spec=100"
+														alt="">
+													<div class="post-info">
+														<span class="post-author">lucson</span><br>
+														<span class="post-date">2021/9/1 1:54::15</span>
 													</div>
 													<div class=" float-end">
 
@@ -850,7 +950,7 @@
 												<div class="post-body">
 
 
-													Test
+													<!-- 内容 -->
 
 
 												</div>
@@ -960,6 +1060,7 @@
 					var that = this;
 					var copy = new ClipboardJS('.copy', {
 						text: function(trigger) {
+							$(that).next(".display").find("div").remove();
 							return $(that).next(".display").html().replace(/&lt;/g, '<').replace(/&gt;/g, ">") +
 								"\n\n\n转载请备注来源：http://lucsons.github.io\n原作者：Lucson\n哔哩哔哩：https://space.bilibili.com/366914054";
 						}
