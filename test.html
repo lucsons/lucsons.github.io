@@ -22,12 +22,16 @@
 		<link rel="stylesheet" type="text/css" href="static/css/paraiso-dark.css" />
 		<script src="static/js/rainbow-custom.min.js"></script>
 		<link rel="stylesheet" href="static/css/contextmenu.css">
+		<!-- 
+		 <pre  style='width:200px;'>\n<code> set a = 1 + 1 \n echo %a% \n</code>\n</pre> 
+		 -->
+		
 		<style>
 			hr {
 				margin: 30px 0 50px 0;
 			}
 
-.page-sidebar {
+		.page-sidebar {
 			z-index: 10002;
 		}
 
@@ -71,10 +75,9 @@
 
 			pre {
 				width: 100%;
-				max-height: 500px;
-				padding: 10px;
+				max-height: 400px;
 				box-shadow: inset 0 0 10px 5px #262635;
-				padding-top: 35px;
+				margin-bottom:0 !important;
 			}
 
 			::-webkit-scrollbar {
@@ -171,6 +174,7 @@
 			 <li><a target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lucsons.github.io/web.html&sharesource=qzone&pics=static/picture/cover.jpg&title=Hello,你好 我是李文祥&summary=这是我的个人主页 通过我的个人主页就可以找到我的博客和github啦 里面有精选的文章等着你们哦~&desc=我叫李文祥,今年21, 致力于学习前后端开发 分享更多的知识 喜欢与人交流  汲取经验 收获新的能量 希望看到此分享的人能够有朝一日成为你心目中的大牛~">分享本博客</a></li>
 			  <li><a href="test.html">测评科目</a></li>
 			   <li><a href="javascript:void(0)" id="u_copy">复制</a></li>
+			  <li><a href="#" >返回顶部</a></li>
 		</ul>
 
 		<div class="tip"> 复制成功 </div>
@@ -398,7 +402,7 @@
 				<div class="main-wrapper px-4" >
 					
 					
-					<h3> 所有测试题均为Lucson收集的面试题 - 跟随视频教程同步 - 测试阶段 还没有实际题目哦~</h3>
+					<h3> 所有测试题均为Lucson收集的面试题 - 跟随视频教程同步 - 题目太多 右键可以返回顶部</h3>
 					
 					
 					<div style="width: 100%;max-height: 300px;overflow: scroll;">
@@ -419,15 +423,18 @@
 						<button data-type="js-3" class="test btn btn-danger">JavaScript 高级</button>
 					</div>
 					
-					<div class="col">
-						<h4 id="title">点击上方选择您的测试题目 </h4>
+					<div class="col mt-3">
+						<h4 id="title" class="text-danger">
+							点击上方选择您的测试题目 <br>
+							每道题目选择之后就会实时提醒正确或者错误  <br>
+							最后答卷可以查看错误的题目编号和错误的题数
+						</h4>
 						<h6 id="error" class="text-primary"></h6>
 					</div>
 					<form action="javascript:void(0)" name="test">
-						<ol>
+						<ol id="list">
 							
 						</ol>
-						只有第一个按钮有测试数据   正确答案是第一个选项三个都是 测试中.....
 						<br>
 						<button type="submit" class="btn btn-success"> 交卷 </button>
 					</form>
