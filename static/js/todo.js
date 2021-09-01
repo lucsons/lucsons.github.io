@@ -77,6 +77,8 @@ render();
 
 // 判断每个任务已超过多少天
 
+out_time();
+
 function out_time(){
 	if(todo_datas.length > 0){
 	   var date = new Date();
@@ -99,7 +101,7 @@ function out_time(){
 	}
 }
 
-out_time();
+
 
 // 勾选切换已完成和未完成
 $("#todo_list_content").on("change",".check",function(){
