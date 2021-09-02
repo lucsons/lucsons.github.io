@@ -565,7 +565,6 @@
 									</blockquote>
 									<div class="card  card-bg">
 										<div class="card-body ">
-
 											<!-- 1 Start-->
 											<div class="post wow fadeIn" id="algorithm1">
 												<div class="post-header">
@@ -586,6 +585,89 @@
 												<!-- Article Start -->
 												<div class="post-body">
 
+													<h5 class="px-2 mb-2"> JS 实现给数组内部插入元素 </h5>
+
+													这个例子是使用JavaScript来实现的给数组中对应位置插入一个元素
+
+													<br>
+
+													<p> 如下是实现方法,注释写的非常清楚 如果你觉得看的不是特别理解  这里还有视频教程
+														<br>
+														<a href="#"> JS 实现给数组内部插入元素视频教程链接 </a>
+													</p>
+
+													<h5 class="px-2 small mt-3 mb-3"> 代码 </h5>
+
+												   <!-- 代码块 -->
+													<div class="code">
+														<span class="badge bg-gradient float-end copy">复制代码</span>
+<pre class="display">
+															
+var arr = [1,2,3,5,6];
+// 不改变自身
+// 在数组的原型上添加一个插入元素的方法
+// insertIndex  插入的下标    insertItem  插入的内容
+Array.prototype.insertArrayItem = function(insertIndex,insertItem){
+	  // 定义两个数组 用来存放 插入的数组之后的内容和插入的元素位置包括之前位置的内容
+	  // this.length - insertIndex 这里的长度是动态计算的 不会产生下标越界 过着数组位置不够
+	  // 例子： 比如数组长度是6  插入的数组位置是 4   需要一个数组存储插入位置之后的内容
+	  // 这个数组的长度就是 当前被插入数组的长度 - 插入的位置 例如 6 - 4 = 2   设置2个长度
+	  // 还要有一个数组存储之前的  所以这个数组的长度就是 插入的位置 + 1
+	  var insertArrBefore = new Array(insertIndex + 1),
+	  insertArrAfter = new Array( this.length  -  insertIndex);
+
+	  // 保存插入位置之后的数组元素
+	  for(var i = insertIndex , insertArrAfterIndex = 0; i < this.length ; i++,insertArrAfterIndex++){
+	  		insertArrAfter[insertArrAfterIndex] = this[i];
+	  } 
+
+	  this[insertIndex] = insertItem;
+
+	  // 保存插入位置之前的数组元素
+	  for(var j = 0 ; j < insertIndex + 1 ; j++ ){
+		insertArrBefore[j] = this[j];
+	  }
+
+	  return  insertArrBefore.push.apply(insertArrBefore,insertArrAfter) && insertArrBefore;
+  
+}
+console.log(arr.insertArrayItem(3,100)); // [1, 2, 3, 100, 5, 6]
+														</pre>
+<pre>
+	<code data-language="JavaScript">
+var arr = [1,2,3,5,6];
+// 不改变自身
+// 在数组的原型上添加一个插入元素的方法
+// insertIndex  插入的下标    insertItem  插入的内容
+Array.prototype.insertArrayItem = function(insertIndex,insertItem){
+	  // 定义两个数组 用来存放 插入的数组之后的内容和插入的元素位置包括之前位置的内容
+	  // this.length - insertIndex 这里的长度是动态计算的 不会产生下标越界 过着数组位置不够
+	  // 例子： 比如数组长度是6  插入的数组位置是 4   需要一个数组存储插入位置之后的内容
+	  // 这个数组的长度就是 当前被插入数组的长度 - 插入的位置 例如 6 - 4 = 2   设置2个长度
+	  // 还要有一个数组存储之前的  所以这个数组的长度就是 插入的位置 + 1
+	  var insertArrBefore = new Array(insertIndex + 1),
+	  insertArrAfter = new Array( this.length  -  insertIndex);
+
+	  // 保存插入位置之后的数组元素
+	  for(var i = insertIndex , insertArrAfterIndex = 0; i < this.length ; i++,insertArrAfterIndex++){
+	  		insertArrAfter[insertArrAfterIndex] = this[i];
+	  } 
+
+	  this[insertIndex] = insertItem;
+
+	  // 保存插入位置之前的数组元素
+	  for(var j = 0 ; j < insertIndex + 1 ; j++ ){
+		insertArrBefore[j] = this[j];
+	  }
+
+	  return  insertArrBefore.push.apply(insertArrBefore,insertArrAfter) && insertArrBefore;
+  
+}
+console.log(arr.insertArrayItem(3,100)); // [1, 2, 3, 100, 5, 6]
+	</code>
+</pre>
+
+													</div>
 
 												</div>
 												<!-- Article End -->
@@ -594,6 +676,35 @@
 											<!-- 1 End-->
 
 											<!-- ----------------- -->
+
+
+											<!-- 2 Start-->
+											<div class="post wow fadeIn" id="algorithm1">
+												<div class="post-header">
+													<img src="http://q4.qlogo.cn/headimg_dl?dst_uin=2857734156&spec=100"
+														alt="">
+													<div class="post-info">
+														<span class="post-author">lucson</span><br>
+														<span class="post-date">2021/8/29 1:54::15</span>
+													</div>
+													<div class=" float-end">
+														<a class="copy_url" target="_blank"><i
+																class="far fa-paper-plane"></i> 分享</a>
+													</div>
+												</div>
+
+
+												<!-- Article Start -->
+												<div class="post-body">
+																											
+												</div>
+												<!-- Article End -->
+
+											</div>
+											<!-- 2 End-->
+
+
+
 										</div>
 									</div>
 								</div>
@@ -694,6 +805,7 @@
 					var that = this;
 					var copy = new ClipboardJS('.copy', {
 						text: function(trigger) {
+							$(that).next(".display").find("div").remove();
 							return $(that).next(".display").html().replace(/&lt;/g, '<').replace(/&gt;/g, ">") +
 								"\n\n\n转载请备注来源：http://lucsons.github.io\n原作者：Lucson\n哔哩哔哩：https://space.bilibili.com/366914054";
 						}
